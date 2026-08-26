@@ -8,6 +8,8 @@ const {
 	title = 'Lotus Technologies',
 	description = 'Lotus Technologies — technology solutions for real business problems.',
 } = Astro.props;
+
+const bodyClass = `min-h-screen bg-gradient-to-br from-lotus-navy via-lotus-navy to-[#102F63] text-white${Astro.url.pathname === '/' ? ' home-page' : ''}`;
 ---
 
 <!doctype html>
@@ -17,9 +19,14 @@ const {
 		<meta name="viewport" content="width=device-width" />
 		<meta name="description" content={description} />
 		<title>{title}</title>
+		<style is:global>
+			body.home-page main > section:nth-child(3) {
+				display: none;
+			}
+		</style>
 	</head>
 
-	<body class="min-h-screen bg-gradient-to-br from-lotus-navy via-lotus-navy to-[#102F63] text-white">
+	<body class={bodyClass}>
 		<Header />
 
 		<main>
