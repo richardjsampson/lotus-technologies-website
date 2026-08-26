@@ -47,7 +47,6 @@
     pointer-events: none;
   }
 
-  /* Integration ecosystem canvas */
   main > section:first-child > div:nth-child(2) > div:nth-child(2) {
     position: relative;
     height: 540px;
@@ -78,7 +77,6 @@
     z-index: 1;
   }
 
-  /* Old grid spacer cells are no longer part of the illustration. */
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(2),
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(4),
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(6),
@@ -86,7 +84,6 @@
     display: none;
   }
 
-  /* Shared technology endpoint */
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(1),
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(3),
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(7),
@@ -123,7 +120,6 @@
     white-space: nowrap;
   }
 
-  /* Asymmetric placement */
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(1) {
     top: 52px;
     left: 10px;
@@ -150,7 +146,6 @@
     width: 258px;
   }
 
-  /* Semantic micrographics: each one should read as a familiar technology object. */
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(1)::after,
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(3)::after,
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(7)::after,
@@ -167,7 +162,6 @@
     box-shadow: inset 0 0 20px rgba(77,163,255,.05);
   }
 
-  /* Systems: two application windows with a clear link between them. */
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(1)::after {
     border-radius: 8px;
     background:
@@ -183,7 +177,6 @@
       inset -18px -18px 0 -12px rgba(77,163,255,.06);
   }
 
-  /* Commerce: unmistakable payment-card silhouette with chip and stripe. */
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(3)::after {
     height: 32px;
     border-radius: 7px;
@@ -194,7 +187,6 @@
       rgba(30,99,233,.08);
   }
 
-  /* Applications: phone frame with screen/header/home indicator. */
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(7)::after {
     width: 30px;
     height: 50px;
@@ -207,7 +199,6 @@
       rgba(30,99,233,.07);
   }
 
-  /* Data: familiar stacked database-cylinder shape. */
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(9)::after {
     width: 42px;
     height: 42px;
@@ -223,7 +214,6 @@
       rgba(30,99,233,.07);
   }
 
-  /* Connection routes stay outside the content area and point toward the Lotus core. */
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(1)::before,
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(3)::before,
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(7)::before,
@@ -273,7 +263,6 @@
     transform: rotate(19deg);
   }
 
-  /* Lotus orchestration core */
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(5) {
     position: absolute;
     z-index: 8;
@@ -314,14 +303,262 @@
     filter: drop-shadow(0 0 15px rgba(77,163,255,.25));
   }
 
-  /* Old Integration Hub caption is redundant once the visual is self-explanatory. */
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) {
     display: none;
   }
 
-  /* Preserve the intended Problems We Solve desktop split. */
   main > section:nth-child(3) > div:nth-child(3) > div:first-child {
     grid-template-columns: .75fr 1.5fr;
+  }
+
+  /* HOW WE HELP: move from four equal cards to a capability map with hierarchy. */
+  main > section:nth-child(4) {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 78% 38%, rgba(30,99,233,.12), transparent 30%),
+      radial-gradient(circle at 60% 76%, rgba(242,184,75,.05), transparent 26%),
+      rgba(255,255,255,.018);
+  }
+
+  main > section:nth-child(4)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(77,163,255,.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(77,163,255,.025) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: linear-gradient(to right, transparent 24%, black 58%, transparent 100%);
+  }
+
+  main > section:nth-child(4) > div {
+    position: relative;
+    z-index: 1;
+  }
+
+  main > section:nth-child(4) > div > div:first-child {
+    grid-template-columns: minmax(300px,.72fr) minmax(0,1.58fr);
+    gap: 5rem;
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:first-child {
+    position: sticky;
+    top: 7rem;
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:first-child h2 {
+    max-width: 10ch;
+    font-size: clamp(2.8rem, 4vw, 4.5rem);
+    line-height: .98;
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:first-child > p:nth-of-type(2) {
+    max-width: 29rem;
+    color: rgba(255,255,255,.58);
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1.15fr .95fr .9fr;
+    grid-template-rows: minmax(230px,auto) minmax(190px,auto);
+    gap: 1rem;
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 0;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    padding: 1.65rem;
+    transform: none;
+    border-color: rgba(255,255,255,.08);
+    background: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.018));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.025), 0 18px 50px rgba(0,0,0,.12);
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:hover {
+    transform: translateY(-3px);
+    border-color: rgba(77,163,255,.30);
+    background: linear-gradient(145deg, rgba(30,99,233,.11), rgba(255,255,255,.025));
+  }
+
+  /* Systems + Data gets the dominant position. */
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(2) {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    min-height: 250px;
+    padding-right: 46%;
+    border-color: rgba(77,163,255,.18);
+    background:
+      radial-gradient(circle at 77% 48%, rgba(30,99,233,.20), transparent 31%),
+      linear-gradient(145deg, rgba(30,99,233,.12), rgba(255,255,255,.025));
+  }
+
+  /* Custom software is the strong secondary vertical capability. */
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(1) {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    min-height: 440px;
+    padding-top: 10rem;
+    background:
+      linear-gradient(rgba(77,163,255,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(77,163,255,.035) 1px, transparent 1px),
+      linear-gradient(155deg, rgba(255,255,255,.055), rgba(30,99,233,.055));
+    background-size: 22px 22px, 22px 22px, auto;
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+    padding-right: 7rem;
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+    padding-right: 6rem;
+  }
+
+  /* Remove brochure-like numbering and repeated learn-more links. */
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a > p:first-child,
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a > p:last-child {
+    display: none;
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a h3 {
+    position: relative;
+    z-index: 2;
+    margin-top: 0;
+    max-width: 20rem;
+    font-size: 1.18rem;
+    line-height: 1.25;
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(2) h3 {
+    max-width: 18rem;
+    font-size: 1.55rem;
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a > p:nth-of-type(2) {
+    position: relative;
+    z-index: 2;
+    margin-top: .7rem;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    max-width: 24rem;
+    color: rgba(255,255,255,.54);
+    line-height: 1.55;
+    font-size: .93rem;
+  }
+
+  /* Systems/Data visual: several recognizable system nodes converging into one integration bus. */
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    width: 38%;
+    height: calc(100% - 4rem);
+    border-radius: 1.15rem;
+    border: 1px solid rgba(77,163,255,.14);
+    background:
+      radial-gradient(circle at 20% 25%, #4DA3FF 0 4px, transparent 5px),
+      radial-gradient(circle at 78% 25%, #4DA3FF 0 4px, transparent 5px),
+      radial-gradient(circle at 20% 75%, #4DA3FF 0 4px, transparent 5px),
+      radial-gradient(circle at 78% 75%, #F2B84B 0 4px, transparent 5px),
+      linear-gradient(90deg, transparent 20%, rgba(77,163,255,.28) 20% 50%, transparent 50%) 0 25% / 100% 1px no-repeat,
+      linear-gradient(90deg, transparent 20%, rgba(77,163,255,.28) 20% 50%, transparent 50%) 0 75% / 100% 1px no-repeat,
+      linear-gradient(90deg, transparent 50%, rgba(77,163,255,.28) 50% 78%, transparent 78%) 0 25% / 100% 1px no-repeat,
+      linear-gradient(90deg, transparent 50%, rgba(77,163,255,.28) 50% 78%, transparent 78%) 0 75% / 100% 1px no-repeat,
+      linear-gradient(rgba(77,163,255,.42), rgba(77,163,255,.42)) 50% 18% / 1px 64% no-repeat,
+      rgba(7,25,53,.48);
+    box-shadow: inset 0 0 28px rgba(30,99,233,.07);
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(2)::after {
+    content: "API  •  CRM  •  ERP  •  DATA";
+    position: absolute;
+    right: 3rem;
+    top: 50%;
+    width: calc(38% - 2rem);
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    color: rgba(141,196,255,.70);
+  }
+
+  /* Custom software visual: layered application windows. */
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(1)::before,
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    left: 1.5rem;
+    right: 1.5rem;
+    height: 82px;
+    border: 1px solid rgba(77,163,255,.20);
+    border-radius: .9rem;
+    background:
+      linear-gradient(rgba(77,163,255,.18), rgba(77,163,255,.18)) 14px 16px / 42% 5px no-repeat,
+      linear-gradient(rgba(255,255,255,.09), rgba(255,255,255,.09)) 14px 30px / 66% 4px no-repeat,
+      linear-gradient(rgba(255,255,255,.06), rgba(255,255,255,.06)) 14px 43px / 52% 4px no-repeat,
+      rgba(7,25,53,.62);
+    box-shadow: 0 14px 32px rgba(0,0,0,.18);
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(1)::before {
+    top: 2rem;
+    transform: rotate(-3deg);
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(1)::after {
+    top: 4.2rem;
+    left: 2.4rem;
+    right: .8rem;
+    transform: rotate(3deg);
+  }
+
+  /* Mobile and Cloud get compact semantic silhouettes. */
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    right: 1.7rem;
+    top: 50%;
+    width: 42px;
+    height: 72px;
+    transform: translateY(-50%);
+    border: 1px solid rgba(77,163,255,.30);
+    border-radius: 9px;
+    background:
+      linear-gradient(rgba(77,163,255,.20), rgba(77,163,255,.20)) 8px 13px / 24px 34px no-repeat,
+      linear-gradient(rgba(77,163,255,.55), rgba(77,163,255,.55)) 13px 59px / 14px 2px no-repeat,
+      rgba(30,99,233,.06);
+    box-shadow: 0 0 24px rgba(77,163,255,.08);
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    right: 1.55rem;
+    top: 50%;
+    width: 58px;
+    height: 42px;
+    transform: translateY(-45%);
+    border: 1px solid rgba(77,163,255,.24);
+    border-radius: 50% 50% 42% 42% / 60% 60% 40% 40%;
+    background:
+      radial-gradient(circle at 35% 38%, rgba(77,163,255,.20) 0 14px, transparent 15px),
+      radial-gradient(circle at 62% 42%, rgba(77,163,255,.16) 0 17px, transparent 18px),
+      rgba(30,99,233,.06);
+    box-shadow: 0 0 24px rgba(77,163,255,.07);
   }
 }
 
