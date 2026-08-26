@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 650" role="img" aria-labelledby="title desc">
+  <title id="title">Connected Lotus technology ecosystem</title>
+  <desc id="desc">Applications, commerce, users, cloud services and data connected through a central Lotus orchestration hub.</desc>
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="48%" r="58%">
+      <stop offset="0" stop-color="#1E63E9" stop-opacity=".22"/>
+      <stop offset=".55" stop-color="#0F356D" stop-opacity=".10"/>
+      <stop offset="1" stop-color="#0A1D3D" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#153B73" stop-opacity=".90"/>
+      <stop offset="1" stop-color="#081B3A" stop-opacity=".92"/>
+    </linearGradient>
+    <linearGradient id="blueStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#74BEFF"/>
+      <stop offset="1" stop-color="#1E63E9"/>
+    </linearGradient>
+    <linearGradient id="goldStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFD27A"/>
+      <stop offset="1" stop-color="#F2B84B"/>
+    </linearGradient>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="nodeGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#4DA3FF" flood-opacity=".35"/>
+    </filter>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" fill="none" stroke="#4DA3FF" stroke-opacity=".055" stroke-width="1"/>
+    </pattern>
+    <style>
+      .orbit { fill:none; stroke:#4DA3FF; stroke-opacity:.12; stroke-width:1.2; }
+      .route { fill:none; stroke:url(#blueStroke); stroke-width:2; stroke-linecap:round; stroke-dasharray:7 10; animation: flow 7s linear infinite; }
+      .route.gold { stroke:url(#goldStroke); stroke-opacity:.9; animation-duration:9s; }
+      .pulse { filter:url(#nodeGlow); }
+      .float-a { animation: driftA 6s ease-in-out infinite; transform-box:fill-box; transform-origin:center; }
+      .float-b { animation: driftB 7.5s ease-in-out infinite; transform-box:fill-box; transform-origin:center; }
+      .float-c { animation: driftC 8.5s ease-in-out infinite; transform-box:fill-box; transform-origin:center; }
+      .core { animation: breathe 4.5s ease-in-out infinite; transform-box:fill-box; transform-origin:center; }
+      .spark { animation: blink 2.8s ease-in-out infinite; }
+      .spark.d2 { animation-delay:.9s; }
+      .spark.d3 { animation-delay:1.7s; }
+      @keyframes flow { to { stroke-dashoffset:-136; } }
+      @keyframes driftA { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+      @keyframes driftB { 0%,100%{transform:translate(0,0)} 50%{transform:translate(5px,-5px)} }
+      @keyframes driftC { 0%,100%{transform:translateY(0)} 50%{transform:translateY(6px)} }
+      @keyframes breathe { 0%,100%{opacity:.88; transform:scale(1)} 50%{opacity:1; transform:scale(1.035)} }
+      @keyframes blink { 0%,100%{opacity:.25} 50%{opacity:1} }
+      @media (prefers-reduced-motion: reduce) { * { animation:none!important; } }
+    </style>
+  </defs>
+
+  <rect width="920" height="650" fill="url(#bgGlow)"/>
+  <ellipse cx="470" cy="322" rx="390" ry="270" fill="url(#grid)" opacity=".8"/>
+  <ellipse class="orbit" cx="470" cy="322" rx="305" ry="220"/>
+  <ellipse class="orbit" cx="470" cy="322" rx="238" ry="168"/>
+  <ellipse class="orbit" cx="470" cy="322" rx="170" ry="118"/>
+
+  <!-- flowing architecture routes -->
+  <path class="route" d="M196 170 C285 180 315 240 380 284"/>
+  <path class="route gold" d="M728 154 C650 184 626 239 565 286"/>
+  <path class="route" d="M760 452 C666 433 620 390 566 356"/>
+  <path class="route" d="M192 463 C280 430 330 390 382 351"/>
+  <path class="route" d="M465 550 C465 475 468 426 469 395"/>
+  <path class="route gold" d="M470 244 C472 202 480 165 493 118"/>
+
+  <!-- application node -->
+  <g class="float-a">
+    <rect x="72" y="92" width="230" height="145" rx="24" fill="url(#panel)" stroke="#4DA3FF" stroke-opacity=".28"/>
+    <rect x="94" y="115" width="186" height="98" rx="14" fill="#071A38" stroke="#4DA3FF" stroke-opacity=".18"/>
+    <circle cx="111" cy="130" r="4" fill="#F2B84B"/>
+    <circle cx="126" cy="130" r="4" fill="#4DA3FF" opacity=".65"/>
+    <path d="M112 153H174M112 167H203M112 181H158" stroke="#9DD2FF" stroke-width="5" stroke-linecap="round" opacity=".55"/>
+    <rect x="210" y="148" width="49" height="45" rx="9" fill="#1E63E9" fill-opacity=".16" stroke="#4DA3FF" stroke-opacity=".35"/>
+    <path d="M222 181l9-14 8 7 9-15" fill="none" stroke="#F2B84B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="94" y="82" fill="#8CC9FF" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2">APPLICATIONS</text>
+  </g>
+
+  <!-- commerce/payment node -->
+  <g class="float-b">
+    <rect x="665" y="82" width="188" height="150" rx="24" fill="url(#panel)" stroke="#F2B84B" stroke-opacity=".30"/>
+    <rect x="694" y="122" width="128" height="79" rx="14" fill="#0B244B" stroke="#F2B84B" stroke-opacity=".36"/>
+    <path d="M694 145H822" stroke="#4DA3FF" stroke-width="8" opacity=".58"/>
+    <rect x="710" y="166" width="29" height="16" rx="4" fill="#F2B84B" opacity=".85"/>
+    <circle cx="785" cy="174" r="8" fill="#4DA3FF" opacity=".65"/>
+    <circle cx="800" cy="174" r="8" fill="#F2B84B" opacity=".75"/>
+    <text x="685" y="112" fill="#FFD27A" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2">COMMERCE</text>
+  </g>
+
+  <!-- user/device node -->
+  <g class="float-c">
+    <rect x="706" y="394" width="154" height="156" rx="24" fill="url(#panel)" stroke="#4DA3FF" stroke-opacity=".24"/>
+    <circle cx="783" cy="435" r="22" fill="#1E63E9" fill-opacity=".16" stroke="#4DA3FF" stroke-opacity=".45"/>
+    <circle cx="783" cy="429" r="8" fill="#9DD2FF" opacity=".8"/>
+    <path d="M766 449c7-11 27-11 34 0" fill="none" stroke="#9DD2FF" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+    <rect x="756" y="475" width="54" height="48" rx="10" fill="#071A38" stroke="#4DA3FF" stroke-opacity=".36"/>
+    <path d="M768 487H798M768 498H790M768 509H800" stroke="#4DA3FF" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+    <text x="728" y="382" fill="#8CC9FF" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2">USERS</text>
+  </g>
+
+  <!-- data node -->
+  <g class="float-b">
+    <rect x="70" y="393" width="218" height="164" rx="24" fill="url(#panel)" stroke="#4DA3FF" stroke-opacity=".26"/>
+    <g transform="translate(112 430)">
+      <ellipse cx="54" cy="12" rx="48" ry="12" fill="#1E63E9" fill-opacity=".22" stroke="#4DA3FF" stroke-opacity=".6"/>
+      <path d="M6 12v61c0 7 21 12 48 12s48-5 48-12V12" fill="#0A2146" stroke="#4DA3FF" stroke-opacity=".55"/>
+      <path d="M6 32c0 7 21 12 48 12s48-5 48-12M6 52c0 7 21 12 48 12s48-5 48-12" fill="none" stroke="#4DA3FF" stroke-opacity=".42"/>
+      <circle cx="88" cy="73" r="4" fill="#F2B84B" class="spark"/>
+    </g>
+    <text x="101" y="381" fill="#8CC9FF" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2">DATA</text>
+  </g>
+
+  <!-- cloud/service node -->
+  <g class="float-a">
+    <rect x="368" y="28" width="208" height="103" rx="24" fill="url(#panel)" stroke="#4DA3FF" stroke-opacity=".24"/>
+    <path d="M427 92h84c18 0 30-10 30-25 0-14-11-24-27-25-5-14-17-22-33-22-18 0-31 10-36 26-17 1-29 10-29 24 0 13 10 22 25 22z" fill="#1E63E9" fill-opacity=".14" stroke="#77BEFF" stroke-opacity=".62"/>
+    <circle cx="452" cy="68" r="5" fill="#4DA3FF" class="spark"/>
+    <circle cx="478" cy="68" r="5" fill="#F2B84B" class="spark d2"/>
+    <circle cx="504" cy="68" r="5" fill="#4DA3FF" class="spark d3"/>
+    <text x="402" y="20" fill="#8CC9FF" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2">CLOUD + APIs</text>
+  </g>
+
+  <!-- central Lotus orchestration core -->
+  <g class="core">
+    <circle cx="470" cy="322" r="116" fill="#0A1D3D" fill-opacity=".92" stroke="#4DA3FF" stroke-opacity=".18"/>
+    <circle cx="470" cy="322" r="91" fill="#102E61" fill-opacity=".88" stroke="url(#blueStroke)" stroke-width="2" filter="url(#softGlow)"/>
+    <circle cx="470" cy="322" r="69" fill="#081B3A" stroke="#F2B84B" stroke-opacity=".28"/>
+    <image href="/lotus-mark.png" x="420" y="272" width="100" height="100" preserveAspectRatio="xMidYMid meet"/>
+    <circle cx="470" cy="322" r="108" fill="none" stroke="#4DA3FF" stroke-opacity=".22" stroke-dasharray="3 11"/>
+  </g>
+
+  <!-- integration satellites -->
+  <g filter="url(#nodeGlow)">
+    <circle cx="343" cy="271" r="7" fill="#4DA3FF" class="pulse"/>
+    <circle cx="590" cy="272" r="7" fill="#F2B84B" class="pulse"/>
+    <circle cx="604" cy="382" r="7" fill="#4DA3FF" class="pulse"/>
+    <circle cx="337" cy="389" r="7" fill="#4DA3FF" class="pulse"/>
+  </g>
+
+  <!-- bottom infrastructure node -->
+  <g class="float-c">
+    <rect x="371" y="530" width="205" height="88" rx="22" fill="url(#panel)" stroke="#4DA3FF" stroke-opacity=".24"/>
+    <rect x="397" y="554" width="151" height="15" rx="7.5" fill="#071A38" stroke="#4DA3FF" stroke-opacity=".38"/>
+    <rect x="397" y="578" width="151" height="15" rx="7.5" fill="#071A38" stroke="#4DA3FF" stroke-opacity=".38"/>
+    <circle cx="413" cy="561.5" r="3" fill="#4DA3FF"/>
+    <circle cx="426" cy="561.5" r="3" fill="#F2B84B"/>
+    <circle cx="413" cy="585.5" r="3" fill="#4DA3FF"/>
+    <text x="408" y="522" fill="#8CC9FF" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2">INFRASTRUCTURE</text>
+  </g>
+</svg>
