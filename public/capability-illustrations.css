@@ -1,0 +1,85 @@
+@media (min-width: 1024px) {
+  /* Custom Software & Applications: modern desktop + mobile product UI. */
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    top: .75rem;
+    height: 205px;
+    border: 0;
+    border-radius: 0;
+    background: url("/illustrations/custom-software.svg") center / contain no-repeat;
+    box-shadow: none;
+    transform: none;
+    opacity: .98;
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(1)::after {
+    display: none;
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(1) {
+    padding-top: 13.4rem;
+  }
+
+  /* Systems & Data Integration: actual architecture diagram with connected endpoints. */
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    right: .9rem;
+    top: .8rem;
+    width: 48%;
+    height: calc(100% - 1.6rem);
+    border: 0;
+    border-radius: 0;
+    background: url("/illustrations/systems-data.svg") center / contain no-repeat;
+    box-shadow: none;
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(2)::after {
+    display: none;
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(2) {
+    padding-right: 49%;
+  }
+
+  /* Mobile & Connected Technology: multiple devices, not a generic phone glyph. */
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    right: .65rem;
+    top: 50%;
+    width: 116px;
+    height: 126px;
+    transform: translateY(-50%);
+    border: 0;
+    border-radius: 0;
+    background: url("/illustrations/mobile-connected.svg") center / contain no-repeat;
+    box-shadow: none;
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(3) {
+    padding-right: 8.2rem;
+  }
+
+  /* Cloud & Technology Consulting: recognizable cloud architecture + infrastructure. */
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    right: .55rem;
+    top: 50%;
+    width: 118px;
+    height: 122px;
+    transform: translateY(-50%);
+    border: 0;
+    border-radius: 0;
+    background: url("/illustrations/cloud-consulting.svg") center / contain no-repeat;
+    box-shadow: none;
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(4) {
+    padding-right: 8rem;
+  }
+}
