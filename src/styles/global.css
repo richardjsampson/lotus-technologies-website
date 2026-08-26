@@ -10,7 +10,6 @@
 }
 
 @media (min-width: 1024px) {
-  /* Give the homepage hero visual enough room for a dominant hub and substantial cards. */
   main > section:first-child {
     max-width: 1500px;
     grid-template-columns: minmax(0, 0.72fr) minmax(720px, 1.28fr);
@@ -19,28 +18,99 @@
     padding-right: 2.5rem;
   }
 
-  /* Tighten the outer integration panel slightly to return width to its contents. */
   main > section:first-child > div:nth-child(2) > div:nth-child(2) {
     padding: 1.75rem;
   }
 
-  /* Protect the two card columns from being squeezed by the larger Lotus hub. */
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child {
-    grid-template-columns: minmax(190px, 1fr) 11rem minmax(190px, 1fr);
+    grid-template-columns: minmax(190px, 1fr) 10rem minmax(190px, 1fr);
     column-gap: 1.25rem;
     row-gap: 1.5rem;
   }
 
-  /* Keep all four integration cards visually equal and more substantial. */
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(1),
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(3),
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(7),
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(9) {
+    position: relative;
     min-height: 112px;
-    padding: 1.5rem;
+    padding: 1.5rem 4.75rem 1.5rem 1.5rem;
+    overflow: hidden;
   }
 
-  /* Preserve the intended Problems We Solve desktop split after the last manual edit. */
+  /* Shared micrographic container */
+  main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(1)::after,
+  main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(3)::after,
+  main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(7)::after,
+  main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(9)::after {
+    content: "";
+    position: absolute;
+    top: 1.35rem;
+    right: 1.35rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid rgba(77, 163, 255, 0.22);
+    border-radius: 0.75rem;
+    background-color: rgba(30, 99, 233, 0.08);
+    box-shadow: inset 0 0 18px rgba(77, 163, 255, 0.06);
+  }
+
+  /* Systems: connected nodes */
+  main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(1)::after {
+    background:
+      radial-gradient(circle at 30% 30%, rgba(77,163,255,.95) 0 2px, transparent 3px),
+      radial-gradient(circle at 70% 30%, rgba(77,163,255,.75) 0 2px, transparent 3px),
+      radial-gradient(circle at 50% 70%, rgba(77,163,255,.9) 0 2px, transparent 3px),
+      linear-gradient(32deg, transparent 47%, rgba(77,163,255,.28) 48% 52%, transparent 53%),
+      linear-gradient(-32deg, transparent 47%, rgba(77,163,255,.28) 48% 52%, transparent 53%),
+      rgba(30,99,233,.08);
+  }
+
+  /* Commerce: payment-card motif */
+  main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(3)::after {
+    background:
+      linear-gradient(to bottom, transparent 30%, rgba(77,163,255,.55) 31% 39%, transparent 40%),
+      radial-gradient(circle at 72% 68%, rgba(77,163,255,.8) 0 3px, transparent 4px),
+      rgba(30,99,233,.08);
+  }
+
+  /* Applications: device / interface motif */
+  main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(7)::after {
+    border-radius: 0.65rem;
+    background:
+      linear-gradient(to bottom, transparent 16%, rgba(77,163,255,.35) 17% 20%, transparent 21% 76%, rgba(77,163,255,.35) 77% 80%, transparent 81%),
+      linear-gradient(to right, transparent 20%, rgba(77,163,255,.2) 21% 24%, transparent 25% 75%, rgba(77,163,255,.2) 76% 79%, transparent 80%),
+      rgba(30,99,233,.08);
+  }
+
+  /* Data: stacked data layers */
+  main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(9)::after {
+    background:
+      repeating-linear-gradient(to bottom, transparent 0 7px, rgba(77,163,255,.45) 8px 9px, transparent 10px 12px),
+      rgba(30,99,233,.08);
+  }
+
+  /* Pull the hub back one step while keeping the mark visually strong. */
+  main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(5) {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(5) img {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  /* Reduce text density under the visual. */
+  main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) p:last-child {
+    display: none;
+  }
+
+  main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) {
+    margin-top: 2rem;
+    padding-top: 1rem;
+  }
+
   main > section:nth-child(3) > div:nth-child(3) > div:first-child {
     grid-template-columns: 0.75fr 1.5fr;
   }
