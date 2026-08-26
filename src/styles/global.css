@@ -311,7 +311,6 @@
     grid-template-columns: .75fr 1.5fr;
   }
 
-  /* HOW WE HELP: move from four equal cards to a capability map with hierarchy. */
   main > section:nth-child(4) {
     position: relative;
     overflow: hidden;
@@ -350,13 +349,30 @@
 
   main > section:nth-child(4) > div > div:first-child > div:first-child h2 {
     max-width: 10ch;
-    font-size: clamp(2.8rem, 4vw, 4.5rem);
+    font-size: 0;
+    line-height: .98;
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:first-child h2::after {
+    content: "Technology should fit the business — not the other way around.";
+    display: block;
+    max-width: 11ch;
+    font-size: clamp(2.65rem, 3.7vw, 4.2rem);
     line-height: .98;
   }
 
   main > section:nth-child(4) > div > div:first-child > div:first-child > p:nth-of-type(2) {
-    max-width: 29rem;
+    max-width: 27rem;
+    font-size: 0;
     color: rgba(255,255,255,.58);
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:first-child > p:nth-of-type(2)::after {
+    content: "We combine software, integrations, devices, data, and cloud technology around the problem you’re trying to solve.";
+    display: block;
+    margin-top: 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
   }
 
   main > section:nth-child(4) > div > div:first-child > div:nth-child(2) {
@@ -387,7 +403,6 @@
     background: linear-gradient(145deg, rgba(30,99,233,.11), rgba(255,255,255,.025));
   }
 
-  /* Systems + Data gets the dominant position. */
   main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(2) {
     grid-column: 1 / span 2;
     grid-row: 1;
@@ -399,7 +414,6 @@
       linear-gradient(145deg, rgba(30,99,233,.12), rgba(255,255,255,.025));
   }
 
-  /* Custom software is the strong secondary vertical capability. */
   main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(1) {
     grid-column: 3;
     grid-row: 1 / span 2;
@@ -424,7 +438,6 @@
     padding-right: 6rem;
   }
 
-  /* Remove brochure-like numbering and repeated learn-more links. */
   main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a > p:first-child,
   main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a > p:last-child {
     display: none;
@@ -448,17 +461,38 @@
     position: relative;
     z-index: 2;
     margin-top: .7rem;
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    display: block;
+    overflow: visible;
     max-width: 24rem;
     color: rgba(255,255,255,.54);
-    line-height: 1.55;
-    font-size: .93rem;
+    line-height: 1.5;
+    font-size: 0;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
   }
 
-  /* Systems/Data visual: several recognizable system nodes converging into one integration bus. */
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a > p:nth-of-type(2)::after {
+    display: block;
+    font-size: .93rem;
+    line-height: 1.5;
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(1) > p:nth-of-type(2)::after {
+    content: "Build software around the way your business actually works.";
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(2) > p:nth-of-type(2)::after {
+    content: "Connect platforms, data, and workflows into one coordinated system.";
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(3) > p:nth-of-type(2)::after {
+    content: "Connect people, devices, and back-end systems in the field.";
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(4) > p:nth-of-type(2)::after {
+    content: "Plan the right architecture, migration, and infrastructure strategy.";
+  }
+
   main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(2)::before {
     content: "";
     position: absolute;
@@ -496,7 +530,6 @@
     color: rgba(141,196,255,.70);
   }
 
-  /* Custom software visual: layered application windows. */
   main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(1)::before,
   main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(1)::after {
     content: "";
@@ -526,7 +559,6 @@
     transform: rotate(3deg);
   }
 
-  /* Mobile and Cloud get compact semantic silhouettes. */
   main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(3)::after {
     content: "";
     position: absolute;
