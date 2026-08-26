@@ -132,8 +132,9 @@
 
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(3) {
     top: 20px;
-    right: 16px;
-    width: 254px;
+    right: 8px;
+    width: 292px;
+    padding-right: 5.2rem;
   }
 
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(7) {
