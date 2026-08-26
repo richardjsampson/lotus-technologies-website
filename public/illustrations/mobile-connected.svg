@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" fill="none">
+  <defs>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g opacity=".65" stroke="#4DA3FF" stroke-width="2">
+    <path d="M78 95C102 81 114 72 132 64"/>
+    <path d="M216 105C196 88 184 77 167 67"/>
+  </g>
+  <g>
+    <rect x="25" y="76" width="90" height="62" rx="10" fill="#0D2B59" stroke="#4DA3FF" stroke-opacity=".35"/>
+    <rect x="34" y="86" width="72" height="38" rx="5" fill="#14366E"/>
+    <path d="M45 114l13-10 12 5 16-14 10 7" stroke="#4DA3FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M49 145h42" stroke="#8DC4FF" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+  </g>
+  <g filter="url(#glow)">
+    <rect x="118" y="28" width="64" height="132" rx="16" fill="#081C3B" stroke="#8DC4FF" stroke-opacity=".55"/>
+    <rect x="126" y="42" width="48" height="94" rx="9" fill="#12356D"/>
+    <circle cx="150" cy="149" r="4" fill="#4DA3FF"/>
+    <rect x="133" y="51" width="34" height="10" rx="5" fill="#1E63E9" fill-opacity=".35"/>
+    <circle cx="141" cy="56" r="3" fill="#F2B84B"/>
+    <rect x="133" y="70" width="34" height="24" rx="6" fill="#1E63E9" fill-opacity=".18"/>
+    <path d="M138 88l8-8 7 4 9-10" stroke="#8DC4FF" stroke-width="2.5" stroke-linecap="round"/>
+    <rect x="133" y="101" width="15" height="22" rx="5" fill="#1E63E9" fill-opacity=".25"/>
+    <rect x="152" y="101" width="15" height="22" rx="5" fill="#F2B84B" fill-opacity=".16"/>
+  </g>
+  <g>
+    <rect x="196" y="68" width="78" height="88" rx="12" fill="#0D2B59" stroke="#4DA3FF" stroke-opacity=".35"/>
+    <rect x="207" y="79" width="56" height="18" rx="5" fill="#1E63E9" fill-opacity=".18"/>
+    <rect x="207" y="106" width="56" height="36" rx="6" fill="#12356D"/>
+    <path d="M216 130h15M216 121h28M216 112h21" stroke="#8DC4FF" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <g>
+    <circle cx="80" cy="49" r="15" fill="#1E63E9" fill-opacity=".14" stroke="#4DA3FF" stroke-opacity=".32"/>
+    <path d="M74 49h12M80 43v12" stroke="#8DC4FF" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="228" cy="40" r="15" fill="#F2B84B" fill-opacity=".1" stroke="#F2B84B" stroke-opacity=".3"/>
+    <path d="M222 44l6-10 6 10M228 34v14" stroke="#F2B84B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
