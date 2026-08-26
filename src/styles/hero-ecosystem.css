@@ -1,0 +1,159 @@
+@media (min-width: 1024px) {
+  main > section:first-child {
+    min-height: 82vh;
+    max-width: 1600px;
+    grid-template-columns: minmax(0,.78fr) minmax(720px,1.22fr);
+    column-gap: 3.25rem;
+    padding-top: 4.5rem;
+    padding-bottom: 5rem;
+  }
+
+  main > section:first-child::before {
+    left: 43%;
+    top: 47%;
+    width: 900px;
+    height: 700px;
+    transform: translate(-3%,-50%);
+    background:
+      radial-gradient(circle at 58% 43%, rgba(30,99,233,.23), transparent 32%),
+      radial-gradient(circle at 78% 66%, rgba(242,184,75,.07), transparent 24%),
+      radial-gradient(circle at 72% 54%, rgba(77,163,255,.10), transparent 47%);
+    filter: blur(10px);
+  }
+
+  main > section:first-child > div:first-child {
+    position: relative;
+    z-index: 4;
+    max-width: 680px;
+  }
+
+  main > section:first-child > div:first-child > p:first-child {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    color: rgba(157,210,255,.88);
+  }
+
+  main > section:first-child > div:first-child > p:first-child::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #F2B84B;
+    box-shadow: 0 0 18px rgba(242,184,75,.6);
+  }
+
+  main > section:first-child h1 {
+    max-width: 9.6ch;
+    font-size: clamp(4.3rem,5.4vw,6.25rem);
+    line-height: .94;
+    letter-spacing: -.052em;
+    background: linear-gradient(112deg,#fff 0%,#fff 53%,#CBE6FF 75%,#F6C96E 112%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-wrap: balance;
+    text-shadow: 0 16px 48px rgba(0,0,0,.16);
+  }
+
+  main > section:first-child > div:first-child > p:nth-of-type(2) {
+    max-width: 34rem;
+    font-size: 1.16rem;
+    line-height: 1.65;
+    color: rgba(255,255,255,.67);
+  }
+
+  main > section:first-child > div:first-child > div:last-child {
+    position: relative;
+  }
+
+  main > section:first-child > div:first-child > div:last-child::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1.25rem;
+    width: 7rem;
+    height: 1px;
+    background: linear-gradient(90deg,rgba(242,184,75,.9),rgba(77,163,255,.35),transparent);
+  }
+
+  main > section:first-child > div:nth-child(2) {
+    position: relative;
+    z-index: 2;
+    min-width: 0;
+  }
+
+  main > section:first-child > div:nth-child(2) > div:first-child {
+    inset: 5% 0 0 4%;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle, rgba(30,99,233,.23) 0%, rgba(77,163,255,.08) 38%, transparent 70%);
+    filter: blur(38px);
+  }
+
+  main > section:first-child > div:nth-child(2) > div:nth-child(2) {
+    height: 620px;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  main > section:first-child > div:nth-child(2) > div:nth-child(2)::before {
+    inset: -36px -18px;
+    background:
+      radial-gradient(ellipse at 51% 49%, transparent 48%, rgba(10,29,61,.42) 75%, #0A1D3D 96%);
+    z-index: 2;
+  }
+
+  main > section:first-child > div:nth-child(2) > div:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    inset: -20px -32px -24px -38px;
+    background: url("/illustrations/hero-ecosystem.svg") center / contain no-repeat;
+    filter: drop-shadow(0 26px 54px rgba(0,0,0,.24));
+    pointer-events: none;
+  }
+
+  main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:first-child,
+  main > section:first-child > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  main > section:first-child > div:nth-child(2) > div:nth-child(2)::after {
+    inset: -34px -60px -36px -46px;
+  }
+}
+
+@media (max-width: 1023px) {
+  main > section:first-child > div:nth-child(2) > div:nth-child(2) {
+    min-height: 440px;
+    position: relative;
+    overflow: visible;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  main > section:first-child > div:nth-child(2) > div:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    inset: -12px;
+    background: url("/illustrations/hero-ecosystem.svg") center / contain no-repeat;
+  }
+
+  main > section:first-child > div:nth-child(2) > div:nth-child(2) > * {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main > section:first-child * {
+    animation: none !important;
+  }
+}
