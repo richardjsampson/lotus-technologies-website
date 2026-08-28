@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Lotus Technologies flower emblem</title>
+  <desc id="desc">A four-petal lotus emblem in deep navy, royal blue, and electric cyan.</desc>
+  <defs>
+    <linearGradient id="center" x1="0.15" y1="0.15" x2="0.9" y2="0.88">
+      <stop offset="0" stop-color="#061A45"/>
+      <stop offset="0.48" stop-color="#0B3FC6"/>
+      <stop offset="1" stop-color="#16C8FF"/>
+    </linearGradient>
+    <linearGradient id="left" x1="0.12" y1="0.2" x2="0.95" y2="0.85">
+      <stop offset="0" stop-color="#0A2C82"/>
+      <stop offset="0.58" stop-color="#0C54F2"/>
+      <stop offset="1" stop-color="#11C4F4"/>
+    </linearGradient>
+    <linearGradient id="right" x1="0.05" y1="0.75" x2="0.95" y2="0.15">
+      <stop offset="0" stop-color="#071D58"/>
+      <stop offset="0.5" stop-color="#0B55F2"/>
+      <stop offset="1" stop-color="#21D0FF"/>
+    </linearGradient>
+    <linearGradient id="base" x1="0.08" y1="0.35" x2="0.92" y2="0.72">
+      <stop offset="0" stop-color="#0A42D8"/>
+      <stop offset="0.45" stop-color="#061A56"/>
+      <stop offset="1" stop-color="#0C61F4"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#65E5FF" stop-opacity="0.62"/>
+      <stop offset="0.5" stop-color="#2A83FF" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#001A62" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#041636" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#soft)">
+    <!-- lower petal -->
+    <path d="M82 377C145 340 214 340 256 368C298 340 367 340 430 377C386 430 320 454 256 448C192 454 126 430 82 377Z" fill="url(#base)"/>
+
+    <!-- left petal -->
+    <path d="M255 387C205 359 150 324 113 279C77 236 58 187 64 129C123 127 175 145 215 182C251 216 270 269 255 387Z" fill="url(#left)"/>
+    <path d="M73 137C126 143 178 167 214 203C237 226 250 254 256 287C223 248 182 217 136 194C111 181 89 163 73 137Z" fill="url(#shine)" opacity="0.9"/>
+
+    <!-- right petal -->
+    <path d="M257 387C307 359 362 324 399 279C435 236 454 187 448 129C389 127 337 145 297 182C261 216 242 269 257 387Z" fill="url(#right)"/>
+    <path d="M439 137C386 143 334 167 298 203C275 226 262 254 256 287C289 248 330 217 376 194C401 181 423 163 439 137Z" fill="url(#shine)" opacity="0.75"/>
+
+    <!-- central petal -->
+    <path d="M256 54C304 111 327 174 322 239C318 294 292 342 256 387C220 342 194 294 190 239C185 174 208 111 256 54Z" fill="url(#center)"/>
+    <path d="M256 66C283 105 298 151 297 198C296 257 280 309 256 356V66Z" fill="url(#shine)" opacity="0.72"/>
+
+    <!-- subtle overlap shadows -->
+    <path d="M256 387C232 326 211 270 206 218C230 264 247 311 256 387Z" fill="#031641" opacity="0.42"/>
+    <path d="M256 387C280 326 301 270 306 218C282 264 265 311 256 387Z" fill="#031641" opacity="0.28"/>
+  </g>
+</svg>
