@@ -27,9 +27,6 @@
     <filter id="nodeGlow" x="-60%" y="-60%" width="220%" height="220%">
       <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#4DA3FF" flood-opacity=".35"/>
     </filter>
-    <filter id="goldGlow" x="-80%" y="-80%" width="260%" height="260%">
-      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#F2B84B" flood-opacity=".38"/>
-    </filter>
     <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
       <path d="M34 0H0V34" fill="none" stroke="#4DA3FF" stroke-opacity=".055" stroke-width="1"/>
     </pattern>
@@ -130,9 +127,6 @@
     <circle cx="470" cy="322" r="96" fill="#102E61" fill-opacity=".88" stroke="url(#blueStroke)" stroke-width="2" filter="url(#softGlow)"/>
     <circle cx="470" cy="322" r="79" fill="url(#coreWarmth)"/>
     <circle cx="470" cy="322" r="68" fill="#081B3A" stroke="#4DA3FF" stroke-width="1.5" stroke-opacity=".35"/>
-    <path d="M414 281a80 80 0 0 1 34-28" fill="none" stroke="#FFD27A" stroke-width="4" stroke-linecap="round" opacity=".62" filter="url(#goldGlow)"/>
-    <path d="M524 278a80 80 0 0 1 22 34" fill="none" stroke="#F2B84B" stroke-width="3.5" stroke-linecap="round" opacity=".48" filter="url(#goldGlow)"/>
-    <path d="M515 378a80 80 0 0 1-28 18" fill="none" stroke="#FFD27A" stroke-width="3" stroke-linecap="round" opacity=".38"/>
     <circle cx="470" cy="322" r="110" fill="none" stroke="#4DA3FF" stroke-opacity=".22" stroke-dasharray="3 11"/>
   </g>
 
