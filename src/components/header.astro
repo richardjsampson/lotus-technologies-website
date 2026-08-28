@@ -1,26 +1,107 @@
-<header class="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
-	<a href="/" class="flex items-center gap-3">
-		<img
-			src="/lotus-mark.png"
-			alt="Lotus Technologies"
-			class="h-11 w-11 object-contain"
-		/>
+<header class="sticky top-0 z-50 w-full border-b border-white/10 bg-lotus-navy/90 backdrop-blur-xl md:static md:border-b-0 md:bg-transparent md:backdrop-blur-none">
+	<div class="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 md:py-6 lg:px-8">
+		<a href="/" class="relative z-50 flex items-center gap-3" aria-label="Lotus Technologies home">
+			<img
+				src="/lotus-mark.png"
+				alt=""
+				class="h-10 w-10 object-contain md:h-11 md:w-11"
+			/>
 
-		<div>
-			<p class="text-sm font-semibold uppercase tracking-[0.22em] text-lotus-sky">
-				Lotus
-			</p>
-			<p class="text-xs uppercase tracking-[0.18em] text-white/60">
-				Technologies
-			</p>
-		</div>
-	</a>
+			<div>
+				<p class="text-sm font-semibold uppercase tracking-[0.22em] text-lotus-sky">
+					Lotus
+				</p>
+				<p class="text-xs uppercase tracking-[0.18em] text-white/60">
+					Technologies
+				</p>
+			</div>
+		</a>
 
-	<nav class="hidden items-center gap-8 text-sm font-medium text-white/80 md:flex">
-	<a href="/solutions" class="transition hover:text-white">Solutions</a>
-	<a href="/our-process" class="transition hover:text-white">Our Process</a>
-	<a href="/case-studies" class="transition hover:text-white">Case Studies</a>
-	<a href="/about" class="transition hover:text-white">About</a>
-	<a href="/contact" class="transition hover:text-white">Contact</a>
-</nav>
+		<nav class="hidden items-center gap-8 text-sm font-medium text-white/80 md:flex" aria-label="Primary navigation">
+			<a href="/solutions" class="transition hover:text-white">Solutions</a>
+			<a href="/our-process" class="transition hover:text-white">Our Process</a>
+			<a href="/case-studies" class="transition hover:text-white">Case Studies</a>
+			<a href="/about" class="transition hover:text-white">About</a>
+			<a href="/contact" class="transition hover:text-white">Contact</a>
+		</nav>
+
+		<button
+			type="button"
+			class="mobile-menu-toggle relative z-50 flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/[0.05] text-white transition hover:bg-white/[0.09] md:hidden"
+			aria-label="Open navigation menu"
+			aria-expanded="false"
+			aria-controls="mobile-navigation"
+		>
+			<span class="sr-only">Menu</span>
+			<span class="mobile-menu-icon flex h-5 w-6 flex-col justify-between" aria-hidden="true">
+				<span class="block h-[2px] w-full origin-center rounded-full bg-current transition duration-300"></span>
+				<span class="block h-[2px] w-full rounded-full bg-current transition duration-300"></span>
+				<span class="block h-[2px] w-full origin-center rounded-full bg-current transition duration-300"></span>
+			</span>
+		</button>
+	</div>
+
+	<div
+		id="mobile-navigation"
+		class="mobile-menu-panel pointer-events-none absolute left-0 right-0 top-full overflow-hidden border-b border-white/10 bg-[#081a37]/97 opacity-0 shadow-2xl backdrop-blur-xl transition duration-300 md:hidden"
+		aria-hidden="true"
+	>
+		<nav class="mx-auto flex max-w-7xl flex-col px-6 pb-7 pt-3" aria-label="Mobile navigation">
+			<a href="/solutions" class="border-b border-white/10 py-4 text-lg font-medium text-white/85 transition hover:text-white">Solutions</a>
+			<a href="/our-process" class="border-b border-white/10 py-4 text-lg font-medium text-white/85 transition hover:text-white">Our Process</a>
+			<a href="/case-studies" class="border-b border-white/10 py-4 text-lg font-medium text-white/85 transition hover:text-white">Case Studies</a>
+			<a href="/about" class="border-b border-white/10 py-4 text-lg font-medium text-white/85 transition hover:text-white">About</a>
+			<a href="/contact" class="mt-5 inline-flex items-center justify-center rounded-full bg-white px-5 py-3.5 text-sm font-semibold text-lotus-navy transition hover:bg-lotus-sky">Discuss Your Challenge</a>
+		</nav>
+	</div>
 </header>
+
+<style>
+	.mobile-menu-panel.is-open {
+		pointer-events: auto;
+		opacity: 1;
+	}
+
+	.mobile-menu-toggle.is-open .mobile-menu-icon span:nth-child(1) {
+		transform: translateY(9px) rotate(45deg);
+	}
+
+	.mobile-menu-toggle.is-open .mobile-menu-icon span:nth-child(2) {
+		opacity: 0;
+		transform: scaleX(0.3);
+	}
+
+	.mobile-menu-toggle.is-open .mobile-menu-icon span:nth-child(3) {
+		transform: translateY(-9px) rotate(-45deg);
+	}
+</style>
+
+<script>
+	const toggle = document.querySelector<HTMLButtonElement>('.mobile-menu-toggle');
+	const panel = document.querySelector<HTMLElement>('.mobile-menu-panel');
+
+	if (toggle && panel) {
+		const closeMenu = () => {
+			toggle.classList.remove('is-open');
+			panel.classList.remove('is-open');
+			toggle.setAttribute('aria-expanded', 'false');
+			toggle.setAttribute('aria-label', 'Open navigation menu');
+			panel.setAttribute('aria-hidden', 'true');
+		};
+
+		toggle.addEventListener('click', () => {
+			const opening = toggle.getAttribute('aria-expanded') !== 'true';
+			toggle.classList.toggle('is-open', opening);
+			panel.classList.toggle('is-open', opening);
+			toggle.setAttribute('aria-expanded', String(opening));
+			toggle.setAttribute('aria-label', opening ? 'Close navigation menu' : 'Open navigation menu');
+			panel.setAttribute('aria-hidden', String(!opening));
+		});
+
+		panel.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+
+		window.addEventListener('resize', () => {
+			if (window.innerWidth >= 768) closeMenu();
+		});
+	}
+</script>
