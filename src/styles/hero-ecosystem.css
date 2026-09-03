@@ -1,24 +1,24 @@
 @media (min-width: 1024px) {
   main > section:first-child {
-    min-height: 82vh;
-    max-width: 1600px;
-    grid-template-columns: minmax(0,.78fr) minmax(720px,1.22fr);
-    column-gap: 3.25rem;
+    min-height: 86vh;
+    max-width: 1640px;
+    grid-template-columns: minmax(0,.76fr) minmax(740px,1.24fr);
+    column-gap: 3rem;
     padding-top: 4.5rem;
     padding-bottom: 5rem;
   }
 
   main > section:first-child::before {
-    left: 43%;
+    left: 42%;
     top: 47%;
-    width: 900px;
-    height: 700px;
-    transform: translate(-3%,-50%);
+    width: 980px;
+    height: 760px;
+    transform: translate(-2%,-50%);
     background:
-      radial-gradient(circle at 58% 43%, rgba(30,99,233,.23), transparent 32%),
-      radial-gradient(circle at 78% 66%, rgba(242,184,75,.07), transparent 24%),
-      radial-gradient(circle at 72% 54%, rgba(77,163,255,.10), transparent 47%);
-    filter: blur(10px);
+      radial-gradient(circle at 58% 44%, rgba(30,99,233,.28), transparent 31%),
+      radial-gradient(circle at 76% 68%, rgba(242,184,75,.08), transparent 24%),
+      radial-gradient(circle at 70% 50%, rgba(77,163,255,.12), transparent 48%);
+    filter: blur(12px);
   }
 
   main > section:first-child > div:first-child {
@@ -31,7 +31,7 @@
     display: flex;
     align-items: center;
     gap: .7rem;
-    color: rgba(157,210,255,.88);
+    color: rgba(157,210,255,.9);
   }
 
   main > section:first-child > div:first-child > p:first-child::before {
@@ -60,7 +60,7 @@
     max-width: 34rem;
     font-size: 1.16rem;
     line-height: 1.65;
-    color: rgba(255,255,255,.67);
+    color: rgba(255,255,255,.69);
   }
 
   main > section:first-child > div:first-child > div:last-child {
@@ -84,15 +84,15 @@
   }
 
   main > section:first-child > div:nth-child(2) > div:first-child {
-    inset: 5% 0 0 4%;
+    inset: 2% -2% 0 1%;
     border-radius: 50%;
     background:
-      radial-gradient(circle, rgba(30,99,233,.23) 0%, rgba(77,163,255,.08) 38%, transparent 70%);
-    filter: blur(38px);
+      radial-gradient(circle, rgba(30,99,233,.27) 0%, rgba(77,163,255,.10) 38%, transparent 70%);
+    filter: blur(42px);
   }
 
   main > section:first-child > div:nth-child(2) > div:nth-child(2) {
-    height: 620px;
+    height: 660px;
     overflow: visible;
     border: 0;
     border-radius: 0;
@@ -102,9 +102,9 @@
   }
 
   main > section:first-child > div:nth-child(2) > div:nth-child(2)::before {
-    inset: -36px -18px;
+    inset: -42px -24px;
     background:
-      radial-gradient(ellipse at 51% 49%, transparent 48%, rgba(10,29,61,.42) 75%, #0A1D3D 96%);
+      radial-gradient(ellipse at 51% 49%, transparent 52%, rgba(10,29,61,.36) 76%, #0A1D3D 97%);
     z-index: 2;
   }
 
@@ -112,17 +112,11 @@
     content: "";
     position: absolute;
     z-index: 3;
-    inset: -20px -32px -24px -38px;
+    inset: -28px -50px -34px -42px;
     background:
-      url("/lotus-flower-emblem.svg") 51.1% 49.55% / 112px 112px no-repeat,
-      radial-gradient(circle,
-        #081B3A 0 35%,
-        rgba(242,184,75,.34) 45%,
-        rgba(242,184,75,.18) 55%,
-        rgba(242,184,75,.08) 66%,
-        rgba(242,184,75,0) 80%) 51.1% 49.55% / 190px 190px no-repeat,
+      url("/lotus-flower-emblem.svg") 50.87% 47.94% / 122px 122px no-repeat,
       url("/illustrations/hero-ecosystem.svg") center / contain no-repeat;
-    filter: drop-shadow(0 26px 54px rgba(0,0,0,.24));
+    filter: drop-shadow(0 30px 64px rgba(0,0,0,.30));
     pointer-events: none;
   }
 
@@ -134,13 +128,22 @@
 
 @media (min-width: 1280px) {
   main > section:first-child > div:nth-child(2) > div:nth-child(2)::after {
-    inset: -34px -60px -36px -46px;
+    inset: -42px -78px -44px -54px;
   }
 }
 
 @media (max-width: 1023px) {
+  main > section:first-child {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  main > section:first-child > div:nth-child(2) {
+    margin-top: 1.5rem;
+  }
+
   main > section:first-child > div:nth-child(2) > div:nth-child(2) {
-    min-height: 440px;
+    min-height: clamp(600px, 158vw, 760px);
     position: relative;
     overflow: visible;
     border: 0;
@@ -148,23 +151,42 @@
     box-shadow: none;
   }
 
+  main > section:first-child > div:nth-child(2) > div:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    inset: 3% -10% 0;
+    border-radius: 48%;
+    background:
+      radial-gradient(circle at 50% 44%, rgba(30,99,233,.30), rgba(77,163,255,.09) 39%, transparent 72%);
+    filter: blur(30px);
+  }
+
   main > section:first-child > div:nth-child(2) > div:nth-child(2)::after {
     content: "";
     position: absolute;
-    inset: -12px;
+    inset: -6px -12px;
     background:
-      url("/lotus-flower-emblem.svg") 51.1% 49.55% / 86px 86px no-repeat,
-      radial-gradient(circle,
-        #081B3A 0 35%,
-        rgba(242,184,75,.30) 45%,
-        rgba(242,184,75,.16) 55%,
-        rgba(242,184,75,.07) 66%,
-        rgba(242,184,75,0) 80%) 51.1% 49.55% / 150px 150px no-repeat,
-      url("/illustrations/hero-ecosystem.svg") center / contain no-repeat;
+      url("/lotus-flower-emblem.svg") 50% 44.12% / 104px 104px no-repeat,
+      url("/illustrations/hero-ecosystem-mobile.svg") center top / contain no-repeat;
+    filter: drop-shadow(0 24px 46px rgba(0,0,0,.28));
+    pointer-events: none;
   }
 
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > * {
     display: none !important;
+  }
+}
+
+@media (max-width: 520px) {
+  main > section:first-child > div:nth-child(2) > div:nth-child(2) {
+    min-height: 610px;
+  }
+
+  main > section:first-child > div:nth-child(2) > div:nth-child(2)::after {
+    inset: 0 -8px;
+    background:
+      url("/lotus-flower-emblem.svg") 50% 44.12% / 92px 92px no-repeat,
+      url("/illustrations/hero-ecosystem-mobile.svg") center top / contain no-repeat;
   }
 }
 
