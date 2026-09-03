@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 900" role="img" aria-labelledby="title desc">
+  <title id="title">Lotus technology ecosystem on mobile</title>
+  <desc id="desc">Applications, cloud APIs, commerce, data, users and infrastructure connected through a central Lotus orchestration core.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1B4A8D"/><stop offset="1" stop-color="#0A2248"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8AD2FF"/><stop offset="1" stop-color="#1B70F4"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE29E"/><stop offset="1" stop-color="#F2B84B"/></linearGradient>
+    <radialGradient id="scene"><stop offset="0" stop-color="#1E63E9" stop-opacity=".28"/><stop offset="1" stop-color="#081B3A" stop-opacity="0"/></radialGradient>
+    <radialGradient id="halo"><stop offset="0" stop-color="#F2B84B" stop-opacity=".3"/><stop offset=".48" stop-color="#F2B84B" stop-opacity=".1"/><stop offset="1" stop-color="#F2B84B" stop-opacity="0"/></radialGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="200%"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#020A17" flood-opacity=".42"/></filter>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#4DA3FF" flood-opacity=".7"/></filter>
+    <style>
+      .route{fill:none;stroke:url(#blue);stroke-width:3;stroke-dasharray:8 11;stroke-linecap:round;animation:flow 6s linear infinite}.label{fill:#B1DEFF;font-family:Arial,sans-serif;font-size:18px;font-weight:700;letter-spacing:2.3px}.float1{animation:f1 6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.float2{animation:f2 7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.core{animation:b 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}@keyframes flow{to{stroke-dashoffset:-152}}@keyframes f1{50%{transform:translateY(-6px)}}@keyframes f2{50%{transform:translateY(6px)}}@keyframes b{50%{transform:scale(1.035)}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+    </style>
+  </defs>
+  <rect width="640" height="900" fill="#081B3A" fill-opacity=".02"/><ellipse cx="320" cy="452" rx="300" ry="390" fill="url(#scene)"/>
+
+  <!-- routes -->
+  <path class="route" d="M190 186C235 245 262 300 280 352"/><path class="route" d="M449 186C405 243 379 300 360 352"/><path class="route" d="M185 675C235 620 262 575 281 548"/><path class="route" d="M455 675C405 620 378 576 359 548"/>
+  <path class="route" d="M320 244V330"/><path class="route" d="M320 570V655"/>
+
+  <!-- top applications -->
+  <g class="float1" filter="url(#shadow)"><text class="label" x="55" y="78">APPLICATIONS</text><rect x="40" y="94" width="225" height="146" rx="28" fill="url(#panel)" stroke="#5DB8FF" stroke-opacity=".55"/><rect x="65" y="118" width="175" height="93" rx="15" fill="#071A38" stroke="#58B4FF" stroke-opacity=".3"/><circle cx="83" cy="135" r="5" fill="#F2B84B"/><circle cx="101" cy="135" r="5" fill="#4DA3FF"/><path d="M82 160h62M82 177h101M82 194h50" stroke="#9DD5FF" stroke-width="6" stroke-linecap="round" opacity=".6"/><rect x="170" y="149" width="49" height="46" rx="10" fill="#143B75"/><path d="M180 185l10-15 8 8 10-18" fill="none" stroke="url(#gold)" stroke-width="4" stroke-linecap="round"/></g>
+
+  <!-- top commerce -->
+  <g class="float2" filter="url(#shadow)"><text class="label" x="393" y="78">COMMERCE</text><rect x="375" y="94" width="225" height="146" rx="28" fill="url(#panel)" stroke="#5DB8FF" stroke-opacity=".55"/><rect x="441" y="112" width="79" height="110" rx="18" fill="#071A38" stroke="#78CAFF" stroke-width="2"/><rect x="451" y="126" width="59" height="70" rx="9" fill="#123A75"/><path d="M461 145h8l5 23h22l6-16h-29" fill="none" stroke="url(#gold)" stroke-width="5" stroke-linecap="round"/><circle cx="479" cy="178" r="4" fill="#FFD27A"/><circle cx="496" cy="178" r="4" fill="#FFD27A"/><circle cx="480" cy="208" r="4" fill="#4DA3FF"/><circle cx="546" cy="165" r="13" fill="#F2B84B" fill-opacity=".14" stroke="#F2B84B" stroke-opacity=".55"/><path d="M540 165l5 5 8-11" fill="none" stroke="#FFD27A" stroke-width="3" stroke-linecap="round"/></g>
+
+  <!-- cloud -->
+  <g class="float1" filter="url(#shadow)"><text class="label" x="243" y="258">CLOUD + APIs</text><rect x="220" y="274" width="200" height="96" rx="25" fill="url(#panel)" stroke="#5DB8FF" stroke-opacity=".5"/><path d="M264 338h111c18 0 31-10 31-25 0-14-11-24-28-25-5-14-18-23-34-23-18 0-31 10-36 26-18 1-31 11-31 25 0 13 11 22 27 22z" fill="#123A75" stroke="#7CCAFF" stroke-opacity=".7"/><circle cx="298" cy="315" r="5" fill="#4DA3FF"/><circle cx="320" cy="315" r="5" fill="#F2B84B"/><circle cx="342" cy="315" r="5" fill="#4DA3FF"/></g>
+
+  <!-- core -->
+  <g class="core"><circle cx="320" cy="450" r="130" fill="#071A38" stroke="#4DA3FF" stroke-opacity=".16"/><circle cx="320" cy="450" r="108" fill="#102E61" stroke="url(#blue)" stroke-width="3"/><circle cx="320" cy="450" r="82" fill="url(#halo)"/><circle cx="320" cy="450" r="64" fill="#071A38" stroke="#4DA3FF" stroke-opacity=".28"/><circle cx="320" cy="450" r="121" fill="none" stroke="#4DA3FF" stroke-opacity=".2" stroke-dasharray="3 10"/></g>
+  <g filter="url(#glow)"><circle cx="280" cy="352" r="9" fill="#4DA3FF"/><circle cx="360" cy="352" r="9" fill="#4DA3FF"/><circle cx="281" cy="548" r="9" fill="#4DA3FF"/><circle cx="359" cy="548" r="9" fill="#4DA3FF"/><circle cx="320" cy="330" r="9" fill="#4DA3FF"/><circle cx="320" cy="570" r="9" fill="#4DA3FF"/></g>
+
+  <!-- data -->
+  <g class="float2" filter="url(#shadow)"><text class="label" x="64" y="690">DATA</text><rect x="40" y="706" width="225" height="150" rx="28" fill="url(#panel)" stroke="#5DB8FF" stroke-opacity=".52"/><g transform="translate(88 735)"><ellipse cx="63" cy="12" rx="53" ry="13" fill="#153D7C" stroke="#6AC1FF"/><path d="M10 12v65c0 8 23 13 53 13s53-5 53-13V12" fill="#0A2247" stroke="#5DB8FF" stroke-opacity=".65"/><path d="M10 34c0 8 23 13 53 13s53-5 53-13M10 56c0 8 23 13 53 13s53-5 53-13" fill="none" stroke="#5DB8FF" stroke-opacity=".48"/><circle cx="102" cy="77" r="5" fill="#F2B84B"/></g></g>
+
+  <!-- users -->
+  <g class="float1" filter="url(#shadow)"><text class="label" x="433" y="690">USERS</text><rect x="375" y="706" width="225" height="150" rx="28" fill="url(#panel)" stroke="#5DB8FF" stroke-opacity=".52"/><circle cx="487" cy="752" r="25" fill="#123A75" stroke="#6BC0FF"/><circle cx="487" cy="746" r="10" fill="#9BD5FF"/><path d="M468 770c8-14 30-14 38 0" fill="none" stroke="#9BD5FF" stroke-width="5" stroke-linecap="round"/><rect x="455" y="791" width="65" height="49" rx="11" fill="#071A38" stroke="#5DB8FF" stroke-opacity=".5"/><path d="M467 805h40M467 817h29M467 829h39" stroke="#5DB8FF" stroke-width="4" stroke-linecap="round" opacity=".65"/></g>
+
+  <!-- infrastructure -->
+  <g class="float2" filter="url(#shadow)"><text class="label" x="236" y="672">INFRASTRUCTURE</text><rect x="210" y="688" width="220" height="112" rx="26" fill="url(#panel)" stroke="#5DB8FF" stroke-opacity=".54"/><g transform="translate(235 710)"><rect width="170" height="18" rx="6" fill="#071A38" stroke="#63BEFF" stroke-opacity=".68"/><rect y="27" width="170" height="18" rx="6" fill="#071A38" stroke="#63BEFF" stroke-opacity=".68"/><rect y="54" width="170" height="18" rx="6" fill="#071A38" stroke="#63BEFF" stroke-opacity=".68"/><circle cx="16" cy="9" r="4" fill="#4DA3FF"/><circle cx="30" cy="9" r="4" fill="#F2B84B"/><circle cx="16" cy="36" r="4" fill="#4DA3FF"/><circle cx="16" cy="63" r="4" fill="#4DA3FF"/><path d="M55 9h91M55 36h91M55 63h66" stroke="#2C7ED0" stroke-width="3" stroke-linecap="round"/></g></g>
+</svg>
