@@ -1,108 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 680" role="img" aria-labelledby="title desc">
-<title id="title">Lotus connected technology scene</title>
-<desc id="desc">A single layered technology environment showing cloud, applications, commerce, users, data and infrastructure connected through Lotus.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" role="img" aria-labelledby="title desc">
+<title id="title">Lotus connected technology platform</title>
+<desc id="desc">A detailed desktop technology platform showing cloud APIs, applications, commerce, data, users, infrastructure and Lotus orchestration.</desc>
 <defs>
-  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#95DCFF"/><stop offset=".48" stop-color="#3AA8FF"/><stop offset="1" stop-color="#1768F2"/></linearGradient>
-  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1B4B91" stop-opacity=".92"/><stop offset="1" stop-color="#081D40" stop-opacity=".9"/></linearGradient>
-  <linearGradient id="glass2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#123E7F" stop-opacity=".88"/><stop offset="1" stop-color="#061731" stop-opacity=".92"/></linearGradient>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#A7E3FF"/><stop offset=".45" stop-color="#48B3FF"/><stop offset="1" stop-color="#1768F2"/></linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#184888" stop-opacity=".96"/><stop offset="1" stop-color="#071A38" stop-opacity=".94"/></linearGradient>
+  <linearGradient id="surface" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#12366B" stop-opacity=".92"/><stop offset="1" stop-color="#06162F" stop-opacity=".98"/></linearGradient>
   <linearGradient id="gold"><stop stop-color="#FFE4A3"/><stop offset="1" stop-color="#F2B84B"/></linearGradient>
-  <radialGradient id="scene" cx="52%" cy="48%" r="58%"><stop stop-color="#1D67CC" stop-opacity=".34"/><stop offset=".52" stop-color="#123A75" stop-opacity=".11"/><stop offset="1" stop-color="#081B3A" stop-opacity="0"/></radialGradient>
-  <radialGradient id="halo"><stop stop-color="#F2B84B" stop-opacity=".28"/><stop offset=".42" stop-color="#F2B84B" stop-opacity=".10"/><stop offset="1" stop-color="#F2B84B" stop-opacity="0"/></radialGradient>
-  <filter id="shadow" x="-60%" y="-60%" width="220%" height="240%"><feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#020814" flood-opacity=".48"/></filter>
-  <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#4DA3FF" flood-opacity=".72"/></filter>
-  <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#6CC1FF" stroke-opacity=".03"/></pattern>
+  <linearGradient id="petalCenter" x1="0.15" y1="0.15" x2="0.9" y2="0.88"><stop offset="0" stop-color="#061A45"/><stop offset=".48" stop-color="#0B3FC6"/><stop offset="1" stop-color="#16C8FF"/></linearGradient>
+  <linearGradient id="petalLeft" x1="0.12" y1="0.2" x2="0.95" y2="0.85"><stop offset="0" stop-color="#0A2C82"/><stop offset=".58" stop-color="#0C54F2"/><stop offset="1" stop-color="#11C4F4"/></linearGradient>
+  <linearGradient id="petalRight" x1="0.05" y1="0.75" x2="0.95" y2="0.15"><stop offset="0" stop-color="#071D58"/><stop offset=".5" stop-color="#0B55F2"/><stop offset="1" stop-color="#21D0FF"/></linearGradient>
+  <linearGradient id="petalBase" x1="0.08" y1="0.35" x2="0.92" y2="0.72"><stop offset="0" stop-color="#0A42D8"/><stop offset=".45" stop-color="#061A56"/><stop offset="1" stop-color="#0C61F4"/></linearGradient>
+  <radialGradient id="scene"><stop stop-color="#1D67CC" stop-opacity=".34"/><stop offset=".5" stop-color="#123A75" stop-opacity=".1"/><stop offset="1" stop-color="#081B3A" stop-opacity="0"/></radialGradient>
+  <radialGradient id="core"><stop stop-color="#2155A1"/><stop offset=".7" stop-color="#0C2854"/><stop offset="1" stop-color="#071A38"/></radialGradient>
+  <filter id="shadow" x="-60%" y="-60%" width="220%" height="240%"><feDropShadow dx="0" dy="16" stdDeviation="15" flood-color="#020814" flood-opacity=".5"/></filter>
+  <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#4DA3FF" flood-opacity=".68"/></filter>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#6CC1FF" stroke-opacity=".025"/></pattern>
+  <clipPath id="appClip"><rect x="74" y="185" width="375" height="155" rx="26"/></clipPath>
+  <clipPath id="commerceClip"><rect x="551" y="185" width="375" height="155" rx="26"/></clipPath>
   <style>
-    .label{fill:#BDE6FF;font-family:Arial,sans-serif;font-size:14px;font-weight:700;letter-spacing:2.4px}.micro{fill:#8DCFFC;font-family:Arial,sans-serif;font-size:9px;letter-spacing:1.1px}.wire{fill:none;stroke:url(#blue);stroke-width:2.5;stroke-linecap:round;stroke-dasharray:6 11;animation:flow 6.5s linear infinite}.trace{fill:none;stroke:#5DB8FF;stroke-width:1.4;stroke-opacity:.24}.f1{animation:a 6.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.f2{animation:b 7.1s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.f3{animation:c 8.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.pulse{animation:p 4.5s ease-in-out infinite;transform-box:fill-box;transform-origin:center}@keyframes flow{to{stroke-dashoffset:-140}}@keyframes a{50%{transform:translate(-3px,-7px)}}@keyframes b{50%{transform:translate(5px,5px)}}@keyframes c{50%{transform:translate(-4px,6px)}}@keyframes p{50%{transform:scale(1.025)}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+    .label{fill:#C7EBFF;font-family:Arial,sans-serif;font-size:15px;font-weight:700;letter-spacing:2.6px}.small{fill:#8FCFFF;font-family:Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:1.35px}.micro{fill:#72B8EE;font-family:Arial,sans-serif;font-size:8px;letter-spacing:1px}.trace{fill:none;stroke:#55B6FF;stroke-width:2;stroke-linecap:round;stroke-opacity:.28}.flow{fill:none;stroke:url(#blue);stroke-width:3;stroke-linecap:round;stroke-dasharray:7 11;animation:flow 5.5s linear infinite}.pulse{animation:pulse 4.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.float{animation:float 6.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.float2{animation:float2 7.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.blink{animation:blink 2.2s ease-in-out infinite}.dash{animation:dash 5s linear infinite}.sweep{animation:sweep 5.8s ease-in-out infinite}@keyframes flow{to{stroke-dashoffset:-144}}@keyframes pulse{50%{transform:scale(1.018)}}@keyframes float{50%{transform:translateY(-5px)}}@keyframes float2{50%{transform:translate(3px,4px)}}@keyframes blink{50%{opacity:.35}}@keyframes dash{to{stroke-dashoffset:-90}}@keyframes sweep{0%,16%{transform:translateX(-220px);opacity:0}35%,58%{opacity:.34}82%,100%{transform:translateX(760px);opacity:0}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}
   </style>
 </defs>
-<rect width="920" height="680" fill="url(#grid)"/><ellipse cx="488" cy="338" rx="420" ry="305" fill="url(#scene)"/>
-
-<!-- one continuous visual flow -->
-<path class="trace" d="M140 520C210 610 345 638 489 618C640 598 756 528 807 421"/>
-<path class="trace" d="M110 252C190 130 332 70 494 78C663 86 786 178 846 307"/>
-<path class="wire" d="M470 133C474 176 477 203 479 232"/>
-<path class="wire" d="M333 268C385 280 419 292 449 313"/>
-<path class="wire" d="M707 260C634 277 584 296 531 321"/>
-<path class="wire" d="M326 445C383 425 425 401 455 377"/>
-<path class="wire" d="M714 438C639 425 585 404 529 376"/>
-<path class="wire" d="M494 420C494 474 495 514 496 553"/>
+<rect width="1000" height="720" fill="url(#grid)"/><ellipse cx="500" cy="370" rx="470" ry="335" fill="url(#scene)"/>
+<path d="M95 355C180 215 320 132 500 132C680 132 820 215 905 355" class="trace" opacity=".45"/>
+<path d="M118 562C245 652 375 681 500 681C625 681 755 652 882 562" class="trace" opacity=".32"/>
 
 <!-- cloud canopy -->
-<g class="f2" filter="url(#shadow)">
-  <text class="label" x="418" y="42">CLOUD + APIs</text>
-  <path d="M399 127h157c27 0 45-15 45-37 0-21-17-36-41-37-7-20-26-33-50-33-28 0-49 16-56 41-26 2-45 16-45 37 0 17 15 29 37 29z" fill="url(#glass)" stroke="#7CCEFF" stroke-opacity=".7"/>
-  <circle cx="455" cy="92" r="6" fill="#4DA3FF"/><circle cx="480" cy="92" r="6" fill="#F2B84B"/><circle cx="505" cy="92" r="6" fill="#4DA3FF"/>
-  <path d="M437 143h120" stroke="#5CB8FF" stroke-width="2" opacity=".4"/>
+<g class="float" filter="url(#shadow)">
+  <text class="label" x="440" y="34">CLOUD + APIs</text>
+  <path d="M385 146h230c31 0 53-17 53-42 0-24-20-42-48-43-9-24-32-39-61-39-34 0-59 19-68 47-31 2-54 19-54 44 0 20 18 33 46 33z" fill="url(#glass)" stroke="#7CCEFF" stroke-opacity=".7"/>
+  <circle cx="454" cy="102" r="6" fill="#4DA3FF"/><circle cx="486" cy="102" r="6" fill="#F2B84B"/><circle cx="518" cy="102" r="6" fill="#4DA3FF"/>
+  <rect x="542" y="84" width="78" height="36" rx="8" fill="#071A38" stroke="#62BEFF" stroke-opacity=".48"/><path d="M557 95h47M557 104h34M557 113h42" stroke="#55B6FF" stroke-width="2" opacity=".7"/>
+  <text class="micro" x="551" y="132">SERVICES · APIs · EVENTS</text>
 </g>
+<path class="flow" d="M500 147V172"/>
 
-<!-- applications workspace, upper left, integrated into scene -->
-<g class="f1" filter="url(#shadow)">
-  <text class="label" x="48" y="126">APPLICATIONS</text>
-  <g transform="translate(42 144) rotate(-2 128 74)">
-    <rect width="258" height="148" rx="24" fill="url(#glass)" stroke="#69C3FF" stroke-opacity=".52"/>
-    <rect x="18" y="18" width="222" height="112" rx="15" fill="#061731" stroke="#4DA3FF" stroke-opacity=".28"/>
-    <circle cx="38" cy="38" r="4.5" fill="#F2B84B"/><circle cx="55" cy="38" r="4.5" fill="#4DA3FF"/>
-    <path d="M39 64h74M39 82h108M39 100h59" stroke="#9DD7FF" stroke-width="6" stroke-linecap="round" opacity=".62"/>
-    <rect x="159" y="53" width="60" height="58" rx="12" fill="#143D7D"/>
-    <path d="M172 100l13-20 10 10 13-23" fill="none" stroke="url(#gold)" stroke-width="4" stroke-linecap="round"/>
+<!-- Applications -->
+<g filter="url(#shadow)">
+  <rect x="55" y="175" width="415" height="180" rx="28" fill="url(#surface)" stroke="#5DBAFF" stroke-opacity=".38"/>
+  <text class="label" x="78" y="204">APPLICATIONS</text>
+  <g clip-path="url(#appClip)">
+    <rect x="76" y="218" width="224" height="113" rx="14" fill="#061731" stroke="#4DA3FF" stroke-opacity=".34"/>
+    <rect x="76" y="218" width="224" height="19" fill="#0C2D5B"/><circle cx="91" cy="228" r="3.5" fill="#F2B84B"/><circle cx="104" cy="228" r="3.5" fill="#4DA3FF"/>
+    <rect x="88" y="247" width="43" height="72" rx="7" fill="#0B2348"/><path d="M98 260h23M98 270h17M98 280h21M98 300h18" stroke="#55B6FF" stroke-width="3" stroke-linecap="round" opacity=".58"/>
+    <rect x="142" y="247" width="65" height="28" rx="7" fill="#123D79"/><rect x="214" y="247" width="72" height="28" rx="7" fill="#0F315F"/>
+    <path d="M150 267l12-8 11 3 10-10 14 4" fill="none" stroke="#F2B84B" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M222 266h48" stroke="#55B6FF" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+    <rect x="142" y="284" width="144" height="35" rx="8" fill="#0B2348"/><path d="M152 308l17-10 16 4 22-14 17 8 21-12 28 7" fill="none" stroke="#4DA3FF" stroke-width="2.5"/><path d="M152 299h120" stroke="#4DA3FF" stroke-width="1" opacity=".12"/>
+    <g transform="translate(322 220)"><rect width="126" height="111" rx="18" fill="#0A244C" stroke="#5DBAFF" stroke-opacity=".4"/><text class="small" x="16" y="22">MOBILE WORKFLOW</text><rect x="18" y="34" width="34" height="58" rx="8" fill="#071A38" stroke="#72C7FF"/><circle cx="35" cy="82" r="3" fill="#4DA3FF"/><path d="M62 43h44M62 55h32M62 73h39" stroke="#5DBAFF" stroke-width="3" stroke-linecap="round" opacity=".62"/><circle cx="99" cy="88" r="6" fill="#F2B84B"/></g>
   </g>
-  <text class="micro" x="78" y="310">WEB · MOBILE · WORKFLOWS</text>
+  <text class="micro" x="79" y="345">WEB · MOBILE · WORKFLOWS · BUSINESS LOGIC</text>
 </g>
 
-<!-- commerce device, upper right, no enclosing card -->
-<g class="f3" filter="url(#shadow)">
-  <text class="label" x="732" y="125">COMMERCE</text>
-  <g transform="translate(724 143) rotate(3 58 78)">
-    <rect width="118" height="164" rx="28" fill="#071A38" stroke="#7ACDFF" stroke-width="2.5"/>
-    <rect x="14" y="18" width="90" height="107" rx="14" fill="#17468A"/>
-    <path d="M31 51h10l6 32h35l9-23H45" fill="none" stroke="url(#gold)" stroke-width="6" stroke-linecap="round"/>
-    <circle cx="59" cy="96" r="6" fill="#FFD27A"/><circle cx="83" cy="96" r="6" fill="#FFD27A"/><circle cx="59" cy="144" r="5" fill="#4DA3FF"/>
+<!-- Commerce -->
+<g filter="url(#shadow)">
+  <rect x="530" y="175" width="415" height="180" rx="28" fill="url(#surface)" stroke="#5DBAFF" stroke-opacity=".38"/>
+  <text class="label" x="554" y="204">COMMERCE</text>
+  <g clip-path="url(#commerceClip)">
+    <g transform="translate(565 218)"><rect width="84" height="122" rx="20" fill="#071A38" stroke="#78CBFF" stroke-width="2"/><rect x="10" y="13" width="64" height="76" rx="11" fill="#17468A"/><path d="M22 38h8l5 26h27l8-19H33" fill="none" stroke="url(#gold)" stroke-width="4.5" stroke-linecap="round"/><circle cx="43" cy="74" r="4.5" fill="#FFD27A"/><circle cx="61" cy="74" r="4.5" fill="#FFD27A"/><circle cx="42" cy="106" r="4" fill="#4DA3FF"/></g>
+    <g transform="translate(674 218)"><rect width="239" height="112" rx="16" fill="#071A38" stroke="#5DBAFF" stroke-opacity=".42"/><text class="small" x="16" y="22">PAYMENT ORCHESTRATION</text><rect x="16" y="34" width="96" height="30" rx="8" fill="#123D79"/><text class="micro" x="28" y="53">$ 1,284.50</text><rect x="125" y="34" width="92" height="30" rx="8" fill="#163865"/><circle cx="143" cy="49" r="5" fill="#4DA3FF"/><text class="micro" x="155" y="53">APPROVED</text><path d="M18 79h42l16 12h45l18-12h80" fill="none" stroke="#55B6FF" stroke-width="2.5" stroke-dasharray="5 7" class="dash"/><circle cx="18" cy="79" r="4" fill="#F2B84B"/><circle cx="76" cy="91" r="4" fill="#4DA3FF"/><circle cx="139" cy="79" r="4" fill="#4DA3FF"/><circle cx="219" cy="79" r="4" fill="#F2B84B"/></g>
   </g>
-  <g transform="translate(856 205)"><circle r="18" fill="#F2B84B" fill-opacity=".13" stroke="#F2B84B" stroke-opacity=".6"/><path d="M-8 0l6 6L9-10" fill="none" stroke="#FFD27A" stroke-width="3.5" stroke-linecap="round"/></g>
+  <text class="micro" x="555" y="345">PAYMENTS · ECOMMERCE · TRANSACTIONS · DEVICES</text>
 </g>
 
-<!-- central Lotus orchestration layer: compact, not a target -->
-<g class="pulse">
-  <ellipse cx="493" cy="345" rx="126" ry="92" fill="#071A38" fill-opacity=".76" stroke="#4DA3FF" stroke-opacity=".14"/>
-  <ellipse cx="493" cy="345" rx="105" ry="75" fill="#102F63" stroke="url(#blue)" stroke-width="2.5" filter="url(#glow)"/>
-  <ellipse cx="493" cy="345" rx="76" ry="55" fill="url(#halo)"/>
-  <ellipse cx="493" cy="345" rx="61" ry="45" fill="#071A38" stroke="#4DA3FF" stroke-opacity=".28"/>
+<!-- orchestration bridge -->
+<g class="pulse" filter="url(#glow)">
+  <path d="M176 391C176 371 193 355 214 355H786C807 355 824 371 824 391V435C824 455 807 471 786 471H214C193 471 176 455 176 435Z" fill="url(#glass)" stroke="url(#blue)" stroke-width="2.6"/>
+  <rect x="192" y="370" width="616" height="86" rx="30" fill="#0A244C" fill-opacity=".38" stroke="#4DA3FF" stroke-opacity=".12"/>
+  <path d="M222 413H403M597 413H778" stroke="#50B4FF" stroke-width="2" stroke-opacity=".38"/>
+  <circle cx="255" cy="413" r="5" fill="#4DA3FF"/><circle cx="292" cy="413" r="5" fill="#4DA3FF"/><circle cx="708" cy="413" r="5" fill="#4DA3FF"/><circle cx="745" cy="413" r="5" fill="#F2B84B"/>
+  <circle cx="500" cy="413" r="66" fill="url(#core)" stroke="#5CBBFF" stroke-width="2.2"/>
+  <circle cx="500" cy="413" r="52" fill="#071A38" stroke="#4DA3FF" stroke-opacity=".38"/>
+  <g transform="translate(461 374) scale(.152344)"><path d="M82 377C145 340 214 340 256 368C298 340 367 340 430 377C386 430 320 454 256 448C192 454 126 430 82 377Z" fill="url(#petalBase)"/><path d="M255 387C205 359 150 324 113 279C77 236 58 187 64 129C123 127 175 145 215 182C251 216 270 269 255 387Z" fill="url(#petalLeft)"/><path d="M257 387C307 359 362 324 399 279C435 236 454 187 448 129C389 127 337 145 297 182C261 216 242 269 257 387Z" fill="url(#petalRight)"/><path d="M256 54C304 111 327 174 322 239C318 294 292 342 256 387C220 342 194 294 190 239C185 174 208 111 256 54Z" fill="url(#petalCenter)"/></g>
+  <rect class="sweep" x="190" y="365" width="180" height="96" rx="35" fill="url(#blue)" opacity="0"/>
 </g>
-<g filter="url(#glow)"><circle cx="449" cy="313" r="7" fill="#4DA3FF"/><circle cx="531" cy="321" r="7" fill="#4DA3FF"/><circle cx="455" cy="377" r="7" fill="#4DA3FF"/><circle cx="529" cy="376" r="7" fill="#4DA3FF"/><circle cx="479" cy="232" r="7" fill="#4DA3FF"/><circle cx="494" cy="420" r="7" fill="#4DA3FF"/></g>
+<text class="small" x="435" y="489">LOTUS ORCHESTRATION</text>
 
-<!-- data foundation, left lower -->
-<g class="f2" filter="url(#shadow)">
-  <text class="label" x="71" y="430">DATA</text>
-  <g transform="translate(72 449)">
-    <ellipse cx="75" cy="17" rx="65" ry="16" fill="#15417F" stroke="#77C9FF"/>
-    <path d="M10 17v90c0 10 29 17 65 17s65-7 65-17V17" fill="#092149" stroke="#58B6FF" stroke-opacity=".7"/>
-    <path d="M10 47c0 10 29 17 65 17s65-7 65-17M10 77c0 10 29 17 65 17s65-7 65-17" fill="none" stroke="#58B6FF" stroke-opacity=".5"/>
-    <circle cx="123" cy="105" r="5" fill="#F2B84B"/>
-  </g>
-  <text class="micro" x="83" y="592">DATA · ANALYTICS</text>
-</g>
-
-<!-- users / endpoints, right lower -->
-<g class="f1" filter="url(#shadow)">
-  <text class="label" x="744" y="421">USERS</text>
-  <g transform="translate(744 439)">
-    <circle cx="55" cy="42" r="34" fill="url(#glass)" stroke="#72C6FF"/>
-    <circle cx="55" cy="32" r="12" fill="#A4DCFF"/><path d="M32 62c9-18 37-18 46 0" fill="none" stroke="#A4DCFF" stroke-width="6" stroke-linecap="round"/>
-    <rect x="8" y="88" width="94" height="63" rx="14" fill="#071A38" stroke="#5DBAFF" stroke-opacity=".58"/>
-    <path d="M26 106h59M26 123h42M26 140h58" stroke="#5DBAFF" stroke-width="5" stroke-linecap="round" opacity=".72"/>
-  </g>
+<!-- Data -->
+<g filter="url(#shadow)">
+  <rect x="84" y="508" width="390" height="128" rx="26" fill="url(#surface)" stroke="#5DBAFF" stroke-opacity=".32"/>
+  <text class="label" x="108" y="538">DATA</text>
+  <g transform="translate(107 548)"><ellipse cx="55" cy="13" rx="48" ry="12" fill="#15417F" stroke="#77C9FF"/><path d="M7 13v53c0 8 22 13 48 13s48-5 48-13V13" fill="#092149" stroke="#58B6FF" stroke-opacity=".66"/><path d="M7 32c0 8 22 13 48 13s48-5 48-13M7 50c0 8 22 13 48 13s48-5 48-13" fill="none" stroke="#58B6FF" stroke-opacity=".46"/><circle cx="85" cy="66" r="4" fill="#F2B84B"/></g>
+  <g transform="translate(230 548)"><text class="small" x="0" y="12">LIVE PIPELINE</text><path d="M2 30h50l17 13h43l18-13h69" fill="none" stroke="#55B6FF" stroke-width="2.3" stroke-dasharray="5 7" class="dash"/><circle cx="2" cy="30" r="4" fill="#4DA3FF"/><circle cx="69" cy="43" r="4" fill="#F2B84B"/><circle cx="130" cy="30" r="4" fill="#4DA3FF"/><rect x="0" y="58" width="200" height="18" rx="5" fill="#071A38"/><path d="M12 69h40M61 69h23M93 69h61M165 69h22" stroke="#4DA3FF" stroke-width="3" stroke-linecap="round" opacity=".55"/></g>
 </g>
 
-<!-- infrastructure base: wider and structural -->
-<g class="f3" filter="url(#shadow)">
-  <text class="label" x="417" y="565">INFRASTRUCTURE</text>
-  <g transform="translate(350 583)">
-    <rect width="290" height="86" rx="20" fill="url(#glass2)" stroke="#64BFFF" stroke-opacity=".56"/>
-    <g transform="translate(20 14)">
-      <rect width="250" height="17" rx="6" fill="#061731" stroke="#65C0FF" stroke-opacity=".7"/><rect y="22" width="250" height="17" rx="6" fill="#061731" stroke="#65C0FF" stroke-opacity=".7"/><rect y="44" width="250" height="17" rx="6" fill="#061731" stroke="#65C0FF" stroke-opacity=".7"/>
-      <circle cx="18" cy="8.5" r="4" fill="#4DA3FF"/><circle cx="33" cy="8.5" r="4" fill="#F2B84B"/><circle cx="18" cy="30.5" r="4" fill="#4DA3FF"/><circle cx="33" cy="30.5" r="4" fill="#4DA3FF"/><circle cx="18" cy="52.5" r="4" fill="#4DA3FF"/>
-      <path d="M67 8.5h143M67 30.5h143M67 52.5h102" stroke="#2E7FCF" stroke-width="3" stroke-linecap="round"/><path d="M188 52.5h24l12-13" fill="none" stroke="#F2B84B" stroke-width="3" stroke-linecap="round"/>
-    </g>
-  </g>
+<!-- Users -->
+<g filter="url(#shadow)">
+  <rect x="526" y="508" width="390" height="128" rx="26" fill="url(#surface)" stroke="#5DBAFF" stroke-opacity=".32"/>
+  <text class="label" x="550" y="538">USERS</text>
+  <g transform="translate(552 548)"><circle cx="35" cy="32" r="27" fill="#123C78" stroke="#71C5FF"/><circle cx="35" cy="24" r="9" fill="#A4DCFF"/><path d="M18 46c7-13 27-13 34 0" fill="none" stroke="#A4DCFF" stroke-width="5" stroke-linecap="round"/><circle cx="86" cy="25" r="20" fill="#0B2A57" stroke="#5DBAFF" stroke-opacity=".6"/><circle cx="86" cy="19" r="7" fill="#78C7FF"/><path d="M73 36c5-10 21-10 26 0" fill="none" stroke="#78C7FF" stroke-width="4"/><circle cx="126" cy="39" r="15" fill="#0B2A57" stroke="#5DBAFF" stroke-opacity=".5"/><circle cx="126" cy="34" r="5" fill="#78C7FF"/></g>
+  <g transform="translate(700 548)"><rect width="184" height="67" rx="12" fill="#071A38" stroke="#5DBAFF" stroke-opacity=".42"/><text class="small" x="14" y="19">ACTIVE ENDPOINTS</text><path d="M16 34h61M16 47h98M16 59h43" stroke="#55B6FF" stroke-width="3" stroke-linecap="round" opacity=".56"/><circle cx="148" cy="34" r="6" fill="#4DA3FF" class="blink"/><circle cx="166" cy="34" r="6" fill="#F2B84B"/><rect x="138" y="46" width="36" height="12" rx="6" fill="#123D79"/></g>
+</g>
+
+<path class="flow" d="M500 471V508"/>
+
+<!-- Infrastructure -->
+<g filter="url(#shadow)">
+  <text class="label" x="426" y="663">INFRASTRUCTURE</text>
+  <path d="M225 676h550v23c0 12-10 21-22 21H247c-12 0-22-9-22-21z" fill="url(#glass)" stroke="#64BFFF" stroke-opacity=".58"/>
+  <g transform="translate(250 684)"><rect width="500" height="10" rx="4" fill="#061731" stroke="#65C0FF" stroke-opacity=".66"/><rect y="14" width="500" height="10" rx="4" fill="#061731" stroke="#65C0FF" stroke-opacity=".66"/><circle cx="14" cy="5" r="3" fill="#4DA3FF"/><circle cx="25" cy="5" r="3" fill="#F2B84B"/><circle cx="14" cy="19" r="3" fill="#4DA3FF"/><circle cx="25" cy="19" r="3" fill="#4DA3FF"/><path d="M48 5h318M48 19h260" stroke="#2E7FCF" stroke-width="2.5" stroke-linecap="round"/><path d="M405 19h42l15-15" fill="none" stroke="#F2B84B" stroke-width="2.5" stroke-linecap="round"/></g>
 </g>
 </svg>
