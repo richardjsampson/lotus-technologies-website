@@ -1,43 +1,87 @@
-@media (min-width: 1024px) {
+@media (min-width:1024px) {
   .process-flow-desktop { display:none !important; }
-  .approval-flow-desktop { display:block; width:100%; height:auto; padding:.5rem .75rem 1.25rem; }
-  .approval-flow-desktop text { font-family:Arial,sans-serif; }
+  .process-visual { max-width:1540px; border:0; background:transparent; box-shadow:none; overflow:visible; }
+  .process-blueprint { display:block; width:100%; height:auto; font-family:Arial,Helvetica,sans-serif; }
+  .process-blueprint .bp-bg { fill:#f7f7f5; stroke:#d8d8d5; stroke-width:1.5; }
+  .process-blueprint .bp-title { fill:#0d3f77; font-size:40px; font-weight:800; letter-spacing:.5px; }
+  .process-blueprint .bp-subtitle { fill:#454545; font-size:20px; letter-spacing:.2px; }
+  .process-blueprint .bp-title-rule { stroke:#e2a411; stroke-width:1.5; }
 
-  .approval-flow-desktop .process-kicker { fill:#EAF7FF; font-size:16px; font-weight:800; letter-spacing:1.35px; }
-  .approval-flow-desktop .process-subhead { fill:#8FC7EC; font-size:10px; letter-spacing:.38px; }
+  .process-blueprint .bp-chevron { fill:#fff; stroke-width:2.6; }
+  .process-blueprint .bp-chevron.c1 { stroke:#0f4c88; }
+  .process-blueprint .bp-chevron.c2 { stroke:#276eb0; }
+  .process-blueprint .bp-chevron.c3 { stroke:#13858a; }
+  .process-blueprint .bp-chevron.c4 { stroke:#3a8551; }
+  .process-blueprint .bp-chevron.c5 { stroke:#e2a400; }
+  .process-blueprint .bp-num { stroke:none; }
+  .process-blueprint .bp-num.n1 { fill:url(#stage1); }
+  .process-blueprint .bp-num.n2 { fill:url(#stage2); }
+  .process-blueprint .bp-num.n3 { fill:url(#stage3); }
+  .process-blueprint .bp-num.n4 { fill:url(#stage4); }
+  .process-blueprint .bp-num.n5 { fill:url(#stage5); }
+  .process-blueprint .bp-num-text { fill:#fff; font-size:19px; font-weight:800; }
+  .process-blueprint .bp-stage-name { font-size:18px; font-weight:800; letter-spacing:.3px; }
+  .process-blueprint .bp-stage-name.s1 { fill:#174c85; }
+  .process-blueprint .bp-stage-name.s2 { fill:#276eb0; }
+  .process-blueprint .bp-stage-name.s3 { fill:#13858a; }
+  .process-blueprint .bp-stage-name.s4 { fill:#347c49; }
+  .process-blueprint .bp-stage-name.s5 { fill:#d89900; }
+  .process-blueprint .bp-stage-phase { fill:#4e4e4e; font-size:14px; }
+  .process-blueprint .bp-icon { fill:none; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
+  .process-blueprint .bp-icon.i1 { stroke:#0f4c88; }
+  .process-blueprint .bp-icon.i2 { stroke:#4d7eb2; }
+  .process-blueprint .bp-icon.i3 { stroke:#13858a; }
+  .process-blueprint .bp-icon.i3 text { fill:#13858a; stroke:none; font-size:24px; font-weight:800; }
+  .process-blueprint .bp-icon.i4 { stroke:#3a8551; }
+  .process-blueprint .bp-icon.i5 { stroke:#dda000; }
 
-  .approval-flow-desktop .process-lane-label { font-size:11px; font-weight:800; letter-spacing:1.5px; }
-  .approval-flow-desktop .process-lane-label.lotus { fill:#7BCBFF; }
-  .approval-flow-desktop .process-lane-label.client { fill:#F6C96E; }
+  .process-blueprint .bp-panel { fill:#fff; stroke:#c8c8c8; stroke-width:2; }
+  .process-blueprint .bp-divider { stroke:#c8c8c8; stroke-width:2; }
+  .process-blueprint .bp-team-block.lotus { fill:url(#teamBlue); }
+  .process-blueprint .bp-team-block.client { fill:url(#teamGold); }
+  .process-blueprint .bp-team-lotus-mark,
+  .process-blueprint .bp-footer-mark { fill:#fff; font-size:52px; }
+  .process-blueprint .bp-team-title { fill:#fff; font-size:23px; font-weight:800; letter-spacing:.5px; }
+  .process-blueprint .bp-person-dot,
+  .process-blueprint .bp-person-body { fill:#fff; }
+  .process-blueprint .bp-col-seps line { stroke:#d9d9d9; stroke-width:1.2; stroke-dasharray:3 5; }
 
-  .approval-flow-desktop .process-stage-num { fill:#76C7FF; font-size:14px; font-weight:800; letter-spacing:1px; }
-  .approval-flow-desktop .process-stage-name { fill:#fff; font-size:16px; font-weight:800; letter-spacing:1.5px; }
+  .process-blueprint .bp-copy { fill:#173456; font-size:13px; }
+  .process-blueprint .bp-copy .bp-copy-head { font-size:14px; font-weight:800; }
+  .process-blueprint .lotus-copy .bp-copy-head { fill:#173456; }
+  .process-blueprint .client-copy .bp-copy-head { fill:#b77900; }
 
-  .approval-flow-desktop .process-card { stroke-width:1.5; }
-  .approval-flow-desktop .process-card.lotus { fill:#0B2A57; stroke:#57B8FF; stroke-opacity:.72; }
-  .approval-flow-desktop .process-card.client { fill:#302A1C; stroke:#F2B84B; stroke-opacity:.7; }
-  .approval-flow-desktop .process-card-title { fill:#E5F5FF; font-size:17px; font-weight:800; }
-  .approval-flow-desktop .process-card-title.client { fill:#FFD77E; }
-  .approval-flow-desktop .process-card-sub { fill:#8FC7EC; font-size:11px; letter-spacing:.32px; }
+  .process-blueprint .bp-approvals line { stroke:#555; stroke-width:1.4; stroke-dasharray:3 5; }
+  .process-blueprint .bp-approvals > text { fill:#bd7c00; font-size:11px; font-weight:800; }
+  .process-blueprint .bp-approvals circle { fill:#fff; stroke:#d59600; stroke-width:2; }
+  .process-blueprint .bp-approvals circle + path { fill:none; stroke:#d59600; stroke-width:2.3; stroke-linecap:round; stroke-linejoin:round; }
+  .process-blueprint .bp-yes { fill:#14795f !important; }
+  .process-blueprint .bp-no { fill:#bd7c00 !important; }
+  .process-blueprint .bp-yes-path { fill:none; stroke:#16846f; stroke-width:2; }
+  .process-blueprint .bp-no-path { fill:none; stroke:#d59600; stroke-width:2; }
 
-  .approval-flow-desktop .process-handoff,
-  .approval-flow-desktop .process-forward-path { fill:none; stroke:#63BEFF; stroke-width:2.35; stroke-linecap:round; stroke-linejoin:round; }
-  .approval-flow-desktop .process-handoff { stroke-opacity:.82; }
-  .approval-flow-desktop .process-client-link { fill:none; stroke:#F2B84B; stroke-width:2; stroke-linecap:round; }
+  .process-blueprint .bp-start-card { fill:#fff; stroke:#0f4c88; stroke-width:2; }
+  .process-blueprint .bp-success-card { fill:#fff; stroke:#d59600; stroke-width:2; }
+  .process-blueprint .bp-start-icon { fill:#0f4c88; }
+  .process-blueprint .bp-success-icon { fill:#e1a300; }
+  .process-blueprint .bp-card-head { fill:#123f75; font-size:14px; font-weight:800; }
+  .process-blueprint .bp-card-head.gold { fill:#b77900; }
+  .process-blueprint .bp-card-copy { fill:#173456; font-size:11.5px; }
+  .process-blueprint .bp-long-arrow { fill:none; stroke:#0c3b73; stroke-width:3; }
 
-  .approval-flow-desktop .process-question { fill:#FFF1C8; font-size:8.8px; font-weight:800; text-anchor:middle; letter-spacing:.42px; }
-
-  .approval-flow-desktop .process-branch { stroke-width:1.1; }
-  .approval-flow-desktop .process-branch.yes { fill:#0D2F5D; stroke:#63BEFF; }
-  .approval-flow-desktop .process-branch.no { fill:#332915; stroke:#F2B84B; }
-  .approval-flow-desktop .process-branch-text { font-size:8.5px; font-weight:800; text-anchor:middle; letter-spacing:.65px; }
-  .approval-flow-desktop .process-branch-text.yes { fill:#B9E7FF; }
-  .approval-flow-desktop .process-branch-text.no { fill:#FFD77E; }
-
-  .approval-flow-desktop .process-revision-path { fill:none; stroke:#F2B84B; stroke-width:1.9; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:7 7; opacity:.68; }
-  .approval-flow-desktop .process-revision-caption { fill:#F6C96E; font-size:8px; font-weight:700; letter-spacing:.55px; }
+  .process-blueprint .bp-footer-band { fill:url(#teamBlue); }
+  .process-blueprint .bp-footer-title { fill:#fff; font-size:25px; font-weight:800; }
+  .process-blueprint .bp-footer-divider { stroke:rgba(255,255,255,.6); stroke-width:1.5; }
+  .process-blueprint .bp-footer-tag { fill:#f4b500; font-size:18px; font-weight:700; }
+  .process-blueprint .bp-key { fill:#fff; stroke:#b9b9b9; stroke-width:2; }
+  .process-blueprint .bp-key-text { font-size:14px; font-weight:700; }
+  .process-blueprint .bp-key-text.lotus { fill:#123f75; }
+  .process-blueprint .bp-key-text.client { fill:#c78600; }
+  .process-blueprint .bp-key-line.lotus { stroke:#0c3b73; stroke-width:2.5; }
+  .process-blueprint .bp-key-line.client { stroke:#d59600; stroke-width:2.5; }
+  .process-blueprint .bp-bottom-note { fill:#123f75; font-size:15px; font-style:italic; }
 }
 
-@media (max-width: 1023px) {
-  .approval-flow-desktop { display:none; }
+@media (max-width:1023px) {
+  .process-blueprint { display:none; }
 }
