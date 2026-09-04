@@ -1,37 +1,108 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 680" role="img" aria-labelledby="title desc">
-<title id="title">Lotus connected technology ecosystem</title><desc id="desc">Applications, cloud APIs, commerce, data, users and infrastructure arranged as a layered connected technology environment around Lotus.</desc>
+<title id="title">Lotus connected technology scene</title>
+<desc id="desc">A single layered technology environment showing cloud, applications, commerce, users, data and infrastructure connected through Lotus.</desc>
 <defs>
-<linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8AD5FF"/><stop offset=".48" stop-color="#3AA8FF"/><stop offset="1" stop-color="#1768F2"/></linearGradient>
-<linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1B4B91" stop-opacity=".86"/><stop offset="1" stop-color="#091E41" stop-opacity=".82"/></linearGradient>
-<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFE4A3"/><stop offset="1" stop-color="#F2B84B"/></linearGradient>
-<radialGradient id="scene"><stop stop-color="#1C65C8" stop-opacity=".30"/><stop offset=".5" stop-color="#123A75" stop-opacity=".10"/><stop offset="1" stop-color="#081B3A" stop-opacity="0"/></radialGradient>
-<radialGradient id="halo"><stop stop-color="#F6C96E" stop-opacity=".32"/><stop offset=".38" stop-color="#F2B84B" stop-opacity=".11"/><stop offset="1" stop-color="#F2B84B" stop-opacity="0"/></radialGradient>
-<filter id="shadow" x="-60%" y="-60%" width="220%" height="240%"><feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#020814" flood-opacity=".5"/></filter>
-<filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#4DA3FF" flood-opacity=".75"/></filter>
-<filter id="goldGlow" x="-100%" y="-100%" width="300%" height="300%"><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#F2B84B" flood-opacity=".35"/></filter>
-<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#6EC4FF" stroke-opacity=".035"/></pattern>
-<style>
-.label{fill:#B6E1FF;font-family:Arial,sans-serif;font-size:14px;font-weight:700;letter-spacing:2.4px}.micro{fill:#83C8FA;font-family:Arial,sans-serif;font-size:9px;letter-spacing:1px}.wire{fill:none;stroke:url(#blue);stroke-width:2.2;stroke-linecap:round;stroke-dasharray:6 12;animation:flow 7s linear infinite}.energy{fill:none;stroke:#4DA3FF;stroke-width:1.2;stroke-opacity:.22}.floatA{animation:a 6.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.floatB{animation:b 7.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.floatC{animation:c 8.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.core{animation:pulse 4.5s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.spark{animation:blink 2.6s ease-in-out infinite}@keyframes flow{to{stroke-dashoffset:-144}}@keyframes a{50%{transform:translate(-4px,-8px)}}@keyframes b{50%{transform:translate(6px,5px)}}@keyframes c{50%{transform:translate(-5px,7px)}}@keyframes pulse{50%{transform:scale(1.03)}}@keyframes blink{50%{opacity:.25}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}
-</style></defs>
-<rect width="920" height="680" fill="url(#grid)"/><ellipse cx="490" cy="337" rx="420" ry="310" fill="url(#scene)"/>
-<!-- ambient orbital sweeps, intentionally incomplete -->
-<path class="energy" d="M86 460C176 145 670 92 860 330"/><path class="energy" d="M160 555C320 650 716 565 842 298"/><path class="energy" d="M115 210C292 43 646 52 822 206"/>
-<!-- curved data paths -->
-<path class="wire" d="M260 178C343 205 390 246 424 293"/><path class="wire" d="M724 175C644 199 596 245 557 293"/><path class="wire" d="M814 459C692 449 616 405 557 368"/><path class="wire" d="M183 487C310 458 372 412 424 369"/><path class="wire" d="M594 576C551 511 518 450 502 413"/><path class="wire" d="M485 104C489 170 491 219 491 257"/>
-<!-- Applications: floating product workspace -->
-<g class="floatA" filter="url(#shadow)"><text class="label" x="42" y="78">APPLICATIONS</text><g transform="translate(34 96) rotate(-2 130 78)"><rect width="266" height="157" rx="24" fill="url(#glass)" stroke="#66BEFF" stroke-opacity=".5"/><rect x="19" y="20" width="226" height="116" rx="15" fill="#061731" stroke="#4DA3FF" stroke-opacity=".28"/><circle cx="38" cy="39" r="4" fill="#F2B84B"/><circle cx="54" cy="39" r="4" fill="#4DA3FF"/><path d="M38 64h78M38 81h117M38 98h66" stroke="#9CD6FF" stroke-width="6" stroke-linecap="round" opacity=".62"/><rect x="159" y="54" width="62" height="59" rx="12" fill="#143D7D" stroke="#4DA3FF" stroke-opacity=".45"/><path d="M173 101l13-20 10 10 14-25" fill="none" stroke="url(#gold)" stroke-width="4" stroke-linecap="round"/></g><text class="micro" x="67" y="270">WEB · MOBILE · WORKFLOWS</text></g>
-<!-- Cloud: suspended service layer, no box -->
-<g class="floatB" filter="url(#shadow)"><text class="label" x="421" y="41">CLOUD + APIs</text><g transform="translate(395 53)"><path d="M38 92h142c25 0 43-15 43-35 0-20-16-34-39-35C177 2 159-10 136-10c-26 0-46 15-52 38-24 2-42 15-42 35 0 17 14 29 36 29z" fill="#123C78" fill-opacity=".88" stroke="#79CAFF" stroke-opacity=".72"/><circle cx="92" cy="56" r="6" fill="#4DA3FF"/><circle cx="116" cy="56" r="6" fill="#F2B84B" class="spark"/><circle cx="140" cy="56" r="6" fill="#4DA3FF"/><path d="M79 106h101" stroke="#5CB8FF" stroke-width="2" opacity=".38"/></g></g>
-<!-- Commerce: phone floating closer -->
-<g class="floatC" filter="url(#shadow)"><text class="label" x="735" y="88">COMMERCE</text><g transform="translate(720 101) rotate(3 70 85)"><rect x="12" width="116" height="164" rx="28" fill="#071A38" stroke="#77CBFF" stroke-width="2.4"/><rect x="27" y="19" width="86" height="108" rx="14" fill="#17468A"/><rect x="49" y="9" width="40" height="5" rx="2.5" fill="#4DA3FF" opacity=".5"/><path d="M43 52h10l7 34h35l9-25H58" fill="none" stroke="url(#gold)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="70" cy="100" r="6" fill="#FFD27A"/><circle cx="95" cy="100" r="6" fill="#FFD27A"/><circle cx="70" cy="144" r="5" fill="#4DA3FF"/></g><g transform="translate(842 157)"><circle r="19" fill="#F2B84B" fill-opacity=".13" stroke="#F2B84B" stroke-opacity=".55"/><path d="M-8 0l6 6L9-10" fill="none" stroke="#FFD27A" stroke-width="3.5" stroke-linecap="round"/></g></g>
-<!-- Data: database with particles, no card -->
-<g class="floatB" filter="url(#shadow)"><text class="label" x="49" y="418">DATA</text><g transform="translate(59 435)"><ellipse cx="76" cy="17" rx="66" ry="16" fill="#15417F" stroke="#76C8FF"/><path d="M10 17v92c0 10 30 17 66 17s66-7 66-17V17" fill="#092149" stroke="#57B6FF" stroke-opacity=".68"/><path d="M10 48c0 10 30 17 66 17s66-7 66-17M10 79c0 10 30 17 66 17s66-7 66-17" fill="none" stroke="#57B6FF" stroke-opacity=".5"/><circle cx="126" cy="107" r="5" fill="#F2B84B" class="spark"/><circle cx="154" cy="43" r="4" fill="#4DA3FF"/><circle cx="168" cy="61" r="3" fill="#82CDFF" opacity=".7"/></g><text class="micro" x="70" y="584">DATA · ANALYTICS</text></g>
-<!-- Users: foreground endpoint cluster -->
-<g class="floatA" filter="url(#shadow)"><text class="label" x="756" y="407">USERS</text><g transform="translate(756 426)"><circle cx="56" cy="46" r="37" fill="url(#glass)" stroke="#73C7FF" stroke-opacity=".75"/><circle cx="56" cy="35" r="13" fill="#A5DCFF"/><path d="M31 68c10-20 40-20 50 0" fill="none" stroke="#A5DCFF" stroke-width="6" stroke-linecap="round"/><rect x="10" y="96" width="97" height="67" rx="15" fill="#071A38" stroke="#5DBAFF" stroke-opacity=".58"/><path d="M28 115h62M28 132h44M28 149h60" stroke="#5DBAFF" stroke-width="5" stroke-linecap="round" opacity=".72"/><circle cx="119" cy="113" r="9" fill="#4DA3FF" fill-opacity=".2" stroke="#4DA3FF"/></g></g>
-<!-- Infrastructure: substantial rack cluster -->
-<g class="floatC" filter="url(#shadow)"><text class="label" x="542" y="552">INFRASTRUCTURE</text><g transform="translate(536 568)"><rect x="0" y="0" width="225" height="90" rx="18" fill="url(#glass)" stroke="#63BDFF" stroke-opacity=".5"/><g transform="translate(17 14)"><rect width="191" height="18" rx="6" fill="#061731" stroke="#65C0FF" stroke-opacity=".7"/><rect y="25" width="191" height="18" rx="6" fill="#061731" stroke="#65C0FF" stroke-opacity=".7"/><rect y="50" width="191" height="18" rx="6" fill="#061731" stroke="#65C0FF" stroke-opacity=".7"/><circle cx="17" cy="9" r="4" fill="#4DA3FF"/><circle cx="31" cy="9" r="4" fill="#F2B84B"/><circle cx="17" cy="34" r="4" fill="#4DA3FF"/><circle cx="31" cy="34" r="4" fill="#4DA3FF"/><circle cx="17" cy="59" r="4" fill="#4DA3FF"/><path d="M59 9h106M59 34h106M59 59h78" stroke="#2E7FCF" stroke-width="3" stroke-linecap="round"/><path d="M145 59h22l10-12" fill="none" stroke="#F2B84B" stroke-width="3" stroke-linecap="round"/></g></g></g>
-<!-- Central orchestration core -->
-<g class="core"><circle cx="491" cy="337" r="132" fill="#061731" fill-opacity=".68" stroke="#4DA3FF" stroke-opacity=".12"/><circle cx="491" cy="337" r="112" fill="#102F63" stroke="url(#blue)" stroke-width="2.5" filter="url(#glow)"/><circle cx="491" cy="337" r="84" fill="url(#halo)"/><circle cx="491" cy="337" r="66" fill="#071A38" stroke="#4DA3FF" stroke-opacity=".28"/><circle cx="491" cy="337" r="124" fill="none" stroke="#4DA3FF" stroke-opacity=".18" stroke-dasharray="2 10"/></g>
-<!-- only four route junctions because four visible routes terminate at core -->
-<g filter="url(#glow)"><circle cx="424" cy="293" r="7" fill="#4DA3FF"/><circle cx="557" cy="293" r="7" fill="#4DA3FF"/><circle cx="424" cy="369" r="7" fill="#4DA3FF"/><circle cx="557" cy="368" r="7" fill="#4DA3FF"/><circle cx="491" cy="257" r="7" fill="#4DA3FF"/><circle cx="502" cy="413" r="7" fill="#4DA3FF"/></g>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#95DCFF"/><stop offset=".48" stop-color="#3AA8FF"/><stop offset="1" stop-color="#1768F2"/></linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1B4B91" stop-opacity=".92"/><stop offset="1" stop-color="#081D40" stop-opacity=".9"/></linearGradient>
+  <linearGradient id="glass2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#123E7F" stop-opacity=".88"/><stop offset="1" stop-color="#061731" stop-opacity=".92"/></linearGradient>
+  <linearGradient id="gold"><stop stop-color="#FFE4A3"/><stop offset="1" stop-color="#F2B84B"/></linearGradient>
+  <radialGradient id="scene" cx="52%" cy="48%" r="58%"><stop stop-color="#1D67CC" stop-opacity=".34"/><stop offset=".52" stop-color="#123A75" stop-opacity=".11"/><stop offset="1" stop-color="#081B3A" stop-opacity="0"/></radialGradient>
+  <radialGradient id="halo"><stop stop-color="#F2B84B" stop-opacity=".28"/><stop offset=".42" stop-color="#F2B84B" stop-opacity=".10"/><stop offset="1" stop-color="#F2B84B" stop-opacity="0"/></radialGradient>
+  <filter id="shadow" x="-60%" y="-60%" width="220%" height="240%"><feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#020814" flood-opacity=".48"/></filter>
+  <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#4DA3FF" flood-opacity=".72"/></filter>
+  <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#6CC1FF" stroke-opacity=".03"/></pattern>
+  <style>
+    .label{fill:#BDE6FF;font-family:Arial,sans-serif;font-size:14px;font-weight:700;letter-spacing:2.4px}.micro{fill:#8DCFFC;font-family:Arial,sans-serif;font-size:9px;letter-spacing:1.1px}.wire{fill:none;stroke:url(#blue);stroke-width:2.5;stroke-linecap:round;stroke-dasharray:6 11;animation:flow 6.5s linear infinite}.trace{fill:none;stroke:#5DB8FF;stroke-width:1.4;stroke-opacity:.24}.f1{animation:a 6.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.f2{animation:b 7.1s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.f3{animation:c 8.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.pulse{animation:p 4.5s ease-in-out infinite;transform-box:fill-box;transform-origin:center}@keyframes flow{to{stroke-dashoffset:-140}}@keyframes a{50%{transform:translate(-3px,-7px)}}@keyframes b{50%{transform:translate(5px,5px)}}@keyframes c{50%{transform:translate(-4px,6px)}}@keyframes p{50%{transform:scale(1.025)}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+</defs>
+<rect width="920" height="680" fill="url(#grid)"/><ellipse cx="488" cy="338" rx="420" ry="305" fill="url(#scene)"/>
+
+<!-- one continuous visual flow -->
+<path class="trace" d="M140 520C210 610 345 638 489 618C640 598 756 528 807 421"/>
+<path class="trace" d="M110 252C190 130 332 70 494 78C663 86 786 178 846 307"/>
+<path class="wire" d="M470 133C474 176 477 203 479 232"/>
+<path class="wire" d="M333 268C385 280 419 292 449 313"/>
+<path class="wire" d="M707 260C634 277 584 296 531 321"/>
+<path class="wire" d="M326 445C383 425 425 401 455 377"/>
+<path class="wire" d="M714 438C639 425 585 404 529 376"/>
+<path class="wire" d="M494 420C494 474 495 514 496 553"/>
+
+<!-- cloud canopy -->
+<g class="f2" filter="url(#shadow)">
+  <text class="label" x="418" y="42">CLOUD + APIs</text>
+  <path d="M399 127h157c27 0 45-15 45-37 0-21-17-36-41-37-7-20-26-33-50-33-28 0-49 16-56 41-26 2-45 16-45 37 0 17 15 29 37 29z" fill="url(#glass)" stroke="#7CCEFF" stroke-opacity=".7"/>
+  <circle cx="455" cy="92" r="6" fill="#4DA3FF"/><circle cx="480" cy="92" r="6" fill="#F2B84B"/><circle cx="505" cy="92" r="6" fill="#4DA3FF"/>
+  <path d="M437 143h120" stroke="#5CB8FF" stroke-width="2" opacity=".4"/>
+</g>
+
+<!-- applications workspace, upper left, integrated into scene -->
+<g class="f1" filter="url(#shadow)">
+  <text class="label" x="48" y="126">APPLICATIONS</text>
+  <g transform="translate(42 144) rotate(-2 128 74)">
+    <rect width="258" height="148" rx="24" fill="url(#glass)" stroke="#69C3FF" stroke-opacity=".52"/>
+    <rect x="18" y="18" width="222" height="112" rx="15" fill="#061731" stroke="#4DA3FF" stroke-opacity=".28"/>
+    <circle cx="38" cy="38" r="4.5" fill="#F2B84B"/><circle cx="55" cy="38" r="4.5" fill="#4DA3FF"/>
+    <path d="M39 64h74M39 82h108M39 100h59" stroke="#9DD7FF" stroke-width="6" stroke-linecap="round" opacity=".62"/>
+    <rect x="159" y="53" width="60" height="58" rx="12" fill="#143D7D"/>
+    <path d="M172 100l13-20 10 10 13-23" fill="none" stroke="url(#gold)" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <text class="micro" x="78" y="310">WEB · MOBILE · WORKFLOWS</text>
+</g>
+
+<!-- commerce device, upper right, no enclosing card -->
+<g class="f3" filter="url(#shadow)">
+  <text class="label" x="732" y="125">COMMERCE</text>
+  <g transform="translate(724 143) rotate(3 58 78)">
+    <rect width="118" height="164" rx="28" fill="#071A38" stroke="#7ACDFF" stroke-width="2.5"/>
+    <rect x="14" y="18" width="90" height="107" rx="14" fill="#17468A"/>
+    <path d="M31 51h10l6 32h35l9-23H45" fill="none" stroke="url(#gold)" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="59" cy="96" r="6" fill="#FFD27A"/><circle cx="83" cy="96" r="6" fill="#FFD27A"/><circle cx="59" cy="144" r="5" fill="#4DA3FF"/>
+  </g>
+  <g transform="translate(856 205)"><circle r="18" fill="#F2B84B" fill-opacity=".13" stroke="#F2B84B" stroke-opacity=".6"/><path d="M-8 0l6 6L9-10" fill="none" stroke="#FFD27A" stroke-width="3.5" stroke-linecap="round"/></g>
+</g>
+
+<!-- central Lotus orchestration layer: compact, not a target -->
+<g class="pulse">
+  <ellipse cx="493" cy="345" rx="126" ry="92" fill="#071A38" fill-opacity=".76" stroke="#4DA3FF" stroke-opacity=".14"/>
+  <ellipse cx="493" cy="345" rx="105" ry="75" fill="#102F63" stroke="url(#blue)" stroke-width="2.5" filter="url(#glow)"/>
+  <ellipse cx="493" cy="345" rx="76" ry="55" fill="url(#halo)"/>
+  <ellipse cx="493" cy="345" rx="61" ry="45" fill="#071A38" stroke="#4DA3FF" stroke-opacity=".28"/>
+</g>
+<g filter="url(#glow)"><circle cx="449" cy="313" r="7" fill="#4DA3FF"/><circle cx="531" cy="321" r="7" fill="#4DA3FF"/><circle cx="455" cy="377" r="7" fill="#4DA3FF"/><circle cx="529" cy="376" r="7" fill="#4DA3FF"/><circle cx="479" cy="232" r="7" fill="#4DA3FF"/><circle cx="494" cy="420" r="7" fill="#4DA3FF"/></g>
+
+<!-- data foundation, left lower -->
+<g class="f2" filter="url(#shadow)">
+  <text class="label" x="71" y="430">DATA</text>
+  <g transform="translate(72 449)">
+    <ellipse cx="75" cy="17" rx="65" ry="16" fill="#15417F" stroke="#77C9FF"/>
+    <path d="M10 17v90c0 10 29 17 65 17s65-7 65-17V17" fill="#092149" stroke="#58B6FF" stroke-opacity=".7"/>
+    <path d="M10 47c0 10 29 17 65 17s65-7 65-17M10 77c0 10 29 17 65 17s65-7 65-17" fill="none" stroke="#58B6FF" stroke-opacity=".5"/>
+    <circle cx="123" cy="105" r="5" fill="#F2B84B"/>
+  </g>
+  <text class="micro" x="83" y="592">DATA · ANALYTICS</text>
+</g>
+
+<!-- users / endpoints, right lower -->
+<g class="f1" filter="url(#shadow)">
+  <text class="label" x="744" y="421">USERS</text>
+  <g transform="translate(744 439)">
+    <circle cx="55" cy="42" r="34" fill="url(#glass)" stroke="#72C6FF"/>
+    <circle cx="55" cy="32" r="12" fill="#A4DCFF"/><path d="M32 62c9-18 37-18 46 0" fill="none" stroke="#A4DCFF" stroke-width="6" stroke-linecap="round"/>
+    <rect x="8" y="88" width="94" height="63" rx="14" fill="#071A38" stroke="#5DBAFF" stroke-opacity=".58"/>
+    <path d="M26 106h59M26 123h42M26 140h58" stroke="#5DBAFF" stroke-width="5" stroke-linecap="round" opacity=".72"/>
+  </g>
+</g>
+
+<!-- infrastructure base: wider and structural -->
+<g class="f3" filter="url(#shadow)">
+  <text class="label" x="417" y="565">INFRASTRUCTURE</text>
+  <g transform="translate(350 583)">
+    <rect width="290" height="86" rx="20" fill="url(#glass2)" stroke="#64BFFF" stroke-opacity=".56"/>
+    <g transform="translate(20 14)">
+      <rect width="250" height="17" rx="6" fill="#061731" stroke="#65C0FF" stroke-opacity=".7"/><rect y="22" width="250" height="17" rx="6" fill="#061731" stroke="#65C0FF" stroke-opacity=".7"/><rect y="44" width="250" height="17" rx="6" fill="#061731" stroke="#65C0FF" stroke-opacity=".7"/>
+      <circle cx="18" cy="8.5" r="4" fill="#4DA3FF"/><circle cx="33" cy="8.5" r="4" fill="#F2B84B"/><circle cx="18" cy="30.5" r="4" fill="#4DA3FF"/><circle cx="33" cy="30.5" r="4" fill="#4DA3FF"/><circle cx="18" cy="52.5" r="4" fill="#4DA3FF"/>
+      <path d="M67 8.5h143M67 30.5h143M67 52.5h102" stroke="#2E7FCF" stroke-width="3" stroke-linecap="round"/><path d="M188 52.5h24l12-13" fill="none" stroke="#F2B84B" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </g>
+</g>
 </svg>
