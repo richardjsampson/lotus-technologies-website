@@ -3,22 +3,294 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-	title="Contact | Lotus Technologies"
-	description="Talk with Lotus Technologies about your technology, integration, software, or operational challenge."
+	title="Contact Us | Lotus Technologies"
+	description="Tell Lotus Technologies what you're trying to solve. Start a conversation about your business, technology, integration, software, or operational challenge."
 >
-	<section class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-		<div class="max-w-3xl">
-			<p class="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-lotus-sky">
-				Contact
-			</p>
+	<section class="contact-page">
+		<div class="contact-shell">
+			<div class="contact-copy">
+				<p class="contact-eyebrow">Contact Us</p>
+				<h1>Let’s talk about what you’re trying to <span>solve.</span></h1>
+				<p class="contact-intro">
+					You don’t need a complete technical plan. Tell us the goal, the problem, or what isn’t working — we’ll help determine the right path forward.
+				</p>
 
-			<h1 class="text-5xl font-semibold tracking-tight text-white sm:text-6xl">
-				What problem are you trying to solve?
-			</h1>
+				<div class="contact-direct" aria-label="Alternate contact information">
+					<p>Prefer to reach out directly?</p>
+					<a href="mailto:info@lotustechnologies.dev">
+						<span>Email</span>
+						<strong>info@lotustechnologies.dev</strong>
+					</a>
+					<a href="tel:+16197585485">
+						<span>Phone</span>
+						<strong>619.758.5485</strong>
+					</a>
+				</div>
 
-			<p class="mt-6 text-lg leading-8 text-white/70">
-				Our Contact page is coming soon.
-			</p>
+				<div class="contact-promise">
+					<span class="contact-promise-mark">✦</span>
+					<p><strong>Start with the business problem.</strong><br />We’ll help translate it into the right technical solution.</p>
+				</div>
+			</div>
+
+			<div class="contact-form-wrap">
+				<div class="contact-form-heading">
+					<p>Start the conversation</p>
+					<h2>What are you trying to accomplish?</h2>
+				</div>
+
+				<form class="contact-form" aria-label="Contact Lotus Technologies">
+					<div class="contact-field-row">
+						<label>
+							<span>Name</span>
+							<input type="text" name="name" autocomplete="name" required />
+						</label>
+						<label>
+							<span>Company <em>optional</em></span>
+							<input type="text" name="company" autocomplete="organization" />
+						</label>
+					</div>
+
+					<label>
+						<span>Email</span>
+						<input type="email" name="email" autocomplete="email" required />
+					</label>
+
+					<label>
+						<span>What are you trying to solve?</span>
+						<textarea name="challenge" rows="7" required placeholder="A goal, a problem, an existing system that isn’t working the way you need — start wherever makes sense."></textarea>
+					</label>
+
+					<button type="submit">Send inquiry <span aria-hidden="true">→</span></button>
+					<p class="contact-form-note">We’ll review your message and get back to you as soon as possible.</p>
+					<p class="contact-form-status" aria-live="polite"></p>
+				</form>
+			</div>
 		</div>
 	</section>
+
+	<script is:inline>
+		const contactForm = document.querySelector('.contact-form');
+		const contactStatus = document.querySelector('.contact-form-status');
+		contactForm?.addEventListener('submit', (event) => {
+			event.preventDefault();
+			const data = new FormData(contactForm);
+			const name = String(data.get('name') || '').trim();
+			const company = String(data.get('company') || '').trim();
+			const email = String(data.get('email') || '').trim();
+			const challenge = String(data.get('challenge') || '').trim();
+			const subject = `Lotus Technologies inquiry${company ? ` — ${company}` : ''}`;
+			const body = `Name: ${name}\nEmail: ${email}${company ? `\nCompany: ${company}` : ''}\n\nWhat I'm trying to solve:\n${challenge}`;
+			if (contactStatus) contactStatus.textContent = 'Opening your email app with this message ready to send…';
+			window.location.href = `mailto:info@lotustechnologies.dev?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+		});
+	</script>
 </BaseLayout>
+
+<style>
+	.contact-page {
+		position: relative;
+		overflow: hidden;
+		padding: clamp(5.5rem, 9vw, 9rem) 1.5rem clamp(6rem, 9vw, 9rem);
+	}
+	.contact-page::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background:
+			radial-gradient(circle at 20% 22%, rgba(30, 99, 233, .24), transparent 31%),
+			radial-gradient(circle at 82% 68%, rgba(242, 184, 75, .1), transparent 27%);
+		pointer-events: none;
+	}
+	.contact-shell {
+		position: relative;
+		z-index: 1;
+		max-width: 1240px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: .9fr 1.1fr;
+		gap: clamp(3rem, 7vw, 7rem);
+		align-items: center;
+	}
+	.contact-eyebrow,
+	.contact-form-heading p {
+		margin: 0;
+		color: #63BEFF;
+		font-size: .78rem;
+		font-weight: 800;
+		letter-spacing: .22em;
+		text-transform: uppercase;
+	}
+	.contact-copy h1 {
+		max-width: 8.5ch;
+		margin: .9rem 0 0;
+		font-size: clamp(3.4rem, 6vw, 6.5rem);
+		font-weight: 620;
+		line-height: .94;
+		letter-spacing: -.055em;
+		color: #fff;
+	}
+	.contact-copy h1 span { color: #F2B84B; }
+	.contact-intro {
+		max-width: 620px;
+		margin: 1.6rem 0 0;
+		color: rgba(255,255,255,.68);
+		font-size: clamp(1.05rem, 1.4vw, 1.22rem);
+		line-height: 1.72;
+	}
+	.contact-direct {
+		margin-top: 2.4rem;
+		padding-top: 1.5rem;
+		border-top: 1px solid rgba(255,255,255,.1);
+	}
+	.contact-direct > p {
+		margin: 0 0 .9rem;
+		color: rgba(255,255,255,.42);
+		font-size: .82rem;
+	}
+	.contact-direct a {
+		display: grid;
+		grid-template-columns: 72px 1fr;
+		align-items: baseline;
+		gap: .8rem;
+		padding: .42rem 0;
+		text-decoration: none;
+		transition: transform .18s ease;
+	}
+	.contact-direct a:hover { transform: translateX(4px); }
+	.contact-direct span {
+		color: #63BEFF;
+		font-size: .72rem;
+		font-weight: 800;
+		letter-spacing: .11em;
+		text-transform: uppercase;
+	}
+	.contact-direct strong {
+		color: rgba(255,255,255,.88);
+		font-size: 1rem;
+		font-weight: 600;
+	}
+	.contact-promise {
+		margin-top: 2.2rem;
+		display: flex;
+		gap: .9rem;
+		align-items: flex-start;
+		max-width: 500px;
+		color: rgba(255,255,255,.52);
+		font-size: .86rem;
+		line-height: 1.6;
+	}
+	.contact-promise-mark { color: #F2B84B; font-size: 1.05rem; line-height: 1.5; }
+	.contact-promise p { margin: 0; }
+	.contact-promise strong { color: rgba(255,255,255,.84); }
+
+	.contact-form-wrap {
+		position: relative;
+		padding: clamp(1.5rem, 3vw, 2.5rem);
+		border: 1px solid rgba(111,184,255,.2);
+		border-radius: 28px;
+		background: linear-gradient(180deg, rgba(17,49,96,.78), rgba(6,22,49,.9));
+		box-shadow: 0 34px 90px rgba(0,0,0,.28);
+	}
+	.contact-form-wrap::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		border-radius: inherit;
+		background: linear-gradient(135deg, rgba(99,190,255,.08), transparent 35%, rgba(242,184,75,.04));
+		pointer-events: none;
+	}
+	.contact-form-heading,
+	.contact-form { position: relative; z-index: 1; }
+	.contact-form-heading h2 {
+		margin: .6rem 0 0;
+		color: #fff;
+		font-size: clamp(1.8rem, 3vw, 2.7rem);
+		line-height: 1.08;
+		letter-spacing: -.035em;
+	}
+	.contact-form {
+		margin-top: 2rem;
+		display: grid;
+		gap: 1.15rem;
+	}
+	.contact-field-row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+	}
+	.contact-form label { display: grid; gap: .48rem; }
+	.contact-form label > span {
+		color: rgba(255,255,255,.72);
+		font-size: .8rem;
+		font-weight: 700;
+	}
+	.contact-form label em {
+		margin-left: .3rem;
+		color: rgba(255,255,255,.34);
+		font-size: .7rem;
+		font-style: normal;
+		font-weight: 500;
+	}
+	.contact-form input,
+	.contact-form textarea {
+		width: 100%;
+		border: 1px solid rgba(255,255,255,.12);
+		border-radius: 12px;
+		background: rgba(3,16,37,.54);
+		color: #fff;
+		padding: .9rem 1rem;
+		outline: none;
+		transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+	}
+	.contact-form textarea {
+		min-height: 160px;
+		resize: vertical;
+		line-height: 1.6;
+	}
+	.contact-form input:focus,
+	.contact-form textarea:focus {
+		border-color: rgba(99,190,255,.7);
+		background: rgba(5,24,53,.75);
+		box-shadow: 0 0 0 3px rgba(99,190,255,.08);
+	}
+	.contact-form textarea::placeholder { color: rgba(255,255,255,.28); }
+	.contact-form button {
+		justify-self: start;
+		display: inline-flex;
+		align-items: center;
+		gap: .7rem;
+		margin-top: .2rem;
+		border: 0;
+		border-radius: 11px;
+		background: #1E63E9;
+		color: #fff;
+		padding: .9rem 1.2rem;
+		font-weight: 800;
+		cursor: pointer;
+		transition: transform .18s ease, background .18s ease;
+	}
+	.contact-form button:hover { transform: translateY(-2px); background: #2873f0; }
+	.contact-form button span { font-size: 1.15rem; }
+	.contact-form-note,
+	.contact-form-status {
+		margin: -.25rem 0 0;
+		color: rgba(255,255,255,.38);
+		font-size: .76rem;
+		line-height: 1.5;
+	}
+	.contact-form-status { color: #8FD4FF; min-height: 1.1em; }
+
+	@media (max-width: 900px) {
+		.contact-shell { grid-template-columns: 1fr; gap: 3.5rem; }
+		.contact-copy h1 { max-width: 11ch; }
+	}
+	@media (max-width: 600px) {
+		.contact-page { padding-left: 1rem; padding-right: 1rem; }
+		.contact-field-row { grid-template-columns: 1fr; }
+		.contact-copy h1 { font-size: clamp(3rem, 16vw, 4.7rem); }
+		.contact-form-wrap { border-radius: 22px; padding: 1.25rem; }
+		.contact-direct a { grid-template-columns: 62px 1fr; }
+		.contact-direct strong { font-size: .93rem; }
+	}
+</style>
