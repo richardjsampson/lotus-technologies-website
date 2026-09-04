@@ -111,7 +111,7 @@
     position: absolute;
     z-index: 3;
     inset: -20px -58px -20px -46px;
-    background: url("/illustrations/hero-ecosystem-desktop-v2.svg") center / contain no-repeat;
+    background: url("/illustrations/hero-ecosystem-desktop-v3.svg") center / contain no-repeat;
     filter: drop-shadow(0 32px 68px rgba(0,0,0,.30));
     pointer-events: none;
   }
