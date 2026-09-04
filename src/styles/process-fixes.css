@@ -1,7 +1,7 @@
 @media (min-width: 1024px) {
   /* Keep the team rails visually strong without striking through the summaries. */
   .process-columns::before {
-    top: calc(50% - 18px);
+    top: calc(50% - 32px);
   }
 
   .process-columns::after {
@@ -9,7 +9,7 @@
   }
 
   .process-node {
-    top: calc(50% - 18px);
+    top: calc(50% - 32px);
   }
 
   .process-client-node {
