@@ -27,43 +27,123 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		<section class="process-map-section">
 			<div class="process-map-intro">
 				<p class="process-eyebrow">The Workflow</p>
-				<h2>Collaboration is built into every stage.</h2>
-				<p>The process moves forward together. When feedback or testing reveals something that needs to change, we loop back, refine it, and move ahead with confidence.</p>
+				<h2>Forward progress. <span>Built-in iteration.</span></h2>
+				<p>Every major stage includes review and feedback. When something needs to change, the process visibly loops back before moving forward again.</p>
 			</div>
 
-			<div class="full-process-board">
-				<div class="full-process-stagebar" aria-hidden="true">
-					<div class="full-stage is-active"><span class="full-stage-num">01</span><strong>Discover</strong><small>Analysis</small></div>
-					<div class="full-stage"><span class="full-stage-num">02</span><strong>Design</strong><small>Solution design</small></div>
-					<div class="full-stage"><span class="full-stage-num">03</span><strong>Build</strong><small>Development</small></div>
-					<div class="full-stage"><span class="full-stage-num">04</span><strong>Validate</strong><small>Testing & review</small></div>
-					<div class="full-stage"><span class="full-stage-num">05</span><strong>Launch & Support</strong><small>Deployment</small></div>
+			<div class="process-visual" aria-label="Lotus and client collaborative workflow">
+				<div class="process-visual-legend" aria-hidden="true">
+					<span class="legend-lotus"><i></i> Lotus Team</span>
+					<span class="legend-client"><i></i> Client Team</span>
+					<span class="legend-loop">↶ Iteration / revision</span>
 				</div>
 
-				<div class="full-process-grid">
-					<div class="full-team-head lotus"><span class="full-team-badge">L</span><strong>Lotus Team</strong></div>
-					<div class="full-cell lotus is-active" data-stage="01 · Discover"><h3>Understand the problem</h3><ul><li>Requirements gathering</li><li>Requirements analysis</li><li>Proposal & quote</li><li>Solution roadmap</li></ul></div>
-					<div class="full-cell lotus" data-stage="02 · Design"><h3>Shape the solution</h3><ul><li>Solution design</li><li>Architecture planning</li><li>Prototypes / mockups</li><li>Design refinement</li></ul></div>
-					<div class="full-cell lotus" data-stage="03 · Build"><h3>Build and test internally</h3><ul><li>Development & coding</li><li>Quality assurance</li><li>Internal testing</li><li>Continuous progress updates</li></ul></div>
-					<div class="full-cell lotus" data-stage="04 · Validate"><h3>Refine with the client</h3><ul><li>Client review support</li><li>Issue resolution</li><li>Bug fixing & refinement</li><li>Final validation</li></ul></div>
-					<div class="full-cell lotus" data-stage="05 · Launch & Support"><h3>Launch and stay engaged</h3><ul><li>Production deployment</li><li>Client training & guides</li><li>Monitoring & optimization</li><li>Ongoing maintenance & support</li></ul></div>
+				<svg class="process-flow-desktop" viewBox="0 0 1260 470" role="img" aria-labelledby="workflow-title workflow-desc">
+					<title id="workflow-title">Two-team iterative development workflow</title>
+					<desc id="workflow-desc">Lotus and client teams move together through Discover, Design, Build, Validate, and Launch, with visible feedback loops returning work to earlier stages when review or testing identifies changes.</desc>
+					<defs>
+						<linearGradient id="lotusRail" x1="0" x2="1"><stop stop-color="#296fe8"/><stop offset="1" stop-color="#58b8ff"/></linearGradient>
+						<linearGradient id="clientRail" x1="0" x2="1"><stop stop-color="#d99a25"/><stop offset="1" stop-color="#ffd36f"/></linearGradient>
+						<filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+						<marker id="arrowBlue" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#58b8ff"/></marker>
+						<marker id="arrowGold" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#f2b84b"/></marker>
+						<marker id="arrowLoop" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#9fd8ff"/></marker>
+					</defs>
 
-					<div class="full-team-head client"><span class="full-team-badge">C</span><strong>Client Team</strong></div>
-					<div class="full-cell client" data-stage="01 · Discover"><h3>Share the vision</h3><ul><li>Share goals & priorities</li><li>Provide requirements</li><li>Review proposal</li><li>Align on scope & roadmap</li></ul></div>
-					<div class="full-cell client" data-stage="02 · Design"><h3>Review and steer</h3><ul><li>Review designs & mockups</li><li>Provide feedback</li><li>Confirm workflow fit</li><li>Approve or request changes</li></ul></div>
-					<div class="full-cell client" data-stage="03 · Build"><h3>Review progress</h3><ul><li>Review feature updates</li><li>Provide feedback</li><li>Validate functionality</li><li>Confirm business alignment</li></ul></div>
-					<div class="full-cell client" data-stage="04 · Validate"><h3>Test and validate</h3><ul><li>Test the solution</li><li>Provide feedback</li><li>Confirm requirements</li><li>Approve final solution</li></ul></div>
-					<div class="full-cell client" data-stage="05 · Launch & Support"><h3>Go live with confidence</h3><ul><li>Train your team</li><li>Share live feedback</li><li>Track outcomes</li><li>Drive continued success</li></ul></div>
-				</div>
+					<!-- Team rails -->
+					<path class="flow-rail lotus-rail" d="M100 165H1160" marker-end="url(#arrowBlue)"/>
+					<path class="flow-rail client-rail" d="M100 315H1160" marker-end="url(#arrowGold)"/>
 
-				<div class="full-approval-row" aria-label="Shared review and approval points">
-					<div class="full-approval-label">Shared checkpoints</div>
-					<div class="full-approval"><span class="full-check">✓</span></div>
-					<div class="full-approval"><span class="full-check">✓</span><span class="full-loop">Revise if needed</span></div>
-					<div class="full-approval"><span class="full-check">✓</span><span class="full-loop">Refine if needed</span></div>
-					<div class="full-approval"><span class="full-check">✓</span><span class="full-loop">Fix & retest</span></div>
-					<div class="full-approval"><span class="full-check">✓</span></div>
+					<!-- Stage columns -->
+					<g class="stage-node" transform="translate(135 0)">
+						<text class="stage-number" x="0" y="67">01</text><text class="stage-label" x="42" y="67">DISCOVER</text>
+						<rect class="lotus-box" x="0" y="105" width="170" height="84" rx="18"/><text class="box-title" x="18" y="136">Understand</text><text class="box-sub" x="18" y="158">requirements + goals</text>
+						<rect class="client-box" x="0" y="270" width="170" height="84" rx="18"/><text class="box-title gold" x="18" y="301">Share</text><text class="box-sub" x="18" y="323">vision + priorities</text>
+						<path class="handoff" d="M85 189V270"/><circle class="checkpoint" cx="85" cy="230" r="16"/><path class="checkmark" d="M77 230l6 6 11-13"/>
+					</g>
+
+					<g class="stage-node" transform="translate(365 0)">
+						<text class="stage-number" x="0" y="67">02</text><text class="stage-label" x="42" y="67">DESIGN</text>
+						<rect class="lotus-box" x="0" y="105" width="170" height="84" rx="18"/><text class="box-title" x="18" y="136">Design</text><text class="box-sub" x="18" y="158">solution + architecture</text>
+						<rect class="client-box" x="0" y="270" width="170" height="84" rx="18"/><text class="box-title gold" x="18" y="301">Review</text><text class="box-sub" x="18" y="323">mockups + workflow</text>
+						<path class="handoff" d="M85 189V270"/><circle class="checkpoint" cx="85" cy="230" r="16"/><path class="checkmark" d="M77 230l6 6 11-13"/>
+					</g>
+
+					<g class="stage-node" transform="translate(595 0)">
+						<text class="stage-number" x="0" y="67">03</text><text class="stage-label" x="42" y="67">BUILD</text>
+						<rect class="lotus-box" x="0" y="105" width="170" height="84" rx="18"/><text class="box-title" x="18" y="136">Build</text><text class="box-sub" x="18" y="158">code + internal QA</text>
+						<rect class="client-box" x="0" y="270" width="170" height="84" rx="18"/><text class="box-title gold" x="18" y="301">Review</text><text class="box-sub" x="18" y="323">working progress</text>
+						<path class="handoff" d="M85 189V270"/><circle class="checkpoint" cx="85" cy="230" r="16"/><path class="checkmark" d="M77 230l6 6 11-13"/>
+					</g>
+
+					<g class="stage-node" transform="translate(825 0)">
+						<text class="stage-number" x="0" y="67">04</text><text class="stage-label" x="42" y="67">VALIDATE</text>
+						<rect class="lotus-box" x="0" y="105" width="170" height="84" rx="18"/><text class="box-title" x="18" y="136">Refine</text><text class="box-sub" x="18" y="158">fix + retest</text>
+						<rect class="client-box" x="0" y="270" width="170" height="84" rx="18"/><text class="box-title gold" x="18" y="301">Test</text><text class="box-sub" x="18" y="323">validate real workflow</text>
+						<path class="handoff" d="M85 189V270"/><circle class="checkpoint" cx="85" cy="230" r="16"/><path class="checkmark" d="M77 230l6 6 11-13"/>
+					</g>
+
+					<g class="stage-node" transform="translate(1055 0)">
+						<text class="stage-number" x="0" y="67">05</text><text class="stage-label" x="42" y="67">LAUNCH</text>
+						<rect class="lotus-box" x="0" y="105" width="170" height="84" rx="18"/><text class="box-title" x="18" y="136">Deploy</text><text class="box-sub" x="18" y="158">train + support</text>
+						<rect class="client-box" x="0" y="270" width="170" height="84" rx="18"/><text class="box-title gold" x="18" y="301">Adopt</text><text class="box-sub" x="18" y="323">measure + improve</text>
+						<path class="handoff" d="M85 189V270"/><circle class="checkpoint final" cx="85" cy="230" r="16"/><path class="checkmark" d="M77 230l6 6 11-13"/>
+					</g>
+
+					<!-- Visible iteration loops -->
+					<path class="return-loop loop-design" d="M450 270C450 395 250 402 220 275" marker-end="url(#arrowLoop)"/>
+					<text class="loop-label" x="268" y="420">DESIGN REVIEW → REVISE</text>
+
+					<path class="return-loop loop-build" d="M680 270C680 438 470 448 450 278" marker-end="url(#arrowLoop)"/>
+					<text class="loop-label" x="492" y="454">PROGRESS REVIEW → REFINE</text>
+
+					<path class="return-loop major-loop" d="M910 270C910 110 700 78 680 105" marker-end="url(#arrowLoop)"/>
+					<text class="loop-label major" x="708" y="91">CLIENT TESTING → BACK TO BUILD</text>
+
+					<path class="return-loop launch-loop" d="M1140 270C1140 88 930 64 910 105" marker-end="url(#arrowLoop)"/>
+					<text class="loop-label major" x="948" y="52">FINAL REVIEW → REFINE BEFORE LAUNCH</text>
+				</svg>
+
+				<div class="process-mobile-flow" aria-hidden="true">
+					<div><b>01</b><strong>Discover</strong><span>Lotus understands ↕ Client shares</span></div>
+					<i>↓</i>
+					<div><b>02</b><strong>Design</strong><span>Lotus designs ↕ Client reviews</span><em>↶ revise when needed</em></div>
+					<i>↓</i>
+					<div><b>03</b><strong>Build</strong><span>Lotus builds ↕ Client reviews progress</span><em>↶ refine when needed</em></div>
+					<i>↓</i>
+					<div><b>04</b><strong>Validate</strong><span>Lotus refines ↕ Client tests</span><em>↶ testing can return work to Build</em></div>
+					<i>↓</i>
+					<div><b>05</b><strong>Launch & Support</strong><span>Lotus deploys ↕ Client adopts</span></div>
 				</div>
+			</div>
+
+			<div class="process-detail-intro">
+				<p class="process-eyebrow">Explore Each Stage</p>
+				<h3>The detail is here when you want it.</h3>
+				<p>The workflow above tells the story at a glance. Open any stage below for the full responsibilities of both teams.</p>
+			</div>
+
+			<div class="process-stage-details">
+				<details open>
+					<summary><span>01</span><strong>Discover</strong><em>Analysis</em></summary>
+					<div class="stage-detail-columns"><div><b>Lotus Team</b><ul><li>Requirements gathering</li><li>Requirements analysis</li><li>Proposal & quote</li><li>Solution roadmap</li></ul></div><div><b>Client Team</b><ul><li>Share goals & priorities</li><li>Provide requirements</li><li>Review proposal</li><li>Align on scope & roadmap</li></ul></div></div>
+				</details>
+				<details>
+					<summary><span>02</span><strong>Design</strong><em>Solution design</em></summary>
+					<div class="stage-detail-columns"><div><b>Lotus Team</b><ul><li>Solution design</li><li>Architecture planning</li><li>Prototypes / mockups</li><li>Design refinement</li></ul></div><div><b>Client Team</b><ul><li>Review designs & mockups</li><li>Provide feedback</li><li>Confirm workflow fit</li><li>Approve or request changes</li></ul></div></div>
+				</details>
+				<details>
+					<summary><span>03</span><strong>Build</strong><em>Development</em></summary>
+					<div class="stage-detail-columns"><div><b>Lotus Team</b><ul><li>Development & coding</li><li>Quality assurance</li><li>Internal testing</li><li>Continuous progress updates</li></ul></div><div><b>Client Team</b><ul><li>Review feature updates</li><li>Provide feedback</li><li>Validate functionality</li><li>Confirm business alignment</li></ul></div></div>
+				</details>
+				<details>
+					<summary><span>04</span><strong>Validate</strong><em>Testing & review</em></summary>
+					<div class="stage-detail-columns"><div><b>Lotus Team</b><ul><li>Client review support</li><li>Issue resolution</li><li>Bug fixing & refinement</li><li>Final validation</li></ul></div><div><b>Client Team</b><ul><li>Test the solution</li><li>Provide feedback</li><li>Confirm requirements</li><li>Approve final solution</li></ul></div></div>
+				</details>
+				<details>
+					<summary><span>05</span><strong>Launch & Support</strong><em>Deployment</em></summary>
+					<div class="stage-detail-columns"><div><b>Lotus Team</b><ul><li>Production deployment</li><li>Client training & guides</li><li>Monitoring & optimization</li><li>Ongoing maintenance & support</li></ul></div><div><b>Client Team</b><ul><li>Train your team</li><li>Share live feedback</li><li>Track outcomes</li><li>Drive continued success</li></ul></div></div>
+				</details>
 			</div>
 		</section>
 
@@ -71,13 +151,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			<div>
 				<p class="process-eyebrow">Why It Works</p>
 				<h2>Fewer surprises. Better decisions.</h2>
-				<p class="process-why-copy">The process is designed to keep technical execution tied to the business problem. Rather than disappearing into development and returning with a finished product, we keep decisions visible, invite feedback while it can still matter, and validate the solution against the real workflow.</p>
+				<p class="process-why-copy">The process keeps technical execution tied to the business problem. Feedback happens while it can still change the outcome, and review is part of the workflow—not an event saved for the end.</p>
 			</div>
 			<div class="process-why-grid">
-				<div class="process-why-card"><strong>Feedback happens early</strong><span>Changes are cheaper and easier when they happen during design and development instead of after launch.</span></div>
-				<div class="process-why-card"><strong>Approvals are explicit</strong><span>Major decisions have clear checkpoints so both teams know when the project is ready to move forward.</span></div>
-				<div class="process-why-card"><strong>Business context stays present</strong><span>Your team keeps the technical work grounded in how people actually use the solution.</span></div>
-				<div class="process-why-card"><strong>Iteration is expected</strong><span>Review, refinement, testing, and retesting are part of the workflow—not signs that the process failed.</span></div>
+				<div class="process-why-card"><strong>Feedback happens early</strong><span>Changes are cheaper and easier during design and development than after launch.</span></div>
+				<div class="process-why-card"><strong>Approvals are explicit</strong><span>Major decisions have clear checkpoints before the work moves forward.</span></div>
+				<div class="process-why-card"><strong>Business context stays present</strong><span>Your team keeps technical work grounded in the real workflow.</span></div>
+				<div class="process-why-card"><strong>Iteration is expected</strong><span>Review, refinement, testing, and retesting are built into the model.</span></div>
 			</div>
 		</section>
 
