@@ -12,18 +12,25 @@
   .approval-flow-desktop .team-label { font-size:11px; font-weight:800; letter-spacing:1.5px; }
   .approval-flow-desktop .team-label.lotus { fill:#7BCBFF; }
   .approval-flow-desktop .team-label.client { fill:#F6C96E; }
+
   .approval-flow-desktop .main-path,
   .approval-flow-desktop .handoff-path { fill:none; stroke:#63BEFF; stroke-width:2.35; stroke-linecap:round; stroke-linejoin:round; }
-  .approval-flow-desktop .handoff-path { stroke-opacity:.78; }
-  .approval-flow-desktop .client-path { fill:none; stroke:#F2B84B; stroke-width:2.05; stroke-linecap:round; stroke-linejoin:round; }
-  .approval-flow-desktop .decision { fill:#0A1D3D; stroke:#F2B84B; stroke-width:1.75; }
-  .approval-flow-desktop .decision-text { fill:#FFF1C8; font-size:8.4px; font-weight:800; text-anchor:middle; letter-spacing:.3px; }
-  .approval-flow-desktop .yes-label { fill:#87D6FF; font-size:8.8px; font-weight:800; letter-spacing:.8px; }
-  .approval-flow-desktop .no-label { fill:#F6C96E; font-size:8.8px; font-weight:800; letter-spacing:.8px; }
-  .approval-flow-desktop .revision-rail { fill:none; stroke:#F2B84B; stroke-width:1.8; stroke-opacity:.38; stroke-dasharray:5 8; }
-  .approval-flow-desktop .return-path { fill:none; stroke:#F2B84B; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:7 7; opacity:.72; }
-  .approval-flow-desktop .revision-label { fill:#FFD77E; font-size:8.4px; font-weight:800; letter-spacing:1.2px; }
-  .approval-flow-desktop .return-label { fill:#F6C96E; font-size:8px; font-weight:700; letter-spacing:.45px; text-transform:uppercase; }
+  .approval-flow-desktop .handoff-path { stroke-opacity:.8; }
+  .approval-flow-desktop .client-path { fill:none; stroke:#F2B84B; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+
+  .approval-flow-desktop .decision-text { fill:#FFF1C8; font-size:8.7px; font-weight:800; text-anchor:middle; letter-spacing:.42px; }
+  .approval-flow-desktop .branch-badge { stroke-width:1.1; }
+  .approval-flow-desktop .branch-badge.yes { fill:#0D2F5D; stroke:#63BEFF; }
+  .approval-flow-desktop .branch-badge.no { fill:#332915; stroke:#F2B84B; }
+  .approval-flow-desktop .branch-text { font-size:8.5px; font-weight:800; text-anchor:middle; letter-spacing:.65px; }
+  .approval-flow-desktop .branch-text.yes { fill:#A9DFFF; }
+  .approval-flow-desktop .branch-text.no { fill:#FFD77E; }
+  .approval-flow-desktop .no-stem { fill:none; stroke:#F2B84B; stroke-width:1.8; stroke-dasharray:5 5; stroke-linecap:round; }
+
+  .approval-flow-desktop .revision-rail { fill:none; stroke:#F2B84B; stroke-width:1.5; stroke-opacity:.25; stroke-dasharray:5 8; }
+  .approval-flow-desktop .return-path { fill:none; stroke:#F2B84B; stroke-width:1.9; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:7 7; opacity:.68; }
+  .approval-flow-desktop .return-label { fill:#F6C96E; font-size:8px; font-weight:700; letter-spacing:.55px; }
+
   .approval-flow-desktop .gate-note { fill:#B8DFF7; font-size:10px; letter-spacing:.5px; }
   .approval-flow-desktop .gate-note.emphasis { fill:#E6F5FF; font-size:15px; font-weight:800; letter-spacing:1.35px; }
   .approval-flow-desktop .gate-note.subnote { fill:#8FC7EC; font-size:10px; letter-spacing:.45px; }
