@@ -1,167 +1,53 @@
-/* Calm, human team silhouettes for the About page.
-   This intentionally removes the role-symbol overlays and sci-fi treatment. */
+/* Preserve the original Lotus team avatar shapes; only recolor and frame them. */
 .about-page .about-portrait {
-  width: 138px;
-  height: 138px;
-  background: linear-gradient(180deg, rgba(17, 54, 105, .94), rgba(6, 24, 52, .98));
-  border: 1px solid rgba(111, 184, 255, .26);
+  width: 146px;
+  height: 146px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 34%, #163f78 0%, #0d2b55 58%, #071a35 100%);
+  border: 1px solid rgba(111, 184, 255, .30);
   box-shadow: none;
 }
 
 .about-page .about-person.featured .about-portrait {
-  width: 154px;
-  height: 154px;
+  width: 164px;
+  height: 164px;
 }
 
-.about-page .about-portrait::before {
-  inset: 0;
-  border: 0;
-  border-radius: 50%;
-  background: radial-gradient(circle at 50% 22%, rgba(77, 163, 255, .10), transparent 46%);
-}
-
+.about-page .about-portrait::before,
 .about-page .about-portrait::after {
-  display: none;
+  display: none !important;
 }
 
+.about-page .about-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: grayscale(1) sepia(.72) hue-rotate(164deg) saturate(2.15) brightness(.96) contrast(1.08);
+  opacity: .97;
+}
+
+/* Kill the old generated geometry completely. */
+.about-page .portrait-head,
+.about-page .portrait-body,
 .about-page .about-portrait svg {
   display: none !important;
 }
 
-.about-page .portrait-head {
-  z-index: 2;
-  top: 19%;
-  width: 31%;
-  background: #6eaee8;
-  box-shadow: none;
-}
-
-.about-page .portrait-body {
-  z-index: 1;
-  bottom: 0;
-  width: 70%;
-  height: 49%;
-  border-radius: 48% 48% 10% 10% / 34% 34% 8% 8%;
-  background: #285c96;
-}
-
-/* Small, deliberately human variations inspired by the older avatar treatment. */
-.about-page .portrait-customer .portrait-head {
-  width: 30%;
-  top: 20%;
-  border-radius: 47% 47% 50% 50%;
-}
-.about-page .portrait-customer .portrait-body {
-  width: 72%;
-  border-radius: 43% 43% 8% 8% / 31% 31% 7% 7%;
-}
-
-.about-page .portrait-architecture .portrait-head {
-  width: 29%;
-  top: 18%;
-  border-radius: 45% 45% 50% 50%;
-}
-.about-page .portrait-architecture .portrait-head::before {
-  content: "";
-  position: absolute;
-  left: -3%;
-  right: -3%;
-  top: -8%;
-  height: 24%;
-  border-radius: 55% 55% 25% 25%;
-  background: #1a477a;
-}
-
-.about-page .portrait-web .portrait-head {
-  width: 31%;
-  top: 19%;
-}
-.about-page .portrait-web .portrait-head::before {
-  content: "";
-  position: absolute;
-  left: -5%;
-  right: -1%;
-  top: -7%;
-  height: 22%;
-  border-radius: 60% 45% 30% 25%;
-  background: #1a477a;
-}
-
-.about-page .portrait-design .portrait-head {
-  width: 30%;
-  top: 20%;
-  border-radius: 48% 48% 53% 53%;
-}
-.about-page .portrait-design .portrait-body {
-  width: 68%;
-}
-
-.about-page .portrait-security .portrait-head {
-  width: 32%;
-  top: 18%;
-  border-radius: 48% 48% 46% 46%;
-}
-.about-page .portrait-security .portrait-head::before {
-  content: "";
-  position: absolute;
-  inset: -8% -2% auto;
-  height: 25%;
-  border-radius: 50% 50% 20% 20%;
-  background: #1a477a;
-}
-.about-page .portrait-security .portrait-body {
-  width: 74%;
-}
-
-.about-page .portrait-telecom .portrait-head {
-  width: 30%;
-  top: 20%;
-}
-.about-page .portrait-telecom .portrait-body {
-  width: 71%;
-  height: 48%;
-}
-
-.about-page .portrait-microsoft .portrait-head {
-  width: 29%;
-  top: 19%;
-  border-radius: 46% 46% 51% 51%;
-}
-.about-page .portrait-microsoft .portrait-head::before {
-  content: "";
-  position: absolute;
-  left: 2%;
-  right: -4%;
-  top: -8%;
-  height: 22%;
-  border-radius: 55% 55% 22% 22%;
-  background: #1a477a;
-}
-
-.about-page .portrait-ux .portrait-head {
-  width: 29%;
-  top: 19%;
-  border-radius: 48% 48% 54% 54%;
-}
-.about-page .portrait-ux .portrait-head::before {
-  content: "";
-  position: absolute;
-  left: -10%;
-  right: -10%;
-  top: -9%;
-  height: 34%;
-  border-radius: 60% 60% 38% 38%;
-  background: #1a477a;
-}
-.about-page .portrait-ux .portrait-body {
-  width: 66%;
-  border-radius: 50% 50% 8% 8% / 36% 36% 7% 7%;
+@media (hover:hover) and (pointer:fine) {
+  .about-page .about-person:hover .about-portrait {
+    border-color: rgba(111, 184, 255, .48);
+  }
 }
 
 @media (max-width: 600px) {
   .about-page .about-portrait,
   .about-page .about-person.featured .about-portrait {
-    width: 136px;
-    height: 136px;
+    width: 142px;
+    height: 142px;
   }
 }
