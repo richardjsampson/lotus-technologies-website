@@ -1,24 +1,102 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/about-page.css';
 ---
 
 <BaseLayout
 	title="About | Lotus Technologies"
-	description="Learn about Lotus Technologies and our approach to solving business problems with technology."
+	description="Meet Lotus Technologies — a customer-centric technology partner built around trusted experts, collaborative delivery, and practical solutions."
 >
-	<section class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-		<div class="max-w-3xl">
-			<p class="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-lotus-sky">
-				About Lotus
-			</p>
+	<div class="about-page">
+		<section class="about-hero">
+			<div class="about-hero-inner">
+				<div>
+					<p class="about-eyebrow">About Lotus</p>
+					<h1>Your goals. <span>Our expertise.</span></h1>
+					<p class="about-hero-copy">
+						Lotus Technologies was formed around a simple idea: clients deserve a technology partner that understands the business problem first, brings the right people to the table, and stays accountable from planning through delivery and beyond.
+					</p>
+				</div>
 
-			<h1 class="text-5xl font-semibold tracking-tight text-white sm:text-6xl">
-				Technology is the tool. Solving the problem is the goal.
-			</h1>
+				<div class="about-hero-visual" aria-label="Lotus combines business context, engineering, design, and customer success around one shared goal">
+					<div class="about-orbit"></div>
+					<div class="about-orbit two"></div>
+					<div class="about-core"><strong>One shared<br />outcome</strong></div>
+					<div class="about-node n1"><strong>Business</strong><span>Goals · workflows · outcomes</span></div>
+					<div class="about-node n2"><strong>Engineering</strong><span>Architecture · software · systems</span></div>
+					<div class="about-node n3"><strong>Experience</strong><span>UX · design · adoption</span></div>
+					<div class="about-node n4"><strong>Partnership</strong><span>Transparency · support · trust</span></div>
+				</div>
+			</div>
+		</section>
 
-			<p class="mt-6 text-lg leading-8 text-white/70">
-				Our About page is coming soon.
-			</p>
-		</div>
-	</section>
+		<section class="about-story">
+			<div>
+				<p class="about-eyebrow">Our Story</p>
+				<h2>Built around people we trust.</h2>
+			</div>
+			<div class="about-story-copy">
+				<p>
+					Lotus brought together experienced professionals from different areas of technology with one shared vision: create a lean, customer-centric organization capable of solving complex problems without the layers, agendas, and friction clients often encounter with larger vendors.
+				</p>
+				<p>
+					The foundation was personal as much as technical. The people behind Lotus were not selected from a résumé pile. They were engineers, architects, designers, and technology leaders whose work had already earned trust over years of professional relationships.
+				</p>
+				<p>
+					That model still shapes how we work today. We assemble the expertise a problem actually requires, keep communication direct, and work alongside the client instead of disappearing behind a delivery process.
+				</p>
+				<div class="about-story-callout">Technology is the tool. Solving the business problem is the goal.</div>
+			</div>
+		</section>
+
+		<section class="about-values-wrap">
+			<div class="about-values">
+				<div class="about-values-head">
+					<p class="about-eyebrow">How We Work</p>
+					<h2>The principles are simple.</h2>
+				</div>
+				<div class="about-values-grid">
+					<article class="about-value"><span class="about-value-num">01</span><h3>Transparency</h3><p>Clients should understand what is happening, why decisions are being made, and where the project stands.</p></article>
+					<article class="about-value"><span class="about-value-num">02</span><h3>Honesty</h3><p>We recommend what fits the problem—not what happens to be easiest or most profitable for us to sell.</p></article>
+					<article class="about-value"><span class="about-value-num">03</span><h3>Precision</h3><p>Good execution begins with understanding the real requirement and carrying that context through implementation.</p></article>
+					<article class="about-value"><span class="about-value-num">04</span><h3>Collaboration</h3><p>Your team stays part of the process. Shared decisions produce better solutions and fewer surprises.</p></article>
+				</div>
+			</div>
+		</section>
+
+		<section class="about-team">
+			<div class="about-team-head">
+				<div>
+					<p class="about-eyebrow">Our Team</p>
+					<h2>Different disciplines. One team.</h2>
+				</div>
+				<p class="about-team-intro">The original Lotus team brought together specialists across customer success, software architecture, web development, design, security, telecommunications, Microsoft technologies, and user experience.</p>
+			</div>
+
+			<div class="about-team-grid">
+				<article class="about-person featured" data-initials="RS">
+					<h3>Richard Sampson</h3><p>CTO · Director of Customer Success</p>
+					<details><summary>About Richard →</summary><div>Technology has been a lifelong interest, beginning with programming as a child and later developing into a career spanning customer-facing technology roles, solution delivery, and the formation of Lotus Technologies.</div></details>
+				</article>
+				<article class="about-person featured" data-initials="AP">
+					<h3>Andy Pham</h3><p>Director · Software Architecture</p>
+					<details><summary>About Andy →</summary><div>UC San Diego computer science graduate with both bachelor's and master's degrees, bringing deep software engineering and enterprise architecture experience to the team.</div></details>
+				</article>
+				<article class="about-person" data-initials="AM"><h3>Aaron Mishra</h3><p>Director · Web Development</p><details><summary>About Aaron →</summary><div>Web technology specialist with undergraduate and graduate training in computer science and experience leading development across startup and enterprise environments.</div></details></article>
+				<article class="about-person" data-initials="PA"><h3>Peter Adhikari</h3><p>Director · UX & Design</p><details><summary>About Peter →</summary><div>Engineer and designer focused on translating product requirements into polished front-end experiences and user-centered interfaces.</div></details></article>
+				<article class="about-person" data-initials="TR"><h3>Tracy Reed</h3><p>Security Architect</p><details><summary>About Tracy →</summary><div>CISSP and RHCE security specialist with deep experience in cloud security, container vulnerability management, intrusion detection, Linux, UNIX, and systems architecture.</div></details></article>
+				<article class="about-person" data-initials="JS"><h3>Jerry Sokol</h3><p>Telecommunications Architect</p><details><summary>About Jerry →</summary><div>Technology and customer-operations leader experienced in taking software and hardware products from concept through worldwide delivery and translating technology for business stakeholders.</div></details></article>
+				<article class="about-person" data-initials="RC"><h3>Robert Campbell</h3><p>Microsoft Lead Architect</p><details><summary>About Robert →</summary><div>Long-time Microsoft-stack developer with experience spanning Visual Basic, ASP.NET, MVC, Azure, and enterprise application development.</div></details></article>
+				<article class="about-person" data-initials="VN"><h3>Vy Nguyen</h3><p>User Experience Lead</p><details><summary>About Vy →</summary><div>Front-end and UX specialist with experience across modern JavaScript stacks, multinational client work, mentoring, and continuous learning.</div></details></article>
+			</div>
+		</section>
+
+		<section class="about-close">
+			<div>
+				<h2>We would rather be your partner than your vendor.</h2>
+				<p>Bring us the business problem. We will help determine what the technology needs to do.</p>
+			</div>
+			<a href="/contact">Discuss Your Challenge</a>
+		</section>
+	</div>
 </BaseLayout>
