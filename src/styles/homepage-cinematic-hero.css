@@ -1,0 +1,118 @@
+/* Cinematic homepage hero: real HTML content over a full-width visual environment */
+body.home-page main > section:first-child{
+  position:relative;
+  isolation:isolate;
+  min-height:760px;
+  max-width:none;
+  width:100%;
+  margin:0;
+  padding:0 1.5rem;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:#071a38;
+}
+
+body.home-page main > section:first-child::before{
+  content:"";
+  position:absolute;
+  z-index:-2;
+  inset:0;
+  background-image:url('/homepage-hero-cinematic.png');
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+
+body.home-page main > section:first-child::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(5,20,46,.99) 0%,rgba(5,20,46,.97) 23%,rgba(5,20,46,.82) 39%,rgba(5,20,46,.36) 58%,rgba(5,20,46,.06) 76%,rgba(5,20,46,.03) 100%),
+    linear-gradient(180deg,rgba(5,20,46,.08) 0%,rgba(5,20,46,0) 63%,#071a38 100%);
+  pointer-events:none;
+}
+
+body.home-page main > section:first-child > div:first-child{
+  width:100%;
+  max-width:1360px;
+  margin:0 auto;
+  padding:7.2rem 0 7rem;
+  position:relative;
+  z-index:1;
+}
+
+body.home-page main > section:first-child > div:nth-child(2){
+  display:none !important;
+}
+
+body.home-page main > section:first-child h1{
+  max-width:8.4ch;
+  font-size:clamp(4rem,6.4vw,7rem);
+  line-height:.93;
+  letter-spacing:-.055em;
+  text-shadow:0 3px 30px rgba(0,0,0,.3);
+}
+
+body.home-page main > section:first-child p:nth-of-type(1){
+  margin-bottom:1.25rem;
+}
+
+body.home-page main > section:first-child p:nth-of-type(2){
+  max-width:650px;
+  color:rgba(255,255,255,.8);
+  text-shadow:0 2px 16px rgba(0,0,0,.35);
+}
+
+body.home-page main > section:first-child a{
+  backdrop-filter:blur(4px);
+}
+
+@media (max-width:1100px){
+  body.home-page main > section:first-child{
+    min-height:720px;
+    padding:0 1.25rem;
+  }
+  body.home-page main > section:first-child::before{
+    background-position:58% center;
+  }
+  body.home-page main > section:first-child::after{
+    background:
+      linear-gradient(90deg,rgba(5,20,46,.98) 0%,rgba(5,20,46,.94) 36%,rgba(5,20,46,.62) 60%,rgba(5,20,46,.18) 82%,rgba(5,20,46,.04) 100%),
+      linear-gradient(180deg,rgba(5,20,46,.08),rgba(5,20,46,0) 60%,#071a38 100%);
+  }
+  body.home-page main > section:first-child > div:first-child{
+    padding:6.5rem 0 6rem;
+  }
+}
+
+@media (max-width:700px){
+  body.home-page main > section:first-child{
+    min-height:760px;
+    padding:0 1rem;
+    align-items:flex-end;
+  }
+  body.home-page main > section:first-child::before{
+    background-position:67% center;
+  }
+  body.home-page main > section:first-child::after{
+    background:
+      linear-gradient(180deg,rgba(5,20,46,.18) 0%,rgba(5,20,46,.28) 27%,rgba(5,20,46,.72) 54%,rgba(5,20,46,.96) 76%,#071a38 100%),
+      linear-gradient(90deg,rgba(5,20,46,.64) 0%,rgba(5,20,46,.28) 65%,rgba(5,20,46,.08) 100%);
+  }
+  body.home-page main > section:first-child > div:first-child{
+    padding:19rem 0 4.75rem;
+  }
+  body.home-page main > section:first-child h1{
+    max-width:9ch;
+    font-size:clamp(3.3rem,15vw,4.8rem);
+    line-height:.94;
+  }
+  body.home-page main > section:first-child p:nth-of-type(2){
+    font-size:1rem;
+    line-height:1.65;
+    max-width:34rem;
+  }
+}
