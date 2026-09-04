@@ -50,11 +50,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 						<marker id="arrowLoop" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#9fd8ff"/></marker>
 					</defs>
 
-					<!-- Team rails -->
 					<path class="flow-rail lotus-rail" d="M100 165H1160" marker-end="url(#arrowBlue)"/>
 					<path class="flow-rail client-rail" d="M100 315H1160" marker-end="url(#arrowGold)"/>
 
-					<!-- Stage columns -->
 					<g class="stage-node" transform="translate(135 0)">
 						<text class="stage-number" x="0" y="67">01</text><text class="stage-label" x="42" y="67">DISCOVER</text>
 						<rect class="lotus-box" x="0" y="105" width="170" height="84" rx="18"/><text class="box-title" x="18" y="136">Understand</text><text class="box-sub" x="18" y="158">requirements + goals</text>
@@ -90,16 +88,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 						<path class="handoff" d="M85 189V270"/><circle class="checkpoint final" cx="85" cy="230" r="16"/><path class="checkmark" d="M77 230l6 6 11-13"/>
 					</g>
 
-					<!-- Visible iteration loops -->
 					<path class="return-loop loop-design" d="M450 270C450 395 250 402 220 275" marker-end="url(#arrowLoop)"/>
 					<text class="loop-label" x="268" y="420">DESIGN REVIEW → REVISE</text>
-
 					<path class="return-loop loop-build" d="M680 270C680 438 470 448 450 278" marker-end="url(#arrowLoop)"/>
 					<text class="loop-label" x="492" y="454">PROGRESS REVIEW → REFINE</text>
-
 					<path class="return-loop major-loop" d="M910 270C910 110 700 78 680 105" marker-end="url(#arrowLoop)"/>
 					<text class="loop-label major" x="708" y="91">CLIENT TESTING → BACK TO BUILD</text>
-
 					<path class="return-loop launch-loop" d="M1140 270C1140 88 930 64 910 105" marker-end="url(#arrowLoop)"/>
 					<text class="loop-label major" x="948" y="52">FINAL REVIEW → REFINE BEFORE LAUNCH</text>
 				</svg>
@@ -115,35 +109,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 					<i>↓</i>
 					<div><b>05</b><strong>Launch & Support</strong><span>Lotus deploys ↕ Client adopts</span></div>
 				</div>
-			</div>
-
-			<div class="process-detail-intro">
-				<p class="process-eyebrow">Explore Each Stage</p>
-				<h3>The detail is here when you want it.</h3>
-				<p>The workflow above tells the story at a glance. Open any stage below for the full responsibilities of both teams.</p>
-			</div>
-
-			<div class="process-stage-details">
-				<details open>
-					<summary><span>01</span><strong>Discover</strong><em>Analysis</em></summary>
-					<div class="stage-detail-columns"><div><b>Lotus Team</b><ul><li>Requirements gathering</li><li>Requirements analysis</li><li>Proposal & quote</li><li>Solution roadmap</li></ul></div><div><b>Client Team</b><ul><li>Share goals & priorities</li><li>Provide requirements</li><li>Review proposal</li><li>Align on scope & roadmap</li></ul></div></div>
-				</details>
-				<details>
-					<summary><span>02</span><strong>Design</strong><em>Solution design</em></summary>
-					<div class="stage-detail-columns"><div><b>Lotus Team</b><ul><li>Solution design</li><li>Architecture planning</li><li>Prototypes / mockups</li><li>Design refinement</li></ul></div><div><b>Client Team</b><ul><li>Review designs & mockups</li><li>Provide feedback</li><li>Confirm workflow fit</li><li>Approve or request changes</li></ul></div></div>
-				</details>
-				<details>
-					<summary><span>03</span><strong>Build</strong><em>Development</em></summary>
-					<div class="stage-detail-columns"><div><b>Lotus Team</b><ul><li>Development & coding</li><li>Quality assurance</li><li>Internal testing</li><li>Continuous progress updates</li></ul></div><div><b>Client Team</b><ul><li>Review feature updates</li><li>Provide feedback</li><li>Validate functionality</li><li>Confirm business alignment</li></ul></div></div>
-				</details>
-				<details>
-					<summary><span>04</span><strong>Validate</strong><em>Testing & review</em></summary>
-					<div class="stage-detail-columns"><div><b>Lotus Team</b><ul><li>Client review support</li><li>Issue resolution</li><li>Bug fixing & refinement</li><li>Final validation</li></ul></div><div><b>Client Team</b><ul><li>Test the solution</li><li>Provide feedback</li><li>Confirm requirements</li><li>Approve final solution</li></ul></div></div>
-				</details>
-				<details>
-					<summary><span>05</span><strong>Launch & Support</strong><em>Deployment</em></summary>
-					<div class="stage-detail-columns"><div><b>Lotus Team</b><ul><li>Production deployment</li><li>Client training & guides</li><li>Monitoring & optimization</li><li>Ongoing maintenance & support</li></ul></div><div><b>Client Team</b><ul><li>Train your team</li><li>Share live feedback</li><li>Track outcomes</li><li>Drive continued success</li></ul></div></div>
-				</details>
 			</div>
 		</section>
 
