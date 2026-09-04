@@ -20,6 +20,12 @@
     text-wrap: balance;
   }
 
+  /* The large desktop headline carries the message on its own. */
+  main > section:nth-child(4) > div > div:first-child > div:first-child h2::after {
+    display: none;
+    content: none;
+  }
+
   /* Custom Software & Applications: modern desktop + mobile product UI. */
   main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(1)::before {
     content: "";
