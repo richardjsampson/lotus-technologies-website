@@ -242,7 +242,7 @@ body.home-page main > section:nth-child(5) > div > div > div:nth-child(2) > div:
   color: white;
 }
 
-body.home-page main > section:nth-child(5) > div > div > div:nth-child(3) > p:nth-child(2)::before {
+body.home-page main > section:nth-child(5) > div > div > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)::before {
   content: "Centralized administration + reporting + ERP-ready services";
   color: #0A1D3D;
 }
