@@ -87,7 +87,7 @@
           <div class="process-lanes">
             <aside class="process-team-labels" aria-hidden="true">
               <div class="process-team lotus"><span class="process-team-icon">L</span><strong>Lotus Team</strong></div>
-              <div class="process-team client"><span class="process-team-icon">Y</span><strong>Client Team</strong></div>
+              <div class="process-team client"><span class="process-team-icon">C</span><strong>Client Team</strong></div>
             </aside>
             <div class="process-columns">${columns}</div>
           </div>
