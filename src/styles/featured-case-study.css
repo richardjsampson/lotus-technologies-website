@@ -39,6 +39,7 @@ body.home-page main > section:nth-child(5) > div > div {
 
 /* Intro */
 body.home-page main > section:nth-child(5) > div > div > div:first-child {
+  width: 100%;
   max-width: 760px;
 }
 
@@ -48,6 +49,7 @@ body.home-page main > section:nth-child(5) > div > div > div:first-child > p:fir
   font-size: .76rem;
   font-weight: 800;
   letter-spacing: .22em;
+  line-height: 1.45;
 }
 
 body.home-page main > section:nth-child(5) > div > div > div:first-child > p:first-child::after {
@@ -58,24 +60,24 @@ body.home-page main > section:nth-child(5) > div > div > div:first-child > p:fir
 
 body.home-page main > section:nth-child(5) h2 {
   margin-top: 1rem;
-  max-width: 15ch;
+  width: 100%;
+  max-width: none;
   color: #0A1D3D;
-  font-size: clamp(2.45rem, 9vw, 4.8rem);
+  font-size: 0;
   line-height: .98;
   letter-spacing: -.045em;
-}
-
-body.home-page main > section:nth-child(5) h2 {
-  font-size: 0;
 }
 
 body.home-page main > section:nth-child(5) h2::after {
   content: "From spreadsheets and email to a real-time field service platform.";
   display: block;
-  font-size: clamp(2.45rem, 9vw, 4.8rem);
-  line-height: .98;
+  width: 100%;
+  max-width: 12.5em;
+  font-size: clamp(2.15rem, 10.5vw, 3.2rem);
+  line-height: 1.02;
   letter-spacing: -.045em;
   font-weight: 650;
+  text-wrap: balance;
 }
 
 body.home-page main > section:nth-child(5) > div > div > div:first-child > p:nth-of-type(2) {
@@ -96,9 +98,6 @@ body.home-page main > section:nth-child(5) a[href="/case-studies"] {
   margin-top: 1.55rem;
   color: #1768F2;
   font-weight: 700;
-}
-
-body.home-page main > section:nth-child(5) a[href="/case-studies"] {
   font-size: 0;
 }
 
@@ -243,7 +242,7 @@ body.home-page main > section:nth-child(5) > div > div > div:nth-child(2) > div:
   color: white;
 }
 
-body.home-page main > section:nth-child(5) > div > div > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)::before {
+body.home-page main > section:nth-child(5) > div > div > div:nth-child(3) > p:nth-child(2)::before {
   content: "Centralized administration + reporting + ERP-ready services";
   color: #0A1D3D;
 }
@@ -332,6 +331,7 @@ body.home-page main > section:nth-child(5) > div::after {
   }
 
   body.home-page main > section:nth-child(5) h2::after {
+    max-width: 12ch;
     font-size: clamp(3.4rem, 4.3vw, 5.25rem);
   }
 
