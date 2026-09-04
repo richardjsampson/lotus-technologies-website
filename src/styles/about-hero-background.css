@@ -1,0 +1,123 @@
+/* High-resolution cinematic About hero */
+.about-page .about-hero {
+  position: relative;
+  min-height: clamp(680px, 78vh, 860px);
+  padding: clamp(7rem, 10vw, 10rem) 1.5rem 7rem;
+  display: flex;
+  align-items: center;
+  isolation: isolate;
+  background-image: url('/about-lotus-san-diego.png');
+  background-size: cover;
+  background-position: center 43%;
+  background-repeat: no-repeat;
+}
+
+.about-page .about-hero::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    linear-gradient(90deg,
+      rgba(5, 22, 49, .96) 0%,
+      rgba(5, 22, 49, .90) 24%,
+      rgba(5, 22, 49, .66) 43%,
+      rgba(5, 22, 49, .18) 66%,
+      rgba(5, 22, 49, .04) 100%),
+    linear-gradient(180deg,
+      rgba(5, 22, 49, .16) 0%,
+      rgba(5, 22, 49, 0) 57%,
+      rgba(7, 25, 54, .45) 76%,
+      #071936 100%);
+  pointer-events: none;
+}
+
+.about-page .about-hero::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 20%;
+  background: linear-gradient(180deg, transparent 0%, #071936 92%);
+  pointer-events: none;
+}
+
+.about-page .about-hero-inner {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+  display: block;
+}
+
+.about-page .about-hero-inner > div:first-child {
+  position: relative;
+  z-index: 2;
+  max-width: 670px;
+  padding: 1.5rem 0;
+}
+
+.about-page .about-hero h1 {
+  max-width: 9ch;
+  text-shadow: 0 4px 32px rgba(3, 13, 30, .38);
+}
+
+.about-page .about-hero-copy {
+  max-width: 640px;
+  color: rgba(255,255,255,.82);
+  text-shadow: 0 2px 18px rgba(3,13,30,.55);
+}
+
+/* Hide the temporary low-resolution inline image panel. */
+.about-page .about-hero-showcase {
+  display: none !important;
+}
+
+@media (max-width: 1023px) {
+  .about-page .about-hero {
+    min-height: 760px;
+    align-items: flex-end;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-position: 66% center;
+  }
+
+  .about-page .about-hero::before {
+    background:
+      linear-gradient(90deg, rgba(5,22,49,.93) 0%, rgba(5,22,49,.76) 55%, rgba(5,22,49,.20) 100%),
+      linear-gradient(180deg, rgba(5,22,49,.08) 0%, rgba(5,22,49,.22) 48%, #071936 100%);
+  }
+
+  .about-page .about-hero-inner > div:first-child {
+    max-width: 610px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-page .about-hero {
+    min-height: 720px;
+    padding: 7rem 1rem 4.75rem;
+    background-position: 70% center;
+  }
+
+  .about-page .about-hero::before {
+    background:
+      linear-gradient(180deg, rgba(5,22,49,.38) 0%, rgba(5,22,49,.50) 38%, rgba(7,25,54,.94) 74%, #071936 100%),
+      linear-gradient(90deg, rgba(5,22,49,.72) 0%, rgba(5,22,49,.28) 100%);
+  }
+
+  .about-page .about-hero-inner > div:first-child {
+    align-self: flex-end;
+    padding: 0;
+  }
+
+  .about-page .about-hero h1 {
+    font-size: clamp(3rem, 14vw, 4.3rem);
+  }
+
+  .about-page .about-hero-copy {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+}
