@@ -11,3 +11,14 @@ body:not(.home-page) .about-page{position:relative;overflow:hidden}.about-hero{p
 @media (hover:hover) and (pointer:fine){.about-person:hover,.about-value:hover{border-color:rgba(77,163,255,.23);transform:translateY(-2px)}.about-person:hover .about-portrait{border-color:rgba(111,184,255,.5)}}
 @media (max-width:1023px){.about-hero-inner,.about-story{grid-template-columns:1fr;gap:3rem}.about-hero-visual{min-height:390px}.about-values-grid{grid-template-columns:1fr 1fr}.about-team-head{display:block}.about-team-intro{margin-top:1rem}.about-team-grid{grid-template-columns:1fr 1fr}.about-person.featured{grid-column:span 2}.about-close{margin-left:1rem;margin-right:1rem}}
 @media (max-width:600px){.about-hero{padding:5.2rem 1rem 4rem}.about-hero h1{font-size:clamp(3.2rem,15vw,4.4rem)}.about-hero-visual{min-height:360px}.about-core{width:135px;height:135px}.about-node{min-width:120px;max-width:135px;padding:.7rem}.about-node span{font-size:.66rem}.about-node::after{display:none}.about-story,.about-values-wrap,.about-team{padding-left:1rem;padding-right:1rem}.about-values-grid,.about-team-grid{grid-template-columns:1fr}.about-person.featured{grid-column:span 1}.about-portrait,.about-person.featured .about-portrait{width:142px;height:142px}.about-close{flex-direction:column;align-items:flex-start;padding:1.5rem}}
+
+/* Cinematic About hero visual */
+.about-hero-showcase{position:relative;margin:0;min-width:0;border-radius:28px;overflow:hidden;border:1px solid rgba(111,184,255,.2);background:#071a38;box-shadow:0 34px 90px rgba(0,0,0,.3),0 0 0 1px rgba(242,184,75,.04)}
+.about-hero-showcase::before{content:"";position:absolute;z-index:2;inset:0;background:linear-gradient(180deg,transparent 58%,rgba(4,14,31,.82) 100%);pointer-events:none}
+.about-hero-showcase::after{content:"";position:absolute;z-index:3;inset:0;border-radius:inherit;box-shadow:inset 0 0 55px rgba(5,18,40,.18);pointer-events:none}
+.about-hero-showcase img{display:block;width:100%;aspect-ratio:1.2/1;object-fit:cover;object-position:center center}
+.about-hero-showcase figcaption{position:absolute;z-index:4;left:1.35rem;right:1.35rem;bottom:1.2rem;display:flex;justify-content:space-between;align-items:end;gap:1rem}
+.about-hero-showcase figcaption span{color:#8fd0ff;font-size:.67rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.about-hero-showcase figcaption strong{color:#fff;font-size:.95rem;font-weight:650;text-align:right}
+@media (max-width:1023px){.about-hero-showcase{max-width:900px}.about-hero-showcase img{aspect-ratio:16/9}.about-story{padding-top:4.75rem}}
+@media (max-width:600px){.about-hero-showcase{border-radius:20px}.about-hero-showcase img{aspect-ratio:4/3}.about-hero-showcase figcaption{left:1rem;right:1rem;bottom:.85rem;display:block}.about-hero-showcase figcaption strong{display:block;margin-top:.3rem;text-align:left;font-size:.88rem}.about-story{padding-top:4rem}}
