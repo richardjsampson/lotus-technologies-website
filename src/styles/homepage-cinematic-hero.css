@@ -18,6 +18,12 @@ body.home-page main > section:first-child::before{
   position:absolute;
   z-index:-2;
   inset:0;
+  left:0;
+  top:0;
+  width:auto;
+  height:auto;
+  transform:none;
+  filter:none;
   background-image:url('/homepage-hero-cinematic.png');
   background-size:cover;
   background-position:center center;
@@ -30,8 +36,8 @@ body.home-page main > section:first-child::after{
   z-index:-1;
   inset:0;
   background:
-    linear-gradient(90deg,rgba(5,20,46,.99) 0%,rgba(5,20,46,.97) 23%,rgba(5,20,46,.82) 39%,rgba(5,20,46,.36) 58%,rgba(5,20,46,.06) 76%,rgba(5,20,46,.03) 100%),
-    linear-gradient(180deg,rgba(5,20,46,.08) 0%,rgba(5,20,46,0) 63%,#071a38 100%);
+    linear-gradient(90deg,rgba(5,20,46,.97) 0%,rgba(5,20,46,.93) 24%,rgba(5,20,46,.72) 40%,rgba(5,20,46,.25) 58%,rgba(5,20,46,.03) 78%,rgba(5,20,46,0) 100%),
+    linear-gradient(180deg,rgba(5,20,46,.03) 0%,rgba(5,20,46,0) 66%,#071a38 100%);
   pointer-events:none;
 }
 
@@ -49,8 +55,8 @@ body.home-page main > section:first-child > div:nth-child(2){
 }
 
 body.home-page main > section:first-child h1{
-  max-width:8.4ch;
-  font-size:clamp(4rem,6.4vw,7rem);
+  max-width:9.3ch;
+  font-size:clamp(4rem,5.7vw,6.4rem);
   line-height:.93;
   letter-spacing:-.055em;
   text-shadow:0 3px 30px rgba(0,0,0,.3);
@@ -62,7 +68,7 @@ body.home-page main > section:first-child p:nth-of-type(1){
 
 body.home-page main > section:first-child p:nth-of-type(2){
   max-width:650px;
-  color:rgba(255,255,255,.8);
+  color:rgba(255,255,255,.82);
   text-shadow:0 2px 16px rgba(0,0,0,.35);
 }
 
@@ -76,12 +82,19 @@ body.home-page main > section:first-child a{
     padding:0 1.25rem;
   }
   body.home-page main > section:first-child::before{
+    inset:0;
+    left:0;
+    top:0;
+    width:auto;
+    height:auto;
+    transform:none;
+    filter:none;
     background-position:58% center;
   }
   body.home-page main > section:first-child::after{
     background:
-      linear-gradient(90deg,rgba(5,20,46,.98) 0%,rgba(5,20,46,.94) 36%,rgba(5,20,46,.62) 60%,rgba(5,20,46,.18) 82%,rgba(5,20,46,.04) 100%),
-      linear-gradient(180deg,rgba(5,20,46,.08),rgba(5,20,46,0) 60%,#071a38 100%);
+      linear-gradient(90deg,rgba(5,20,46,.97) 0%,rgba(5,20,46,.92) 36%,rgba(5,20,46,.56) 60%,rgba(5,20,46,.13) 82%,rgba(5,20,46,0) 100%),
+      linear-gradient(180deg,rgba(5,20,46,.05),rgba(5,20,46,0) 62%,#071a38 100%);
   }
   body.home-page main > section:first-child > div:first-child{
     padding:6.5rem 0 6rem;
@@ -95,12 +108,19 @@ body.home-page main > section:first-child a{
     align-items:flex-end;
   }
   body.home-page main > section:first-child::before{
+    inset:0;
+    left:0;
+    top:0;
+    width:auto;
+    height:auto;
+    transform:none;
+    filter:none;
     background-position:67% center;
   }
   body.home-page main > section:first-child::after{
     background:
-      linear-gradient(180deg,rgba(5,20,46,.18) 0%,rgba(5,20,46,.28) 27%,rgba(5,20,46,.72) 54%,rgba(5,20,46,.96) 76%,#071a38 100%),
-      linear-gradient(90deg,rgba(5,20,46,.64) 0%,rgba(5,20,46,.28) 65%,rgba(5,20,46,.08) 100%);
+      linear-gradient(180deg,rgba(5,20,46,.12) 0%,rgba(5,20,46,.22) 28%,rgba(5,20,46,.68) 55%,rgba(5,20,46,.95) 78%,#071a38 100%),
+      linear-gradient(90deg,rgba(5,20,46,.58) 0%,rgba(5,20,46,.22) 65%,rgba(5,20,46,.04) 100%);
   }
   body.home-page main > section:first-child > div:first-child{
     padding:19rem 0 4.75rem;
