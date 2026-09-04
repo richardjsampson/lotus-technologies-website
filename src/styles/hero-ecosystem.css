@@ -167,6 +167,8 @@
     pointer-events: none;
   }
 
+  /* The mobile SVG now contains the one authoritative Lotus emblem. */
+  main > section:first-child > div:nth-child(2) > div:nth-child(2) img,
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > * {
     display: none !important;
   }
