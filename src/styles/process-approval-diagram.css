@@ -12,16 +12,19 @@
   .approval-flow-desktop .team-label { font-size:11px; font-weight:800; letter-spacing:1.5px; }
   .approval-flow-desktop .team-label.lotus { fill:#7BCBFF; }
   .approval-flow-desktop .team-label.client { fill:#F6C96E; }
-  .approval-flow-desktop .main-path { fill:none; stroke:#63BEFF; stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round; }
-  .approval-flow-desktop .client-path { fill:none; stroke:#F2B84B; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
-  .approval-flow-desktop .decision { fill:#0A1D3D; stroke:#F2B84B; stroke-width:1.9; }
-  .approval-flow-desktop .decision-text { fill:#FFF1C8; font-size:10px; font-weight:800; text-anchor:middle; letter-spacing:.55px; }
-  .approval-flow-desktop .yes-label { fill:#87D6FF; font-size:10px; font-weight:800; letter-spacing:1px; }
-  .approval-flow-desktop .no-label { fill:#F6C96E; font-size:10px; font-weight:800; letter-spacing:1px; }
-  .approval-flow-desktop .return-path { fill:none; stroke:#F2B84B; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:7 7; opacity:.76; }
-  .approval-flow-desktop .return-label { fill:#F6C96E; font-size:8.5px; font-weight:800; letter-spacing:.8px; }
+  .approval-flow-desktop .main-path,
+  .approval-flow-desktop .handoff-path { fill:none; stroke:#63BEFF; stroke-width:2.35; stroke-linecap:round; stroke-linejoin:round; }
+  .approval-flow-desktop .handoff-path { stroke-opacity:.76; }
+  .approval-flow-desktop .client-path { fill:none; stroke:#F2B84B; stroke-width:2.1; stroke-linecap:round; stroke-linejoin:round; }
+  .approval-flow-desktop .decision { fill:#0A1D3D; stroke:#F2B84B; stroke-width:1.8; }
+  .approval-flow-desktop .decision-text { fill:#FFF1C8; font-size:8.8px; font-weight:800; text-anchor:middle; letter-spacing:.35px; }
+  .approval-flow-desktop .yes-label { fill:#87D6FF; font-size:9px; font-weight:800; letter-spacing:.85px; }
+  .approval-flow-desktop .no-label { fill:#F6C96E; font-size:9px; font-weight:800; letter-spacing:.85px; }
+  .approval-flow-desktop .return-path { fill:none; stroke:#F2B84B; stroke-width:2.15; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:7 7; opacity:.75; }
+  .approval-flow-desktop .return-label { fill:#F6C96E; font-size:8.2px; font-weight:800; letter-spacing:.72px; }
   .approval-flow-desktop .gate-note { fill:#B8DFF7; font-size:10px; letter-spacing:.5px; }
-  .approval-flow-desktop .gate-note.emphasis { fill:#CFEAFF; font-size:10px; font-weight:700; letter-spacing:.55px; }
+  .approval-flow-desktop .gate-note.emphasis { fill:#E6F5FF; font-size:15px; font-weight:800; letter-spacing:1.35px; }
+  .approval-flow-desktop .gate-note.subnote { fill:#8FC7EC; font-size:10px; letter-spacing:.45px; }
 }
 
 @media (max-width: 1023px) {
