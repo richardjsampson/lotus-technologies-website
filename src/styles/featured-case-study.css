@@ -14,11 +14,13 @@ body.home-page main > section:nth-child(5)::before {
   inset: 0;
   pointer-events: none;
   background:
+    linear-gradient(to bottom, #0A1D3D 0, rgba(10,29,61,.78) 18px, rgba(10,29,61,.34) 52px, rgba(10,29,61,.10) 82px, transparent 112px),
+    linear-gradient(to top, #0A1D3D 0, rgba(10,29,61,.78) 18px, rgba(10,29,61,.34) 52px, rgba(10,29,61,.10) 82px, transparent 112px),
     radial-gradient(circle at 86% 18%, rgba(30,99,233,.10), transparent 24%),
     radial-gradient(circle at 12% 78%, rgba(242,184,75,.09), transparent 22%),
     linear-gradient(rgba(10,29,61,.035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(10,29,61,.035) 1px, transparent 1px);
-  background-size: auto, auto, 36px 36px, 36px 36px;
+  background-size: auto, auto, auto, auto, 36px 36px, 36px 36px;
 }
 
 body.home-page main > section:nth-child(5) > div {
