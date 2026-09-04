@@ -1,0 +1,18 @@
+@media (min-width: 1024px) {
+  /* Keep the team rails visually strong without striking through the summaries. */
+  .process-columns::before {
+    top: calc(50% - 18px);
+  }
+
+  .process-columns::after {
+    top: calc(100% - 18px);
+  }
+
+  .process-node {
+    top: calc(50% - 18px);
+  }
+
+  .process-client-node {
+    top: calc(100% - 18px);
+  }
+}
