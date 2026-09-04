@@ -91,7 +91,7 @@
   }
 
   main > section:first-child > div:nth-child(2) > div:nth-child(2) {
-    height: 700px;
+    height: 735px;
     overflow: visible;
     border: 0;
     border-radius: 0;
@@ -110,8 +110,8 @@
     content: "";
     position: absolute;
     z-index: 3;
-    inset: -24px -62px -24px -48px;
-    background: url("/illustrations/hero-ecosystem.svg") center / contain no-repeat;
+    inset: -20px -58px -20px -46px;
+    background: url("/illustrations/hero-ecosystem-desktop-v2.svg") center / contain no-repeat;
     filter: drop-shadow(0 32px 68px rgba(0,0,0,.30));
     pointer-events: none;
   }
@@ -124,7 +124,7 @@
 
 @media (min-width: 1280px) {
   main > section:first-child > div:nth-child(2) > div:nth-child(2)::after {
-    inset: -36px -88px -36px -60px;
+    inset: -28px -82px -28px -58px;
   }
 }
 
@@ -165,7 +165,6 @@
     pointer-events: none;
   }
 
-  /* The mobile SVG now contains the one authoritative Lotus emblem. */
   main > section:first-child > div:nth-child(2) > div:nth-child(2) img,
   main > section:first-child > div:nth-child(2) > div:nth-child(2) > * {
     display: none !important;
