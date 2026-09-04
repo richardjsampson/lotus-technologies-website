@@ -2,144 +2,107 @@
   const oldSvg = document.querySelector('.process-page .process-flow-desktop');
   if (!oldSvg) return;
 
-  const loopLegend = document.querySelector('.process-page .legend-loop');
-  if (loopLegend) loopLegend.remove();
+  const legend = document.querySelector('.process-page .process-visual-legend');
+  if (legend) legend.remove();
 
   const wrap = document.createElement('div');
   wrap.innerHTML = `
-  <svg class="approval-flow-desktop" viewBox="0 0 1400 600" role="img" aria-labelledby="process-redesign-title process-redesign-desc">
-    <title id="process-redesign-title">Lotus collaborative approval workflow</title>
-    <desc id="process-redesign-desc">Forward progress is earned. Lotus completes each stage, the client reviews it, and approval moves the project forward. A no decision follows a dedicated revision path back to the Lotus work for that stage.</desc>
+  <svg class="process-blueprint" viewBox="0 0 1440 920" role="img" aria-labelledby="process-blueprint-title process-blueprint-desc">
+    <title id="process-blueprint-title">Our Process. Your Success.</title>
+    <desc id="process-blueprint-desc">A collaborative five-stage process showing Lotus Team and Client Team responsibilities, approval checkpoints after Discover, Design, Build, and Validate, and revision loops when approval is not yet earned.</desc>
+
     <defs>
-      <marker id="process-blue-arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
-        <path d="M0 0L9 4.5L0 9Z" fill="#63BEFF"/>
-      </marker>
-      <marker id="process-gold-arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
-        <path d="M0 0L9 4.5L0 9Z" fill="#F2B84B"/>
-      </marker>
+      <linearGradient id="teamBlue" x1="0" x2="1"><stop stop-color="#083a78"/><stop offset="1" stop-color="#0d5ca5"/></linearGradient>
+      <linearGradient id="teamGold" x1="0" x2="1"><stop stop-color="#d99800"/><stop offset="1" stop-color="#f3b500"/></linearGradient>
+      <linearGradient id="stage1" x1="0" x2="1"><stop stop-color="#0d437d"/><stop offset="1" stop-color="#185995"/></linearGradient>
+      <linearGradient id="stage2" x1="0" x2="1"><stop stop-color="#1a5b9c"/><stop offset="1" stop-color="#2d74b5"/></linearGradient>
+      <linearGradient id="stage3" x1="0" x2="1"><stop stop-color="#087d83"/><stop offset="1" stop-color="#15999a"/></linearGradient>
+      <linearGradient id="stage4" x1="0" x2="1"><stop stop-color="#246b3f"/><stop offset="1" stop-color="#3b8b54"/></linearGradient>
+      <linearGradient id="stage5" x1="0" x2="1"><stop stop-color="#d69300"/><stop offset="1" stop-color="#efb000"/></linearGradient>
+      <marker id="arrowNavy" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#0c3b73"/></marker>
+      <marker id="arrowGreen" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#16846f"/></marker>
+      <marker id="arrowGold" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#d59600"/></marker>
     </defs>
 
-    <text class="process-kicker" x="120" y="42">FORWARD PROGRESS IS EARNED</text>
-    <text class="process-subhead" x="120" y="62">Lotus builds. You review. Approval moves the project forward.</text>
+    <rect class="bp-bg" x="0" y="0" width="1440" height="920" rx="28"/>
 
-    <text class="process-lane-label lotus" x="26" y="186">LOTUS TEAM</text>
-    <text class="process-lane-label client" x="26" y="356">CLIENT TEAM</text>
+    <text class="bp-title" x="720" y="52" text-anchor="middle">OUR PROCESS. YOUR SUCCESS.</text>
+    <line class="bp-title-rule" x1="350" y1="78" x2="430" y2="78"/>
+    <text class="bp-subtitle" x="720" y="86" text-anchor="middle">A collaborative approach. Every step. Every time.</text>
+    <line class="bp-title-rule" x1="1010" y1="78" x2="1090" y2="78"/>
 
-    <!-- Dedicated revision routes, deliberately separated from the main flow. -->
-    <g class="process-revision-routes">
-      <path class="process-revision-path" d="M337 393V480H96V176Q96 162 110 162H120" marker-end="url(#process-gold-arrow)"/>
-      <text class="process-revision-caption" x="158" y="501">REFINE REQUIREMENTS</text>
+    <!-- Stage chevrons -->
+    <g class="bp-stage-strip">
+      <path class="bp-chevron c1" d="M110 104H344L382 164L344 224H110L145 164Z"/>
+      <path class="bp-chevron c2" d="M360 104H594L632 164L594 224H360L395 164Z"/>
+      <path class="bp-chevron c3" d="M610 104H844L882 164L844 224H610L645 164Z"/>
+      <path class="bp-chevron c4" d="M860 104H1094L1132 164L1094 224H860L895 164Z"/>
+      <path class="bp-chevron c5" d="M1110 104H1344L1382 164L1344 224H1110L1145 164Z"/>
 
-      <path class="process-revision-path" d="M607 393V505H366V176Q366 162 380 162H390" marker-end="url(#process-gold-arrow)"/>
-      <text class="process-revision-caption" x="447" y="526">REVISE DESIGN</text>
+      <g transform="translate(158 0)"><circle class="bp-num n1" cx="0" cy="135" r="18"/><text class="bp-num-text" x="0" y="141" text-anchor="middle">1</text><text class="bp-stage-name s1" x="30" y="139">DISCOVER</text><text class="bp-stage-phase" x="30" y="166">Analysis Phase</text></g>
+      <g transform="translate(408 0)"><circle class="bp-num n2" cx="0" cy="135" r="18"/><text class="bp-num-text" x="0" y="141" text-anchor="middle">2</text><text class="bp-stage-name s2" x="30" y="139">DESIGN</text><text class="bp-stage-phase" x="30" y="166">Design Phase</text></g>
+      <g transform="translate(658 0)"><circle class="bp-num n3" cx="0" cy="135" r="18"/><text class="bp-num-text" x="0" y="141" text-anchor="middle">3</text><text class="bp-stage-name s3" x="30" y="139">BUILD</text><text class="bp-stage-phase" x="30" y="166">Development Phase</text></g>
+      <g transform="translate(908 0)"><circle class="bp-num n4" cx="0" cy="135" r="18"/><text class="bp-num-text" x="0" y="141" text-anchor="middle">4</text><text class="bp-stage-name s4" x="30" y="139">VALIDATE</text><text class="bp-stage-phase" x="30" y="166">Testing &amp; Review</text></g>
+      <g transform="translate(1158 0)"><circle class="bp-num n5" cx="0" cy="135" r="18"/><text class="bp-num-text" x="0" y="141" text-anchor="middle">5</text><text class="bp-stage-name s5" x="30" y="135">LAUNCH &amp;</text><text class="bp-stage-name s5" x="30" y="154">SUPPORT</text><text class="bp-stage-phase" x="30" y="180">Deployment Phase</text></g>
 
-      <path class="process-revision-path" d="M877 393V530H636V176Q636 162 650 162H660" marker-end="url(#process-gold-arrow)"/>
-      <text class="process-revision-caption" x="718" y="551">REFINE BUILD</text>
-
-      <path class="process-revision-path" d="M1147 393V555H906V176Q906 162 920 162H930" marker-end="url(#process-gold-arrow)"/>
-      <text class="process-revision-caption" x="992" y="576">FIX + RETEST</text>
+      <!-- simple stage icons -->
+      <g class="bp-icon i1"><circle cx="207" cy="197" r="20"/><line x1="221" y1="211" x2="238" y2="226"/></g>
+      <g class="bp-icon i2"><rect x="455" y="184" width="70" height="38" rx="3"/><line x1="472" y1="228" x2="509" y2="228"/><line x1="490" y1="222" x2="490" y2="228"/></g>
+      <g class="bp-icon i3"><rect x="705" y="181" width="70" height="43" rx="4"/><text x="740" y="211" text-anchor="middle">&lt;/&gt;</text></g>
+      <g class="bp-icon i4"><rect x="965" y="181" width="46" height="50" rx="4"/><line x1="977" y1="194" x2="999" y2="194"/><path d="M976 207l6 6 10-12M976 221l6 6 10-12"/></g>
+      <g class="bp-icon i5"><path d="M1208 218h44a18 18 0 0 0 2-36 27 27 0 0 0-52 8 15 15 0 0 0 6 28Z"/><path d="M1230 210v-22M1221 197l9-9 9 9"/></g>
     </g>
 
-    <!-- Forward YES routes. -->
-    <g class="process-forward-routes">
-      <path class="process-forward-path" d="M363 346H374V176Q374 162 388 162H390" marker-end="url(#process-blue-arrow)"/>
-      <path class="process-forward-path" d="M633 346H644V176Q644 162 658 162H660" marker-end="url(#process-blue-arrow)"/>
-      <path class="process-forward-path" d="M903 346H914V176Q914 162 928 162H930" marker-end="url(#process-blue-arrow)"/>
-      <path class="process-forward-path" d="M1173 346H1184V176Q1184 162 1198 162H1200" marker-end="url(#process-blue-arrow)"/>
+    <!-- Main process body -->
+    <rect class="bp-panel" x="24" y="226" width="1392" height="554" rx="20"/>
+    <line class="bp-divider" x1="24" y1="475" x2="1416" y2="475"/>
+
+    <!-- team labels -->
+    <rect class="bp-team-block lotus" x="24" y="226" width="112" height="248" rx="20"/>
+    <text class="bp-team-lotus-mark" x="80" y="286" text-anchor="middle">✦</text>
+    <text class="bp-team-title" x="80" y="330" text-anchor="middle">LOTUS</text><text class="bp-team-title" x="80" y="356" text-anchor="middle">TEAM</text>
+    <rect class="bp-team-block client" x="24" y="476" width="112" height="215" rx="20"/>
+    <circle class="bp-person-dot" cx="64" cy="525" r="11"/><circle class="bp-person-dot" cx="88" cy="530" r="9"/><path class="bp-person-body" d="M46 554q18-24 36 0v18H46Z"/><path class="bp-person-body" d="M76 554q15-20 30 0v15H76Z"/>
+    <text class="bp-team-title" x="80" y="610" text-anchor="middle">CLIENT</text><text class="bp-team-title" x="80" y="636" text-anchor="middle">TEAM</text>
+
+    <!-- vertical column separators -->
+    <g class="bp-col-seps"><line x1="360" y1="226" x2="360" y2="692"/><line x1="610" y1="226" x2="610" y2="692"/><line x1="860" y1="226" x2="860" y2="692"/><line x1="1110" y1="226" x2="1110" y2="692"/></g>
+
+    <!-- Lotus responsibilities -->
+    <g class="bp-copy lotus-copy">
+      <text class="bp-copy-head" x="162" y="264">We start by understanding</text><text x="174" y="295">• Requirements gathering</text><text x="174" y="322">• Requirements analysis</text><text x="174" y="349">• Proposal &amp; quote</text><text x="174" y="376">• Solution roadmap</text>
+      <text class="bp-copy-head" x="402" y="264">We design the right solution</text><text x="414" y="295">• Solution design</text><text x="414" y="322">• Prototypes / mockups</text><text x="414" y="349">• Architecture planning</text><text x="414" y="376">• Client review</text>
+      <text class="bp-copy-head" x="652" y="264">We build with quality</text><text x="664" y="295">• Development &amp; coding</text><text x="664" y="322">• Quality assurance</text><text x="664" y="349">• Internal testing</text><text x="664" y="376">• Continuous updates</text>
+      <text class="bp-copy-head" x="902" y="264">We test and refine together</text><text x="914" y="295">• Client review</text><text x="914" y="322">• Client testing</text><text x="914" y="349">• Bug fixing &amp; refinement</text><text x="914" y="376">• Final validation</text>
+      <text class="bp-copy-head" x="1152" y="264">We launch and support</text><text x="1164" y="295">• Launch to production</text><text x="1164" y="322">• Client training &amp; guides</text><text x="1164" y="349">• Monitoring &amp; optimization</text><text x="1164" y="376">• Ongoing maintenance</text>
     </g>
 
-    <!-- DISCOVER -->
-    <g class="process-stage">
-      <text class="process-stage-num" x="120" y="106">01</text>
-      <text class="process-stage-name" x="157" y="106">DISCOVER</text>
-      <rect class="process-card lotus" x="120" y="122" width="165" height="92" rx="18"/>
-      <text class="process-card-title" x="138" y="158">Understand</text>
-      <text class="process-card-sub" x="138" y="183">requirements + goals</text>
-      <path class="process-handoff" d="M202.5 214V296" marker-end="url(#process-blue-arrow)"/>
-      <rect class="process-card client" x="120" y="296" width="165" height="92" rx="18"/>
-      <text class="process-card-title client" x="138" y="332">Align</text>
-      <text class="process-card-sub" x="138" y="357">scope + roadmap</text>
-      <path class="process-client-link" d="M285 342H302"/>
-      <text class="process-question" x="337" y="327">CLIENT</text>
-      <text class="process-question" x="337" y="342">APPROVES?</text>
-      <rect class="process-branch yes" x="346" y="351" width="34" height="20" rx="5"/>
-      <text class="process-branch-text yes" x="363" y="365">YES</text>
-      <rect class="process-branch no" x="320" y="373" width="34" height="20" rx="5"/>
-      <text class="process-branch-text no" x="337" y="387">NO</text>
+    <!-- Approval checkpoints -->
+    <g class="bp-approvals">
+      <line x1="260" y1="395" x2="260" y2="502"/><text x="282" y="458">APPROVE?</text><circle cx="360" cy="476" r="19"/><path d="M350 476l7 7 13-16"/><text class="bp-yes" x="245" y="523">YES</text><path class="bp-yes-path" d="M260 492V536" marker-end="url(#arrowGreen)"/><text class="bp-no" x="318" y="508">NO</text><path class="bp-no-path" d="M360 495V526Q360 545 341 545H314" marker-end="url(#arrowGold)"/>
+      <line x1="510" y1="395" x2="510" y2="502"/><text x="532" y="458">APPROVE?</text><circle cx="610" cy="476" r="19"/><path d="M600 476l7 7 13-16"/><text class="bp-yes" x="495" y="523">YES</text><path class="bp-yes-path" d="M510 492V536" marker-end="url(#arrowGreen)"/><text class="bp-no" x="568" y="508">NO</text><path class="bp-no-path" d="M610 495V526Q610 545 591 545H564" marker-end="url(#arrowGold)"/>
+      <line x1="760" y1="395" x2="760" y2="502"/><text x="782" y="458">APPROVE?</text><circle cx="860" cy="476" r="19"/><path d="M850 476l7 7 13-16"/><text class="bp-yes" x="745" y="523">YES</text><path class="bp-yes-path" d="M760 492V536" marker-end="url(#arrowGreen)"/><text class="bp-no" x="818" y="508">NO</text><path class="bp-no-path" d="M860 495V526Q860 545 841 545H814" marker-end="url(#arrowGold)"/>
+      <line x1="1010" y1="395" x2="1010" y2="502"/><text x="1032" y="458">APPROVE?</text><circle cx="1110" cy="476" r="19"/><path d="M1100 476l7 7 13-16"/><text class="bp-yes" x="995" y="523">YES</text><path class="bp-yes-path" d="M1010 492V536" marker-end="url(#arrowGreen)"/><text class="bp-no" x="1068" y="508">NO</text><path class="bp-no-path" d="M1110 495V526Q1110 545 1091 545H1064" marker-end="url(#arrowGold)"/>
     </g>
 
-    <!-- DESIGN -->
-    <g class="process-stage">
-      <text class="process-stage-num" x="390" y="106">02</text>
-      <text class="process-stage-name" x="427" y="106">DESIGN</text>
-      <rect class="process-card lotus" x="390" y="122" width="165" height="92" rx="18"/>
-      <text class="process-card-title" x="408" y="158">Design</text>
-      <text class="process-card-sub" x="408" y="183">solution + architecture</text>
-      <path class="process-handoff" d="M472.5 214V296" marker-end="url(#process-blue-arrow)"/>
-      <rect class="process-card client" x="390" y="296" width="165" height="92" rx="18"/>
-      <text class="process-card-title client" x="408" y="332">Review</text>
-      <text class="process-card-sub" x="408" y="357">mockups + workflow</text>
-      <path class="process-client-link" d="M555 342H572"/>
-      <text class="process-question" x="607" y="327">CLIENT</text>
-      <text class="process-question" x="607" y="342">APPROVES?</text>
-      <rect class="process-branch yes" x="616" y="351" width="34" height="20" rx="5"/>
-      <text class="process-branch-text yes" x="633" y="365">YES</text>
-      <rect class="process-branch no" x="590" y="373" width="34" height="20" rx="5"/>
-      <text class="process-branch-text no" x="607" y="387">NO</text>
+    <!-- Client responsibilities -->
+    <g class="bp-copy client-copy">
+      <text class="bp-copy-head" x="162" y="585">You share your vision</text><text x="174" y="616">• Share goals &amp; priorities</text><text x="174" y="643">• Provide requirements</text><text x="174" y="670">• Review proposal</text>
+      <text class="bp-copy-head" x="402" y="585">You review &amp; provide feedback</text><text x="414" y="616">• Review designs &amp; mockups</text><text x="414" y="643">• Provide feedback</text><text x="414" y="670">• Approve or request changes</text>
+      <text class="bp-copy-head" x="652" y="585">You review progress</text><text x="664" y="616">• Review feature updates</text><text x="664" y="643">• Provide feedback</text><text x="664" y="670">• Validate functionality</text>
+      <text class="bp-copy-head" x="902" y="585">You test &amp; validate</text><text x="914" y="616">• Test the solution</text><text x="914" y="643">• Provide feedback</text><text x="914" y="670">• Approve final solution</text>
+      <text class="bp-copy-head" x="1152" y="585">You’re live and confident</text><text x="1164" y="616">• Train your team</text><text x="1164" y="643">• Share feedback</text><text x="1164" y="670">• Drive continued success</text>
     </g>
 
-    <!-- BUILD -->
-    <g class="process-stage">
-      <text class="process-stage-num" x="660" y="106">03</text>
-      <text class="process-stage-name" x="697" y="106">BUILD</text>
-      <rect class="process-card lotus" x="660" y="122" width="165" height="92" rx="18"/>
-      <text class="process-card-title" x="678" y="158">Build</text>
-      <text class="process-card-sub" x="678" y="183">code + internal QA</text>
-      <path class="process-handoff" d="M742.5 214V296" marker-end="url(#process-blue-arrow)"/>
-      <rect class="process-card client" x="660" y="296" width="165" height="92" rx="18"/>
-      <text class="process-card-title client" x="678" y="332">Review</text>
-      <text class="process-card-sub" x="678" y="357">working progress</text>
-      <path class="process-client-link" d="M825 342H842"/>
-      <text class="process-question" x="877" y="327">CLIENT</text>
-      <text class="process-question" x="877" y="342">APPROVES?</text>
-      <rect class="process-branch yes" x="886" y="351" width="34" height="20" rx="5"/>
-      <text class="process-branch-text yes" x="903" y="365">YES</text>
-      <rect class="process-branch no" x="860" y="373" width="34" height="20" rx="5"/>
-      <text class="process-branch-text no" x="877" y="387">NO</text>
-    </g>
+    <!-- Agreement to success -->
+    <rect class="bp-start-card" x="24" y="700" width="332" height="70" rx="14"/><circle class="bp-start-icon" cx="64" cy="735" r="24"/><text class="bp-card-head" x="105" y="726">AGREEMENT &amp; ROADMAP</text><text class="bp-card-copy" x="105" y="747">Once scope is approved, we align on schedule,</text><text class="bp-card-copy" x="105" y="763">milestones and deliverables.</text>
+    <path class="bp-long-arrow" d="M356 735H1078" marker-end="url(#arrowNavy)"/>
+    <rect class="bp-success-card" x="1090" y="700" width="326" height="70" rx="14"/><circle class="bp-success-icon" cx="1132" cy="735" r="24"/><text class="bp-card-head gold" x="1172" y="726">SUCCESS TOGETHER</text><text class="bp-card-copy" x="1172" y="747">A successful launch is just the</text><text class="bp-card-copy" x="1172" y="763">beginning of our partnership.</text>
 
-    <!-- VALIDATE -->
-    <g class="process-stage">
-      <text class="process-stage-num" x="930" y="106">04</text>
-      <text class="process-stage-name" x="967" y="106">VALIDATE</text>
-      <rect class="process-card lotus" x="930" y="122" width="165" height="92" rx="18"/>
-      <text class="process-card-title" x="948" y="158">Refine</text>
-      <text class="process-card-sub" x="948" y="183">fix + retest</text>
-      <path class="process-handoff" d="M1012.5 214V296" marker-end="url(#process-blue-arrow)"/>
-      <rect class="process-card client" x="930" y="296" width="165" height="92" rx="18"/>
-      <text class="process-card-title client" x="948" y="332">Test</text>
-      <text class="process-card-sub" x="948" y="357">validate real workflow</text>
-      <path class="process-client-link" d="M1095 342H1112"/>
-      <text class="process-question" x="1147" y="327">CLIENT</text>
-      <text class="process-question" x="1147" y="342">APPROVES?</text>
-      <rect class="process-branch yes" x="1156" y="351" width="34" height="20" rx="5"/>
-      <text class="process-branch-text yes" x="1173" y="365">YES</text>
-      <rect class="process-branch no" x="1130" y="373" width="34" height="20" rx="5"/>
-      <text class="process-branch-text no" x="1147" y="387">NO</text>
-    </g>
-
-    <!-- LAUNCH -->
-    <g class="process-stage">
-      <text class="process-stage-num" x="1200" y="106">05</text>
-      <text class="process-stage-name" x="1237" y="106">LAUNCH</text>
-      <rect class="process-card lotus" x="1200" y="122" width="165" height="92" rx="18"/>
-      <text class="process-card-title" x="1218" y="158">Deploy</text>
-      <text class="process-card-sub" x="1218" y="183">train + support</text>
-      <path class="process-handoff" d="M1282.5 214V296" marker-end="url(#process-blue-arrow)"/>
-      <rect class="process-card client" x="1200" y="296" width="165" height="92" rx="18"/>
-      <text class="process-card-title client" x="1218" y="332">Adopt</text>
-      <text class="process-card-sub" x="1218" y="357">measure + improve</text>
-    </g>
+    <!-- Two teams one goal -->
+    <rect class="bp-footer-band" x="24" y="794" width="1110" height="76" rx="16"/><text class="bp-footer-mark" x="72" y="842">✦</text><text class="bp-footer-title" x="138" y="840">TWO TEAMS. ONE GOAL.</text><line class="bp-footer-divider" x1="488" y1="812" x2="488" y2="852"/><text class="bp-footer-tag" x="548" y="840">Your goals. Our expertise. Exceptional results.</text>
+    <rect class="bp-key" x="1155" y="794" width="261" height="76" rx="16"/><text class="bp-key-text lotus" x="1184" y="824">Lotus Team</text><line class="bp-key-line lotus" x1="1288" y1="820" x2="1370" y2="820" marker-end="url(#arrowNavy)"/><text class="bp-key-text client" x="1184" y="852">Client Team</text><line class="bp-key-line client" x1="1288" y1="848" x2="1370" y2="848" marker-end="url(#arrowGold)"/>
+    <text class="bp-bottom-note" x="720" y="902" text-anchor="middle">Collaboration. Transparency. Accountability.   <tspan font-weight="700">That’s the Lotus difference.</tspan></text>
   </svg>`;
 
   oldSvg.replaceWith(wrap.firstElementChild);
