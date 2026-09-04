@@ -1,0 +1,50 @@
+/* Featured Case Study: make the dark-to-light transition part of the section itself,
+   rather than trying to disguise a hard section edge with an overlay. */
+body.home-page main > section:nth-child(5) {
+  background:
+    linear-gradient(
+      to bottom,
+      #0A1D3D 0,
+      #112C58 44px,
+      #31537B 88px,
+      #7790AE 132px,
+      #BBC9D9 166px,
+      #EAF1FA 205px,
+      #EAF1FA calc(100% - 205px),
+      #BBC9D9 calc(100% - 166px),
+      #7790AE calc(100% - 132px),
+      #31537B calc(100% - 88px),
+      #112C58 calc(100% - 44px),
+      #0A1D3D 100%
+    );
+}
+
+/* Keep the subtle technical texture, but remove the old edge-fade overlays. */
+body.home-page main > section:nth-child(5)::before {
+  background:
+    radial-gradient(circle at 86% 18%, rgba(30,99,233,.10), transparent 24%),
+    radial-gradient(circle at 12% 78%, rgba(242,184,75,.09), transparent 22%),
+    linear-gradient(rgba(10,29,61,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10,29,61,.035) 1px, transparent 1px);
+  background-size: auto, auto, 36px 36px, 36px 36px;
+}
+
+/* Give the content enough breathing room to sit fully inside the pale portion. */
+body.home-page main > section:nth-child(5) > div {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+@media (min-width: 768px) {
+  body.home-page main > section:nth-child(5) > div {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body.home-page main > section:nth-child(5) > div {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+}
