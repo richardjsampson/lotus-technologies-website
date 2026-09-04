@@ -1,0 +1,30 @@
+/* Full-bleed cinematic About hero override */
+.about-page .about-hero{position:relative;min-height:760px;padding:0 1.5rem;display:flex;align-items:center;overflow:hidden;background:#071a38}
+.about-page .about-hero::before{content:"";position:absolute;z-index:2;inset:0;background:linear-gradient(90deg,rgba(5,20,46,.98) 0%,rgba(5,20,46,.94) 24%,rgba(5,20,46,.76) 43%,rgba(5,20,46,.28) 63%,rgba(5,20,46,.05) 100%),linear-gradient(180deg,rgba(5,20,46,.12) 0%,rgba(5,20,46,0) 64%,#071a38 100%);pointer-events:none}
+.about-page .about-hero-inner{position:relative;z-index:3;width:100%;max-width:1360px;margin:0 auto;display:block}
+.about-page .about-hero-inner>div:first-child{position:relative;z-index:4;max-width:650px;padding:7rem 0 6.5rem}
+.about-page .about-hero h1{max-width:9.5ch;text-shadow:0 3px 28px rgba(0,0,0,.28)}
+.about-page .about-hero-copy{max-width:610px;color:rgba(255,255,255,.8);text-shadow:0 2px 16px rgba(0,0,0,.35)}
+.about-page .about-hero-showcase{position:absolute;z-index:1;inset:0 calc(50% - 50vw);margin:0;border:0;border-radius:0;box-shadow:none;background:#071a38;overflow:hidden}
+.about-page .about-hero-showcase::before{display:none}
+.about-page .about-hero-showcase::after{content:"";position:absolute;z-index:1;inset:0;border-radius:0;box-shadow:inset 0 -100px 120px -70px #071a38;pointer-events:none}
+.about-page .about-hero-showcase img{display:block;width:100%;height:100%;min-height:760px;aspect-ratio:auto;object-fit:cover;object-position:62% center;filter:saturate(1.05) contrast(1.02)}
+.about-page .about-hero-showcase figcaption{display:none}
+.about-page .about-story{padding-top:5.5rem}
+
+@media (max-width:1023px){
+  .about-page .about-hero{min-height:700px;padding:0 1.25rem}
+  .about-page .about-hero::before{background:linear-gradient(90deg,rgba(5,20,46,.96) 0%,rgba(5,20,46,.9) 42%,rgba(5,20,46,.48) 70%,rgba(5,20,46,.16) 100%),linear-gradient(180deg,rgba(5,20,46,.1),rgba(5,20,46,0) 60%,#071a38 100%)}
+  .about-page .about-hero-inner>div:first-child{max-width:600px;padding:6rem 0 5.5rem}
+  .about-page .about-hero-showcase img{min-height:700px;object-position:66% center}
+}
+
+@media (max-width:700px){
+  .about-page .about-hero{min-height:720px;padding:0 1rem;align-items:flex-end}
+  .about-page .about-hero::before{background:linear-gradient(180deg,rgba(5,20,46,.18) 0%,rgba(5,20,46,.36) 28%,rgba(5,20,46,.92) 63%,#071a38 100%)}
+  .about-page .about-hero-inner>div:first-child{max-width:none;padding:16rem 0 4.25rem}
+  .about-page .about-hero h1{font-size:clamp(3.1rem,15vw,4.5rem);max-width:8.5ch}
+  .about-page .about-hero-copy{font-size:1rem;line-height:1.65;max-width:34rem}
+  .about-page .about-hero-showcase img{min-height:720px;object-position:64% center}
+  .about-page .about-story{padding-top:4.25rem}
+}
