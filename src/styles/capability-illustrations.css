@@ -1,4 +1,25 @@
 @media (min-width: 1024px) {
+  /* Give the How We Help introduction enough editorial width on desktop. */
+  main > section:nth-child(4) > div > div:first-child {
+    grid-template-columns: minmax(360px, .95fr) minmax(0, 1.7fr);
+    gap: clamp(3rem, 4vw, 5rem);
+    align-items: start;
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:first-child {
+    width: 100%;
+    max-width: 430px;
+  }
+
+  main > section:nth-child(4) > div > div:first-child > div:first-child h2 {
+    width: 100%;
+    max-width: 10.5ch;
+    font-size: clamp(3.35rem, 4.1vw, 4.6rem);
+    line-height: 1.01;
+    letter-spacing: -.045em;
+    text-wrap: balance;
+  }
+
   /* Custom Software & Applications: modern desktop + mobile product UI. */
   main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(1)::before {
     content: "";
