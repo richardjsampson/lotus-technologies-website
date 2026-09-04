@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" role="img" aria-labelledby="title desc">
+<title id="title">Lotus connected technology platform</title>
+<desc id="desc">A rich desktop technology platform showing cloud APIs, cross-platform applications, secure commerce, data systems, connected users, Lotus orchestration and secure infrastructure.</desc>
+<defs>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#A7E3FF"/><stop offset=".45" stop-color="#48B3FF"/><stop offset="1" stop-color="#1768F2"/></linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#184888" stop-opacity=".96"/><stop offset="1" stop-color="#071A38" stop-opacity=".94"/></linearGradient>
+  <linearGradient id="surface" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#12366B" stop-opacity=".92"/><stop offset="1" stop-color="#06162F" stop-opacity=".98"/></linearGradient>
+  <linearGradient id="gold"><stop stop-color="#FFE4A3"/><stop offset="1" stop-color="#F2B84B"/></linearGradient>
+  <linearGradient id="petalCenter" x1="0.15" y1="0.15" x2="0.9" y2="0.88"><stop offset="0" stop-color="#061A45"/><stop offset=".48" stop-color="#0B3FC6"/><stop offset="1" stop-color="#16C8FF"/></linearGradient>
+  <linearGradient id="petalLeft" x1="0.12" y1="0.2" x2="0.95" y2="0.85"><stop offset="0" stop-color="#0A2C82"/><stop offset=".58" stop-color="#0C54F2"/><stop offset="1" stop-color="#11C4F4"/></linearGradient>
+  <linearGradient id="petalRight" x1="0.05" y1="0.75" x2="0.95" y2="0.15"><stop offset="0" stop-color="#071D58"/><stop offset=".5" stop-color="#0B55F2"/><stop offset="1" stop-color="#21D0FF"/></linearGradient>
+  <linearGradient id="petalBase" x1="0.08" y1="0.35" x2="0.92" y2="0.72"><stop offset="0" stop-color="#0A42D8"/><stop offset=".45" stop-color="#061A56"/><stop offset="1" stop-color="#0C61F4"/></linearGradient>
+  <radialGradient id="scene"><stop stop-color="#1D67CC" stop-opacity=".34"/><stop offset=".5" stop-color="#123A75" stop-opacity=".1"/><stop offset="1" stop-color="#081B3A" stop-opacity="0"/></radialGradient>
+  <radialGradient id="core"><stop stop-color="#2155A1"/><stop offset=".7" stop-color="#0C2854"/><stop offset="1" stop-color="#071A38"/></radialGradient>
+  <filter id="shadow" x="-60%" y="-60%" width="220%" height="240%"><feDropShadow dx="0" dy="16" stdDeviation="15" flood-color="#020814" flood-opacity=".5"/></filter>
+  <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#4DA3FF" flood-opacity=".68"/></filter>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#6CC1FF" stroke-opacity=".025"/></pattern>
+  <style>
+    .label{fill:#C7EBFF;font-family:Arial,sans-serif;font-size:15px;font-weight:700;letter-spacing:2.6px}.small{fill:#8FCFFF;font-family:Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:1.15px}.micro{fill:#72B8EE;font-family:Arial,sans-serif;font-size:8px;letter-spacing:.8px}.trace{fill:none;stroke:#55B6FF;stroke-width:2;stroke-linecap:round;stroke-opacity:.28}.flow{fill:none;stroke:url(#blue);stroke-width:3;stroke-linecap:round;stroke-dasharray:7 11;animation:flow 5.5s linear infinite}.pulse{animation:pulse 4.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.float{animation:float 6.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.float2{animation:float2 7.1s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.blink{animation:blink 2.2s ease-in-out infinite}.dash{animation:dash 5s linear infinite}.sweep{animation:sweep 5.8s ease-in-out infinite}.packet{animation:packet 4.6s linear infinite}.orbit{animation:orbit 7s linear infinite;transform-box:fill-box;transform-origin:center}@keyframes flow{to{stroke-dashoffset:-144}}@keyframes pulse{50%{transform:scale(1.015)}}@keyframes float{50%{transform:translateY(-5px)}}@keyframes float2{50%{transform:translate(3px,4px)}}@keyframes blink{50%{opacity:.35}}@keyframes dash{to{stroke-dashoffset:-90}}@keyframes sweep{0%,16%{transform:translateX(-220px);opacity:0}35%,58%{opacity:.3}82%,100%{transform:translateX(760px);opacity:0}}@keyframes packet{0%{opacity:0;transform:translateX(0)}15%{opacity:1}85%{opacity:1}100%{opacity:0;transform:translateX(180px)}}@keyframes orbit{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+</defs>
+<rect width="1000" height="800" fill="url(#grid)"/><ellipse cx="500" cy="406" rx="475" ry="372" fill="url(#scene)"/>
+<path d="M95 360C180 215 320 132 500 132C680 132 820 215 905 360" class="trace" opacity=".42"/>
+<path d="M115 620C240 710 375 742 500 742C625 742 760 710 885 620" class="trace" opacity=".28"/>
+
+<!-- Cloud + APIs -->
+<g class="float" filter="url(#shadow)">
+  <text class="label" x="417" y="30">CLOUD + APIs</text>
+  <path d="M385 145h230c31 0 53-17 53-42 0-24-20-42-48-43-9-24-32-39-61-39-34 0-59 19-68 47-31 2-54 19-54 44 0 20 18 33 46 33z" fill="url(#glass)" stroke="#7CCEFF" stroke-opacity=".7"/>
+  <circle cx="448" cy="101" r="6" fill="#4DA3FF"/><circle cx="480" cy="101" r="6" fill="#F2B84B"/><circle cx="512" cy="101" r="6" fill="#4DA3FF"/>
+  <rect x="535" y="82" width="80" height="38" rx="8" fill="#071A38" stroke="#62BEFF" stroke-opacity=".48"/><path d="M551 94h47M551 103h34M551 112h42" stroke="#55B6FF" stroke-width="2" opacity=".7"/>
+  <text class="micro" x="520" y="132">SERVICES · APIs · EVENTS</text>
+</g>
+<path class="flow" d="M500 147V170"/>
+
+<!-- Applications: cross-platform product environment -->
+<g filter="url(#shadow)">
+  <rect x="55" y="175" width="415" height="180" rx="28" fill="url(#surface)" stroke="#5DBAFF" stroke-opacity=".38"/>
+  <text class="label" x="78" y="204">APPLICATIONS</text>
+  <!-- desktop workspace -->
+  <g transform="translate(76 219)">
+    <rect width="226" height="112" rx="14" fill="#061731" stroke="#4DA3FF" stroke-opacity=".34"/>
+    <rect width="226" height="19" rx="14" fill="#0C2D5B"/><circle cx="15" cy="10" r="3.5" fill="#F2B84B"/><circle cx="28" cy="10" r="3.5" fill="#4DA3FF"/>
+    <rect x="12" y="31" width="42" height="68" rx="7" fill="#0B2348"/><path d="M22 43h22M22 53h16M22 63h20M22 82h18" stroke="#55B6FF" stroke-width="3" stroke-linecap="round" opacity=".58"/>
+    <rect x="64" y="31" width="68" height="26" rx="7" fill="#123D79"/><rect x="140" y="31" width="73" height="26" rx="7" fill="#0F315F"/>
+    <path d="M73 50l13-8 11 4 11-11 14 5" fill="none" stroke="#F2B84B" stroke-width="2.5" stroke-linecap="round"/>
+    <rect x="64" y="66" width="149" height="33" rx="8" fill="#0B2348"/><path d="M74 90l17-10 16 4 22-14 17 8 21-12 31 7" fill="none" stroke="#4DA3FF" stroke-width="2.5"/><path d="M74 80h125" stroke="#4DA3FF" opacity=".13"/>
+  </g>
+  <!-- tablet + phone layered outward like real cross-platform apps -->
+  <g class="float2" transform="translate(311 217)">
+    <rect x="0" y="15" width="88" height="104" rx="13" fill="#0A244C" stroke="#5DBAFF" stroke-opacity=".52"/>
+    <rect x="10" y="28" width="68" height="61" rx="7" fill="#071A38"/><path d="M18 40h46M18 50h33M18 70h47" stroke="#55B6FF" stroke-width="3" stroke-linecap="round" opacity=".62"/><rect x="19" y="95" width="34" height="8" rx="4" fill="#123D79"/><circle cx="66" cy="99" r="5" fill="#F2B84B"/>
+    <rect x="79" y="0" width="51" height="107" rx="14" fill="#071A38" stroke="#72C7FF" stroke-width="2"/><rect x="86" y="14" width="37" height="66" rx="8" fill="#123D79"/><circle cx="104" cy="92" r="4" fill="#4DA3FF"/><path d="M93 28h23M93 39h18M93 54h22" stroke="#8FD3FF" stroke-width="2.5" stroke-linecap="round"/><rect x="92" y="62" width="25" height="9" rx="4" fill="#1768F2"/>
+    <path d="M44 8C61 1 72 0 83 10M73 105c9 6 18 7 28 4" class="trace"/>
+  </g>
+  <text class="micro" x="79" y="346">WEB · MOBILE · TABLET · WORKFLOWS · BUSINESS LOGIC</text>
+</g>
+
+<!-- Commerce: storefront + payment + card + security + success -->
+<g filter="url(#shadow)">
+  <rect x="530" y="175" width="415" height="180" rx="28" fill="url(#surface)" stroke="#5DBAFF" stroke-opacity=".38"/>
+  <text class="label" x="554" y="204">COMMERCE</text>
+  <!-- online storefront monitor -->
+  <g transform="translate(646 218)">
+    <rect width="257" height="104" rx="15" fill="#071A38" stroke="#5DBAFF" stroke-opacity=".45"/>
+    <rect x="13" y="14" width="231" height="72" rx="8" fill="#0B2348"/>
+    <rect x="25" y="27" width="70" height="45" rx="7" fill="#143D7D"/><circle cx="60" cy="43" r="8" fill="#4DA3FF" opacity=".55"/><path d="M35 65l14-13 10 7 13-13 13 19" fill="none" stroke="#8FD3FF" stroke-width="2"/>
+    <rect x="107" y="27" width="52" height="18" rx="5" fill="#123D79"/><rect x="167" y="27" width="58" height="18" rx="5" fill="#0F315F"/><rect x="107" y="53" width="118" height="8" rx="4" fill="#1768F2" opacity=".55"/><rect x="107" y="67" width="78" height="7" rx="3.5" fill="#55B6FF" opacity=".35"/>
+    <path d="M104 104h49M128 104v10" stroke="#6AC2FF" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <!-- foreground payment phone -->
+  <g class="float2" transform="translate(557 215)">
+    <rect width="88" height="122" rx="21" fill="#071A38" stroke="#78CBFF" stroke-width="2"/><rect x="11" y="13" width="66" height="78" rx="11" fill="#17468A"/>
+    <path d="M23 38h8l5 25h28l8-19H34" fill="none" stroke="url(#gold)" stroke-width="4.5" stroke-linecap="round"/><circle cx="44" cy="73" r="4.5" fill="#FFD27A"/><circle cx="62" cy="73" r="4.5" fill="#FFD27A"/><circle cx="44" cy="106" r="4" fill="#4DA3FF"/>
+  </g>
+  <!-- credit card -->
+  <g transform="translate(602 285) rotate(-8)"><rect width="86" height="48" rx="8" fill="#123D79" stroke="#64BFFF" stroke-opacity=".55"/><rect y="11" width="86" height="8" fill="#071A38"/><rect x="11" y="27" width="20" height="12" rx="3" fill="#F2B84B" opacity=".8"/><path d="M39 31h34M39 37h23" stroke="#8FD3FF" stroke-width="2" opacity=".55"/></g>
+  <!-- security lock + approval -->
+  <g transform="translate(846 214)"><path d="M15 20v-7a14 14 0 0 1 28 0v7" fill="none" stroke="#8FD3FF" stroke-width="3"/><rect x="9" y="19" width="40" height="33" rx="8" fill="#123D79" stroke="#72C8FF"/><circle cx="29" cy="34" r="5" fill="#F2B84B"/><path d="M29 39v6" stroke="#F2B84B" stroke-width="3" stroke-linecap="round"/></g>
+  <g transform="translate(858 287)"><circle cx="27" cy="27" r="25" fill="#F2B84B" fill-opacity=".11" stroke="#F2B84B" stroke-opacity=".65"/><path d="M15 27l8 8 16-20" fill="none" stroke="#FFD27A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text class="micro" x="555" y="346">ECOMMERCE · PAYMENTS · DEVICES · SECURITY · APPROVAL</text>
+</g>
+
+<!-- Equal gap above orchestration -->
+<path class="flow" d="M500 355V378"/>
+
+<!-- Lotus orchestration -->
+<g class="pulse" filter="url(#glow)">
+  <path d="M176 402C176 382 193 366 214 366H786C807 366 824 382 824 402V446C824 466 807 482 786 482H214C193 482 176 466 176 446Z" fill="url(#glass)" stroke="url(#blue)" stroke-width="2.6"/>
+  <rect x="192" y="381" width="616" height="86" rx="30" fill="#0A244C" fill-opacity=".38" stroke="#4DA3FF" stroke-opacity=".12"/>
+  <path d="M222 424H403M597 424H778" stroke="#50B4FF" stroke-width="2" stroke-opacity=".38"/>
+  <circle cx="255" cy="424" r="5" fill="#4DA3FF"/><circle cx="292" cy="424" r="5" fill="#4DA3FF"/><circle cx="708" cy="424" r="5" fill="#4DA3FF"/><circle cx="745" cy="424" r="5" fill="#F2B84B"/>
+  <circle cx="500" cy="424" r="66" fill="url(#core)" stroke="#5CBBFF" stroke-width="2.2"/>
+  <circle cx="500" cy="424" r="52" fill="#071A38" stroke="#4DA3FF" stroke-opacity=".38"/>
+  <g transform="translate(461 385) scale(.152344)"><path d="M82 377C145 340 214 340 256 368C298 340 367 340 430 377C386 430 320 454 256 448C192 454 126 430 82 377Z" fill="url(#petalBase)"/><path d="M255 387C205 359 150 324 113 279C77 236 58 187 64 129C123 127 175 145 215 182C251 216 270 269 255 387Z" fill="url(#petalLeft)"/><path d="M257 387C307 359 362 324 399 279C435 236 454 187 448 129C389 127 337 145 297 182C261 216 242 269 257 387Z" fill="url(#petalRight)"/><path d="M256 54C304 111 327 174 322 239C318 294 292 342 256 387C220 342 194 294 190 239C185 174 208 111 256 54Z" fill="url(#petalCenter)"/></g>
+  <rect class="sweep" x="190" y="376" width="180" height="96" rx="35" fill="url(#blue)" opacity="0"/>
+</g>
+<text class="small" x="425" y="503">LOTUS ORCHESTRATION</text>
+<path class="flow" d="M500 482V514"/>
+
+<!-- Data: central database feeding different data representations -->
+<g filter="url(#shadow)">
+  <rect x="84" y="522" width="390" height="128" rx="26" fill="url(#surface)" stroke="#5DBAFF" stroke-opacity=".32"/>
+  <text class="label" x="108" y="552">DATA</text>
+  <g transform="translate(111 560)">
+    <ellipse cx="78" cy="18" rx="54" ry="13" fill="#15417F" stroke="#77C9FF"/>
+    <path d="M24 18v50c0 8 24 14 54 14s54-6 54-14V18" fill="#092149" stroke="#58B6FF" stroke-opacity=".72"/>
+    <path d="M24 36c0 8 24 14 54 14s54-6 54-14M24 53c0 8 24 14 54 14s54-6 54-14" fill="none" stroke="#58B6FF" stroke-opacity=".5"/>
+    <circle cx="111" cy="69" r="4" fill="#F2B84B"/>
+    <!-- data branches -->
+    <path d="M133 31h24M133 56h24M78 3V-8" class="trace"/>
+    <g transform="translate(158 3)"><rect width="75" height="35" rx="8" fill="#071A38" stroke="#5DBAFF" stroke-opacity=".44"/><path d="M10 26l12-11 10 6 11-13 19 14" fill="none" stroke="#4DA3FF" stroke-width="2"/><circle cx="62" cy="11" r="4" fill="#F2B84B"/></g>
+    <g transform="translate(158 46)"><rect width="75" height="35" rx="8" fill="#071A38" stroke="#5DBAFF" stroke-opacity=".44"/><rect x="11" y="9" width="10" height="17" rx="2" fill="#4DA3FF" opacity=".45"/><rect x="27" y="5" width="10" height="21" rx="2" fill="#4DA3FF" opacity=".7"/><rect x="43" y="13" width="10" height="13" rx="2" fill="#F2B84B" opacity=".8"/><rect x="59" y="8" width="7" height="18" rx="2" fill="#4DA3FF" opacity=".55"/></g>
+  </g>
+  <!-- top mini cards: map + API table -->
+  <g transform="translate(355 558)"><rect width="91" height="38" rx="8" fill="#071A38" stroke="#5DBAFF" stroke-opacity=".42"/><path d="M14 13h22M14 21h15M14 29h30" stroke="#55B6FF" stroke-width="2" opacity=".55"/><path d="M56 10l8 8-8 8M78 10l-8 8 8 8" fill="none" stroke="#F2B84B" stroke-width="2"/></g>
+  <g transform="translate(355 604)"><rect width="91" height="34" rx="8" fill="#071A38" stroke="#5DBAFF" stroke-opacity=".42"/><circle cx="18" cy="17" r="5" fill="#4DA3FF"/><path d="M30 11h45M30 18h36M30 25h48" stroke="#55B6FF" stroke-width="2" opacity=".45"/></g>
+</g>
+
+<!-- Users: varied people + devices connected to a shared workspace -->
+<g filter="url(#shadow)">
+  <rect x="526" y="522" width="390" height="128" rx="26" fill="url(#surface)" stroke="#5DBAFF" stroke-opacity=".32"/>
+  <text class="label" x="550" y="552">USERS</text>
+  <!-- shared workspace hub -->
+  <g transform="translate(682 558)"><rect x="0" y="12" width="80" height="58" rx="12" fill="#071A38" stroke="#5DBAFF" stroke-opacity=".5"/><rect x="12" y="23" width="56" height="30" rx="6" fill="#123D79"/><path d="M21 34h36M21 42h25" stroke="#8FD3FF" stroke-width="2" opacity=".6"/><path d="M28 70h24M40 70v10" stroke="#64BFFF" stroke-width="3" stroke-linecap="round"/></g>
+  <!-- connected paths -->
+  <path d="M682 585H640M762 585h40M722 558V548M722 628v10" class="trace"/>
+  <!-- person + phone -->
+  <g transform="translate(551 560)"><circle cx="34" cy="25" r="18" fill="#123C78" stroke="#71C5FF"/><circle cx="34" cy="19" r="6" fill="#A4DCFF"/><path d="M22 34c5-9 19-9 24 0" fill="none" stroke="#A4DCFF" stroke-width="4" stroke-linecap="round"/><rect x="56" y="14" width="22" height="40" rx="6" fill="#071A38" stroke="#72C7FF"/><circle cx="67" cy="47" r="2" fill="#4DA3FF"/><path d="M61 24h12M61 30h9" stroke="#55B6FF" stroke-width="2"/></g>
+  <!-- person + tablet -->
+  <g transform="translate(603 600)"><circle cx="24" cy="17" r="14" fill="#0B2A57" stroke="#5DBAFF"/><circle cx="24" cy="12" r="5" fill="#78C7FF"/><path d="M14 26c4-8 16-8 20 0" fill="none" stroke="#78C7FF" stroke-width="3"/><rect x="42" y="3" width="35" height="26" rx="5" fill="#071A38" stroke="#5DBAFF"/><path d="M49 11h20M49 17h15" stroke="#55B6FF" stroke-width="2"/></g>
+  <!-- person + laptop -->
+  <g transform="translate(787 557)"><circle cx="26" cy="22" r="17" fill="#123C78" stroke="#71C5FF"/><circle cx="26" cy="16" r="6" fill="#A4DCFF"/><path d="M15 31c4-9 18-9 22 0" fill="none" stroke="#A4DCFF" stroke-width="4"/><rect x="49" y="9" width="48" height="31" rx="5" fill="#071A38" stroke="#5DBAFF"/><path d="M57 17h31M57 24h22" stroke="#55B6FF" stroke-width="2"/><path d="M44 43h58" stroke="#72C7FF" stroke-width="3" stroke-linecap="round"/></g>
+  <!-- fourth endpoint + status -->
+  <g transform="translate(805 607)"><circle cx="15" cy="13" r="12" fill="#0B2A57" stroke="#5DBAFF"/><circle cx="15" cy="9" r="4" fill="#78C7FF"/><path d="M7 20c3-6 13-6 16 0" fill="none" stroke="#78C7FF" stroke-width="3"/><circle cx="48" cy="13" r="5" fill="#4DA3FF" class="blink"/><circle cx="64" cy="13" r="5" fill="#F2B84B"/></g>
+</g>
+
+<!-- Secure infrastructure scene -->
+<g filter="url(#shadow)">
+  <text class="label" x="418" y="680">INFRASTRUCTURE</text>
+  <rect x="185" y="693" width="630" height="98" rx="26" fill="url(#surface)" stroke="#64BFFF" stroke-opacity=".5"/>
+  <path d="M224 770H776M270 748H730M315 724H685" stroke="#4DA3FF" stroke-opacity=".18"/><path d="M300 790l45-42h310l45 42M405 790l35-66M595 790l-35-66" fill="none" stroke="#55B6FF" stroke-opacity=".22"/>
+  <g transform="translate(235 704)"><rect width="92" height="78" rx="8" fill="#061731" stroke="#73C8FF" stroke-opacity=".7"/><rect x="9" y="9" width="74" height="12" rx="3" fill="#0D3265"/><rect x="9" y="27" width="74" height="12" rx="3" fill="#0D3265"/><rect x="9" y="45" width="74" height="12" rx="3" fill="#0D3265"/><rect x="9" y="63" width="74" height="8" rx="3" fill="#0D3265"/><circle cx="18" cy="15" r="3" fill="#4DA3FF"/><circle cx="28" cy="15" r="3" fill="#F2B84B"/><circle cx="18" cy="33" r="3" fill="#4DA3FF"/><circle cx="18" cy="51" r="3" fill="#4DA3FF"/><path d="M39 15h34M39 33h34M39 51h27M39 67h31" stroke="#4DA3FF" stroke-width="2" opacity=".55"/></g>
+  <g transform="translate(338 698)"><rect width="100" height="84" rx="8" fill="#071A38" stroke="#73C8FF" stroke-opacity=".78"/><rect x="10" y="10" width="80" height="13" rx="3" fill="#113B77"/><rect x="10" y="29" width="80" height="13" rx="3" fill="#113B77"/><rect x="10" y="48" width="80" height="13" rx="3" fill="#113B77"/><rect x="10" y="67" width="80" height="9" rx="3" fill="#113B77"/><circle cx="20" cy="16" r="3" fill="#4DA3FF"/><circle cx="30" cy="16" r="3" fill="#4DA3FF"/><circle cx="20" cy="35" r="3" fill="#F2B84B"/><circle cx="20" cy="54" r="3" fill="#4DA3FF"/><path d="M42 16h37M42 35h37M42 54h30M42 71h34" stroke="#4DA3FF" stroke-width="2" opacity=".58"/></g>
+  <g transform="translate(468 704)"><path d="M38 0l30 11v25c0 24-14 38-30 47C22 74 8 60 8 36V11z" fill="#123D79" stroke="#74CBFF" stroke-width="2"/><path d="M38 17v31M24 33h28" stroke="#A8E3FF" stroke-width="4" stroke-linecap="round"/><circle cx="38" cy="34" r="8" fill="#0A244C" stroke="#F2B84B"/><path d="M34 35l3 3 6-8" fill="none" stroke="#F2B84B" stroke-width="2.5" stroke-linecap="round"/></g>
+  <g transform="translate(565 704)"><rect width="205" height="78" rx="11" fill="#061731" stroke="#5DBAFF" stroke-opacity=".6"/><text class="small" x="14" y="18">SECURE OPERATIONS</text><path d="M16 30h72M16 42h55M16 54h82" stroke="#55B6FF" stroke-width="2.5" stroke-linecap="round" opacity=".6"/><path d="M115 56l13-12 12 5 14-18 17 8 18-17" fill="none" stroke="#4DA3FF" stroke-width="2.5"/><path d="M115 62h76" stroke="#4DA3FF" stroke-opacity=".18"/><circle cx="183" cy="18" r="5" fill="#4DA3FF" class="blink"/><circle cx="166" cy="18" r="5" fill="#F2B84B"/></g>
+  <circle class="packet" cx="327" cy="786" r="4" fill="#4DA3FF"/><circle class="packet" cx="438" cy="786" r="4" fill="#F2B84B" style="animation-delay:1.2s"/>
+</g>
+</svg>
