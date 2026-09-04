@@ -1,4 +1,4 @@
-/* Preserve the original Lotus team avatar shapes; only recolor and frame them. */
+/* Preserve the original Lotus team avatar artwork in full color. */
 .about-page .about-portrait {
   width: 146px;
   height: 146px;
@@ -6,7 +6,7 @@
   place-items: center;
   overflow: hidden;
   border-radius: 50%;
-  background: radial-gradient(circle at 50% 34%, #163f78 0%, #0d2b55 58%, #071a35 100%);
+  background: #eef8ff;
   border: 1px solid rgba(111, 184, 255, .30);
   box-shadow: none;
 }
@@ -27,8 +27,8 @@
   height: 100%;
   object-fit: contain;
   object-position: center bottom;
-  filter: grayscale(1) sepia(.72) hue-rotate(164deg) saturate(2.15) brightness(.96) contrast(1.08);
-  opacity: .97;
+  filter: none;
+  opacity: 1;
 }
 
 /* Kill the old generated geometry completely. */
