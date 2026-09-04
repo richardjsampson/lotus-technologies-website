@@ -6,19 +6,88 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	title="Our Process | Lotus Technologies"
 	description="See how Lotus Technologies works collaboratively with clients from discovery through launch and support."
 >
-	<section class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-		<div class="max-w-3xl">
-			<p class="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-lotus-sky">
-				Our Process
-			</p>
+	<div class="process-page">
+		<section class="process-hero">
+			<div class="process-hero-inner">
+				<p class="process-eyebrow">Our Process</p>
+				<h1>Two teams. <span>One goal.</span></h1>
+				<p>
+					Great solutions are built with clients, not handed to them at the end. Lotus keeps your team involved from the first requirements conversation through design, development, testing, launch, and ongoing support.
+				</p>
+			</div>
+		</section>
 
-			<h1 class="text-5xl font-semibold tracking-tight text-white sm:text-6xl">
-				Two teams. One goal.
-			</h1>
+		<section class="process-principles" aria-label="Process principles">
+			<div class="process-principle"><strong>Shared ownership</strong><span>Your team helps shape priorities, requirements, and decisions throughout the project.</span></div>
+			<div class="process-principle"><strong>Visible progress</strong><span>You see working designs and functionality while there is still time to influence them.</span></div>
+			<div class="process-principle"><strong>Built-in approval</strong><span>Review and approval checkpoints keep scope, expectations, and outcomes aligned.</span></div>
+			<div class="process-principle"><strong>Success after launch</strong><span>Deployment is a milestone, not the end of the relationship.</span></div>
+		</section>
 
-			<p class="mt-6 text-lg leading-8 text-white/70">
-				Our Process page is coming soon.
-			</p>
-		</div>
-	</section>
+		<section class="process-map-section">
+			<div class="process-map-intro">
+				<p class="process-eyebrow">The Workflow</p>
+				<h2>Collaboration is built into every stage.</h2>
+				<p>The process moves forward together. When feedback or testing reveals something that needs to change, we loop back, refine it, and move ahead with confidence.</p>
+			</div>
+
+			<div class="full-process-board">
+				<div class="full-process-stagebar" aria-hidden="true">
+					<div class="full-stage is-active"><span class="full-stage-num">01</span><strong>Discover</strong><small>Analysis</small></div>
+					<div class="full-stage"><span class="full-stage-num">02</span><strong>Design</strong><small>Solution design</small></div>
+					<div class="full-stage"><span class="full-stage-num">03</span><strong>Build</strong><small>Development</small></div>
+					<div class="full-stage"><span class="full-stage-num">04</span><strong>Validate</strong><small>Testing & review</small></div>
+					<div class="full-stage"><span class="full-stage-num">05</span><strong>Launch & Support</strong><small>Deployment</small></div>
+				</div>
+
+				<div class="full-process-grid">
+					<div class="full-team-head lotus"><span class="full-team-badge">L</span><strong>Lotus Team</strong></div>
+					<div class="full-cell lotus is-active" data-stage="01 · Discover"><h3>Understand the problem</h3><ul><li>Requirements gathering</li><li>Requirements analysis</li><li>Proposal & quote</li><li>Solution roadmap</li></ul></div>
+					<div class="full-cell lotus" data-stage="02 · Design"><h3>Shape the solution</h3><ul><li>Solution design</li><li>Architecture planning</li><li>Prototypes / mockups</li><li>Design refinement</li></ul></div>
+					<div class="full-cell lotus" data-stage="03 · Build"><h3>Build and test internally</h3><ul><li>Development & coding</li><li>Quality assurance</li><li>Internal testing</li><li>Continuous progress updates</li></ul></div>
+					<div class="full-cell lotus" data-stage="04 · Validate"><h3>Refine with the client</h3><ul><li>Client review support</li><li>Issue resolution</li><li>Bug fixing & refinement</li><li>Final validation</li></ul></div>
+					<div class="full-cell lotus" data-stage="05 · Launch & Support"><h3>Launch and stay engaged</h3><ul><li>Production deployment</li><li>Client training & guides</li><li>Monitoring & optimization</li><li>Ongoing maintenance & support</li></ul></div>
+
+					<div class="full-team-head client"><span class="full-team-badge">C</span><strong>Client Team</strong></div>
+					<div class="full-cell client" data-stage="01 · Discover"><h3>Share the vision</h3><ul><li>Share goals & priorities</li><li>Provide requirements</li><li>Review proposal</li><li>Align on scope & roadmap</li></ul></div>
+					<div class="full-cell client" data-stage="02 · Design"><h3>Review and steer</h3><ul><li>Review designs & mockups</li><li>Provide feedback</li><li>Confirm workflow fit</li><li>Approve or request changes</li></ul></div>
+					<div class="full-cell client" data-stage="03 · Build"><h3>Review progress</h3><ul><li>Review feature updates</li><li>Provide feedback</li><li>Validate functionality</li><li>Confirm business alignment</li></ul></div>
+					<div class="full-cell client" data-stage="04 · Validate"><h3>Test and validate</h3><ul><li>Test the solution</li><li>Provide feedback</li><li>Confirm requirements</li><li>Approve final solution</li></ul></div>
+					<div class="full-cell client" data-stage="05 · Launch & Support"><h3>Go live with confidence</h3><ul><li>Train your team</li><li>Share live feedback</li><li>Track outcomes</li><li>Drive continued success</li></ul></div>
+				</div>
+
+				<div class="full-approval-row" aria-label="Shared review and approval points">
+					<div class="full-approval-label">Shared checkpoints</div>
+					<div class="full-approval"><span class="full-check">✓</span></div>
+					<div class="full-approval"><span class="full-check">✓</span><span class="full-loop">Revise if needed</span></div>
+					<div class="full-approval"><span class="full-check">✓</span><span class="full-loop">Refine if needed</span></div>
+					<div class="full-approval"><span class="full-check">✓</span><span class="full-loop">Fix & retest</span></div>
+					<div class="full-approval"><span class="full-check">✓</span></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="process-why">
+			<div>
+				<p class="process-eyebrow">Why It Works</p>
+				<h2>Fewer surprises. Better decisions.</h2>
+				<p class="process-why-copy">The process is designed to keep technical execution tied to the business problem. Rather than disappearing into development and returning with a finished product, we keep decisions visible, invite feedback while it can still matter, and validate the solution against the real workflow.</p>
+			</div>
+			<div class="process-why-grid">
+				<div class="process-why-card"><strong>Feedback happens early</strong><span>Changes are cheaper and easier when they happen during design and development instead of after launch.</span></div>
+				<div class="process-why-card"><strong>Approvals are explicit</strong><span>Major decisions have clear checkpoints so both teams know when the project is ready to move forward.</span></div>
+				<div class="process-why-card"><strong>Business context stays present</strong><span>Your team keeps the technical work grounded in how people actually use the solution.</span></div>
+				<div class="process-why-card"><strong>Iteration is expected</strong><span>Review, refinement, testing, and retesting are part of the workflow—not signs that the process failed.</span></div>
+			</div>
+		</section>
+
+		<section class="process-success">
+			<div>
+				<p class="process-eyebrow">Success Together</p>
+				<h2>Launch is the beginning of the partnership.</h2>
+				<p>Agreement & roadmap → shared decisions → successful launch → continued improvement.</p>
+			</div>
+			<a href="/contact">Discuss Your Challenge</a>
+		</section>
+	</div>
 </BaseLayout>
