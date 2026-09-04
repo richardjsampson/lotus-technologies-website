@@ -112,7 +112,7 @@
     z-index: 3;
     inset: -30px -56px -34px -44px;
     background:
-      url("/lotus-flower-emblem.svg") 53.37% 49.56% / 126px 126px no-repeat,
+      url("/lotus-flower-emblem.svg") 53.59% 50.74% / 118px 118px no-repeat,
       url("/illustrations/hero-ecosystem.svg") center / contain no-repeat;
     filter: drop-shadow(0 32px 68px rgba(0,0,0,.30));
     pointer-events: none;
@@ -154,7 +154,7 @@
     position: absolute;
     inset: 1% -11% 0;
     border-radius: 48%;
-    background: radial-gradient(circle at 50% 44%, rgba(30,99,233,.34), rgba(77,163,255,.10) 40%, transparent 73%);
+    background: radial-gradient(circle at 50% 46%, rgba(30,99,233,.34), rgba(77,163,255,.10) 40%, transparent 73%);
     filter: blur(32px);
   }
 
@@ -163,7 +163,7 @@
     position: absolute;
     inset: -4px -10px;
     background:
-      url("/lotus-flower-emblem.svg") 50.31% 45.22% / 110px 110px no-repeat,
+      url("/lotus-flower-emblem.svg") 50% 48.33% / 104px 104px no-repeat,
       url("/illustrations/hero-ecosystem-mobile.svg") center top / contain no-repeat;
     filter: drop-shadow(0 26px 50px rgba(0,0,0,.30));
     pointer-events: none;
@@ -182,7 +182,7 @@
   main > section:first-child > div:nth-child(2) > div:nth-child(2)::after {
     inset: 0 -6px;
     background:
-      url("/lotus-flower-emblem.svg") 50.31% 45.22% / 96px 96px no-repeat,
+      url("/lotus-flower-emblem.svg") 50% 48.33% / 94px 94px no-repeat,
       url("/illustrations/hero-ecosystem-mobile.svg") center top / contain no-repeat;
   }
 }
