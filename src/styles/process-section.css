@@ -17,6 +17,8 @@ body.home-page main > section:nth-child(6) > div {
 .process-shell { position: relative; }
 .process-intro { max-width: 850px; margin: 0 auto 2.8rem; text-align: center; }
 .process-kicker { margin: 0; color: #4DA3FF; font-size: .78rem; font-weight: 800; letter-spacing: .22em; text-transform: uppercase; }
+.process-kicker-link { display:inline-block; text-decoration:none; transition:color .2s ease; }
+.process-kicker-link:hover,.process-kicker-link:focus-visible { color:#fff; outline:none; }
 .process-title { margin: .7rem 0 0; color: #fff; font-size: clamp(2.65rem,5vw,5rem); line-height: .96; letter-spacing: -.045em; font-weight: 650; }
 .process-title span { color: #F2B84B; }
 .process-deck { max-width: 720px; margin: 1.2rem auto 0; color: rgba(255,255,255,.68); font-size: 1.05rem; line-height: 1.65; }
@@ -86,32 +88,12 @@ body.home-page main > section:nth-child(6) > div {
   .process-intro { text-align:left; margin-bottom:2rem; }
   .process-title { font-size:clamp(2.55rem,11vw,4.25rem); }
   .process-deck { margin-left:0; }
-  .process-board { border-radius:24px; overflow:visible; background:transparent; border:0; box-shadow:none; }
-  .process-stage-tabs { display:none; }
-  .process-lanes { display:block; }
-  .process-team-labels { display:none; }
-  .process-columns { display:block; }
-  .process-columns::before,.process-columns::after { display:none; }
-  .process-stage-col { display:block; margin-bottom:1rem; border:1px solid rgba(255,255,255,.1); border-radius:20px; overflow:hidden; background:linear-gradient(180deg,rgba(18,54,107,.62),rgba(7,26,56,.72)); }
-  .process-stage-col::before { content:attr(data-mobile-title); display:block; padding:1rem 1.1rem; color:#fff; font-size:1rem; font-weight:800; letter-spacing:.02em; border-bottom:1px solid rgba(255,255,255,.08); }
-  .process-stage-col.is-active { border-color:rgba(77,163,255,.38); box-shadow:0 15px 35px rgba(0,0,0,.16); }
-  .process-cell { min-height:0; padding:1rem 1.1rem 1rem 3.4rem; }
-  .process-cell::before { position:absolute; left:1.05rem; top:1rem; width:1.7rem; height:1.7rem; display:grid; place-items:center; border-radius:9px; font-size:.66rem; font-weight:800; letter-spacing:.04em; }
-  .process-cell.lotus::before { content:"LT"; color:#BFE7FF; border:1px solid rgba(77,163,255,.45); background:rgba(30,99,233,.12); }
-  .process-cell.client::before { content:"YOU"; color:#FFD77E; border:1px solid rgba(242,184,75,.42); background:rgba(242,184,75,.08); font-size:.52rem; }
-  .process-node,.process-client-node,.process-approval { display:none; }
-  .process-cell-summary { font-size:.83rem; }
-  .process-stage-col .process-cell.client { border-top:1px solid rgba(255,255,255,.07); }
-  .process-stage-col { cursor:pointer; }
-  .process-details { padding:0; border:0; background:transparent; }
-  .process-detail-panel { display:none; grid-template-columns:1fr; padding:.2rem 0 1rem; gap:.7rem; }
-  .process-detail-panel.is-active { display:grid; }
-  .process-footer { flex-direction:column; align-items:flex-start; }
+  .process-board { display:none; }
+  .process-footer { flex-direction:column; align-items:flex-start; margin-top:0; }
 }
 
 @media (max-width: 520px) {
   body.home-page main > section:nth-child(6) > div { padding-left:1rem; padding-right:1rem; }
   .process-title { max-width:10ch; }
   .process-deck { font-size:.98rem; }
-  .process-detail-card { padding:1rem; }
 }
