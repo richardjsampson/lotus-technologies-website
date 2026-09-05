@@ -103,10 +103,12 @@ body.home-page main > section:first-child a{
 
 @media (max-width:700px){
   body.home-page main > section:first-child{
-    min-height:760px;
+    min-height:820px;
     padding:0 1rem;
     align-items:flex-end;
+    background:#071a38;
   }
+
   body.home-page main > section:first-child::before{
     inset:0;
     left:0;
@@ -115,21 +117,31 @@ body.home-page main > section:first-child a{
     height:auto;
     transform:none;
     filter:none;
-    background-position:67% center;
+    background-size:auto 52%;
+    background-position:59% 7%;
+    background-repeat:no-repeat;
   }
+
   body.home-page main > section:first-child::after{
     background:
-      linear-gradient(180deg,rgba(5,20,46,.12) 0%,rgba(5,20,46,.22) 28%,rgba(5,20,46,.68) 55%,rgba(5,20,46,.95) 78%,#071a38 100%),
-      linear-gradient(90deg,rgba(5,20,46,.58) 0%,rgba(5,20,46,.22) 65%,rgba(5,20,46,.04) 100%);
+      linear-gradient(180deg,rgba(5,20,46,.04) 0%,rgba(5,20,46,.04) 34%,rgba(5,20,46,.28) 49%,rgba(5,20,46,.82) 63%,#071a38 76%,#071a38 100%),
+      linear-gradient(90deg,rgba(5,20,46,.16) 0%,rgba(5,20,46,.02) 68%,rgba(5,20,46,.08) 100%);
   }
+
   body.home-page main > section:first-child > div:first-child{
-    padding:19rem 0 4.75rem;
+    padding:23rem 0 4.75rem;
   }
+
+  body.home-page main > section:first-child > div:first-child > p:first-child{
+    display:none !important;
+  }
+
   body.home-page main > section:first-child h1{
     max-width:9ch;
-    font-size:clamp(3.3rem,15vw,4.8rem);
+    font-size:clamp(3.15rem,14.3vw,4.55rem);
     line-height:.94;
   }
+
   body.home-page main > section:first-child p:nth-of-type(2){
     font-size:1rem;
     line-height:1.65;
