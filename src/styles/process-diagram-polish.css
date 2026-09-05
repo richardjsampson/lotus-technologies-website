@@ -1,0 +1,14 @@
+/* Small desktop-only alignment refinements for the approved Process infographic. */
+@media (min-width: 901px) {
+  /* Give "Deployment Phase" clear breathing room above the cloud/upload icon. */
+  .process-page .process-blueprint .bp-icon.i5 {
+    transform-box: fill-box;
+    transform-origin: center;
+    transform: translateY(11px) scale(.88);
+  }
+
+  /* Place YES beneath the green forward arrow rather than on top of it. */
+  .process-page .process-blueprint .bp-yes {
+    transform: translateY(34px);
+  }
+}
