@@ -77,7 +77,7 @@
     <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
       <div class="process-shell">
         <header class="process-intro">
-          <p class="process-kicker">Our Process</p>
+          <a class="process-kicker process-kicker-link" href="/our-process">Our Process</a>
           <h2 class="process-title">Two teams. <span>One goal.</span></h2>
           <p class="process-deck">We work with your team at every stage — defining the problem, shaping the solution, validating progress, and launching together. Collaboration is part of the workflow, not something added at the end.</p>
         </header>
