@@ -96,27 +96,59 @@
 
 @media (max-width: 600px) {
   .about-page .about-hero {
-    min-height: 720px;
-    padding: 7rem 1rem 4.75rem;
-    background-position: 70% center;
+    min-height: 760px;
+    padding: 0 1rem;
+    align-items: stretch;
+    background-color: #071936;
+    background-size: auto 58%;
+    background-position: 75% 43%;
+    background-repeat: no-repeat;
   }
 
   .about-page .about-hero::before {
     background:
-      linear-gradient(180deg, rgba(5,22,49,.38) 0%, rgba(5,22,49,.50) 38%, rgba(7,25,54,.94) 74%, #071936 100%),
-      linear-gradient(90deg, rgba(5,22,49,.72) 0%, rgba(5,22,49,.28) 100%);
+      linear-gradient(180deg,
+        rgba(5,22,49,.58) 0%,
+        rgba(5,22,49,.22) 23%,
+        rgba(5,22,49,.08) 46%,
+        rgba(7,25,54,.58) 72%,
+        #071936 100%),
+      linear-gradient(90deg, rgba(5,22,49,.28) 0%, rgba(5,22,49,.06) 100%);
+  }
+
+  .about-page .about-hero::after {
+    height: 22%;
+  }
+
+  .about-page .about-hero-inner {
+    display: flex;
+    min-height: 760px;
   }
 
   .about-page .about-hero-inner > div:first-child {
-    align-self: flex-end;
-    padding: 0;
+    width: 100%;
+    max-width: none;
+    min-height: 760px;
+    padding: 2rem 0 4rem;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+  }
+
+  .about-page .about-eyebrow {
+    display: none;
   }
 
   .about-page .about-hero h1 {
+    margin: 0;
+    max-width: 8.5ch;
     font-size: clamp(3rem, 14vw, 4.3rem);
+    line-height: .94;
   }
 
   .about-page .about-hero-copy {
+    margin-top: auto;
+    max-width: 34rem;
     font-size: 1rem;
     line-height: 1.65;
   }
