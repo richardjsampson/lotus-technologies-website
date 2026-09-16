@@ -711,3 +711,111 @@
     animation:none !important;
   }
 }
+
+
+/* Cinematic Solutions hero — intentionally appended after legacy hero rules.
+   The old diagram markup has been removed from solutions.astro. */
+.solutions-hero {
+  min-height: 760px;
+  background:
+    radial-gradient(circle at 72% 38%, rgba(30,99,233,.12), transparent 32%),
+    linear-gradient(105deg, #06152e 0%, #071936 43%, #091f42 100%);
+}
+
+.solutions-hero::before {
+  opacity: .32;
+  mask-image: linear-gradient(90deg, transparent 0%, black 58%, black 100%);
+}
+
+.solutions-hero-inner {
+  grid-template-columns: minmax(420px,.82fr) minmax(660px,1.18fr);
+  gap: 2.75rem;
+  width: min(1460px, calc(100% - 3rem));
+  padding-top: 7.5rem;
+  padding-bottom: 6.5rem;
+}
+
+.solutions-hero-art {
+  position: relative;
+  min-height: 590px;
+  align-self: stretch;
+  margin-right: -4vw;
+  border-radius: 34px 0 0 34px;
+  overflow: hidden;
+  background-image: url('/dreams_into_digital_reality.png');
+  background-repeat: no-repeat;
+  background-size: 164% auto;
+  background-position: 84% 59%;
+  box-shadow:
+    0 35px 100px rgba(0,0,0,.34),
+    inset 1px 0 0 rgba(255,255,255,.08);
+}
+
+.solutions-hero-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, #071936 0%, rgba(7,25,54,.82) 8%, rgba(7,25,54,.18) 25%, transparent 43%),
+    linear-gradient(180deg, #071936 0%, rgba(7,25,54,.72) 8%, transparent 24%, transparent 78%, #071936 100%);
+  pointer-events: none;
+}
+
+.solutions-hero-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: radial-gradient(circle at 74% 50%, transparent 36%, rgba(7,25,54,.16) 72%, rgba(7,25,54,.42) 100%);
+  pointer-events: none;
+}
+
+@media (max-width: 1050px) {
+  .solutions-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .solutions-hero-art {
+    min-height: 520px;
+    margin-right: -1.5rem;
+    border-radius: 28px 0 0 28px;
+    background-size: 150% auto;
+    background-position: 82% 60%;
+  }
+}
+
+@media (max-width: 760px) {
+  .solutions-hero {
+    min-height: auto;
+  }
+
+  .solutions-hero-inner {
+    padding-top: 4.7rem;
+    padding-bottom: 3.6rem;
+  }
+
+  .solutions-hero-art {
+    min-height: 440px;
+    margin: .6rem -1rem 0;
+    border-radius: 22px;
+    background-size: auto 128%;
+    background-position: 69% 62%;
+    box-shadow: 0 24px 70px rgba(0,0,0,.28);
+  }
+
+  .solutions-hero-art::before {
+    background:
+      linear-gradient(180deg, #071936 0%, rgba(7,25,54,.72) 7%, transparent 20%, transparent 78%, #071936 100%),
+      linear-gradient(90deg, rgba(7,25,54,.45), transparent 22%, transparent 78%, rgba(7,25,54,.22));
+  }
+}
+
+@media (max-width: 430px) {
+  .solutions-hero-art {
+    min-height: 400px;
+    background-size: auto 120%;
+    background-position: 68% 64%;
+  }
+}
