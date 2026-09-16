@@ -1,24 +1,271 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/solutions-page.css';
 ---
 
 <BaseLayout
-	title="Solutions | Lotus Technologies"
-	description="Technology solutions designed around real business problems."
+  title="Solutions | Lotus Technologies"
+  description="Build something new, improve what exists, or connect the systems your business depends on. Explore Lotus Technologies solutions."
 >
-	<section class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-		<div class="max-w-3xl">
-			<p class="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-lotus-sky">
-				Solutions
-			</p>
+  <div class="solutions-page">
+    <section class="solutions-hero">
+      <div class="solutions-hero-inner">
+        <div>
+          <p class="solutions-eyebrow">Solutions</p>
+          <h1>Your Dream. <span>Our Team.</span></h1>
+          <p class="solutions-hero-copy">
+            Whether you are bringing a new idea to life, improving the way your business works,
+            or connecting systems that were never designed to work together, we help turn the
+            need into working technology.
+          </p>
+          <div class="solutions-hero-actions">
+            <a class="solutions-btn primary" href="/contact">Discuss Your Idea</a>
+            <a class="solutions-btn secondary" href="#capabilities">Explore Solutions</a>
+          </div>
+        </div>
 
-			<h1 class="text-5xl font-semibold tracking-tight text-white sm:text-6xl">
-				Technology built around the problem.
-			</h1>
+        <div class="idea-system" aria-label="An idea becoming an interconnected digital solution">
+          <span class="system-chip">Idea → Working Technology</span>
+          <span class="system-route r1"></span>
+          <span class="system-route r2"></span>
+          <span class="system-route r3"></span>
+          <span class="system-route r4"></span>
 
-			<p class="mt-6 text-lg leading-8 text-white/70">
-				Our Solutions page is coming soon.
-			</p>
-		</div>
-	</section>
+          <div class="system-card c1">
+            <small>Experience</small>
+            <strong>Applications</strong>
+            <span>Software built around the people who use it.</span>
+          </div>
+          <div class="system-card c2">
+            <small>Connection</small>
+            <strong>Systems & Data</strong>
+            <span>Platforms, APIs, workflows, and information working together.</span>
+          </div>
+          <div class="system-card c3">
+            <small>Anywhere</small>
+            <strong>Mobile & Devices</strong>
+            <span>People, field workflows, scanners, terminals, and connected hardware.</span>
+          </div>
+          <div class="system-card c4">
+            <small>Foundation</small>
+            <strong>Cloud & Architecture</strong>
+            <span>The infrastructure and technical strategy underneath it all.</span>
+          </div>
+
+          <div class="idea-core" aria-hidden="true"><span class="idea-spark"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="solutions-intents">
+      <div class="solutions-intro">
+        <p class="solutions-section-label">Where we start</p>
+        <h2>What are you trying to make possible?</h2>
+        <p>
+          Sometimes the need is a problem to solve. Sometimes it is an opportunity to pursue.
+          Sometimes it is simply an idea that deserves to exist.
+        </p>
+      </div>
+
+      <div class="intent-grid">
+        <article class="intent-card" data-index="01">
+          <h3>Build something new.</h3>
+          <p>
+            Turn an idea, workflow, product concept, or customer need into custom software,
+            an application, or a connected digital experience.
+          </p>
+        </article>
+        <article class="intent-card" data-index="02">
+          <h3>Improve what exists.</h3>
+          <p>
+            Modernize a process, replace a fragile workflow, extend an existing platform,
+            or make technology fit the business better.
+          </p>
+        </article>
+        <article class="intent-card" data-index="03">
+          <h3>Connect what should work together.</h3>
+          <p>
+            Integrate systems, data, devices, payments, and teams so information moves where
+            it needs to go without creating more work.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="solutions-capabilities" id="capabilities">
+      <div class="solutions-cap-heading">
+        <p class="solutions-section-label">Capabilities</p>
+        <h2>One partner. Multiple disciplines.</h2>
+        <p>
+          The right solution may live in one of these areas — or combine several of them into
+          one coordinated system.
+        </p>
+      </div>
+
+      <article class="solution-band">
+        <div class="solution-copy">
+          <span class="solution-num">01 / 04</span>
+          <h3>Custom Software & Applications</h3>
+          <p>
+            We design and build software around the way your business actually works — from
+            customer-facing products to internal applications, portals, tools, and workflows.
+          </p>
+          <div class="solution-points">
+            <span>Web applications</span>
+            <span>Business applications</span>
+            <span>Custom workflows</span>
+            <span>Portals & dashboards</span>
+            <span>Front-end & back-end</span>
+          </div>
+        </div>
+        <div class="solution-visual" aria-hidden="true">
+          <div class="app-window">
+            <span class="app-sidebar"></span>
+            <span class="app-main">
+              <span class="app-panel big"></span>
+              <span class="app-panel"></span>
+              <span class="app-panel"></span>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <article class="solution-band reverse">
+        <div class="solution-copy">
+          <span class="solution-num">02 / 04</span>
+          <h3>Mobile & Connected Solutions</h3>
+          <p>
+            We connect mobile experiences to the systems, devices, and workflows behind them —
+            whether the user is a customer, an employee in the field, or an operator using
+            purpose-built hardware.
+          </p>
+          <div class="solution-points">
+            <span>iOS & Android</span>
+            <span>Mobile workflows</span>
+            <span>Scanners & terminals</span>
+            <span>Connected devices</span>
+            <span>Payments & commerce</span>
+          </div>
+        </div>
+        <div class="solution-visual" aria-hidden="true">
+          <span class="device-node n1"></span>
+          <span class="device-node n2"></span>
+          <span class="device-node n3"></span>
+          <span class="device-node n4"></span>
+          <div class="phone"><span class="phone-screen"></span></div>
+        </div>
+      </article>
+
+      <article class="solution-band">
+        <div class="solution-copy">
+          <span class="solution-num">03 / 04</span>
+          <h3>Systems & Data Integration</h3>
+          <p>
+            We make separate platforms behave like parts of the same business. APIs, CRM,
+            ERP, payments, eCommerce, SaaS platforms, and data layers can become one coordinated
+            flow instead of a collection of disconnected tools.
+          </p>
+          <div class="solution-points">
+            <span>APIs & SDKs</span>
+            <span>CRM & ERP</span>
+            <span>Payments</span>
+            <span>eCommerce</span>
+            <span>Data interoperability</span>
+          </div>
+        </div>
+        <div class="solution-visual" aria-hidden="true">
+          <span class="integration-line l1"></span>
+          <span class="integration-line l2"></span>
+          <span class="integration-line l3"></span>
+          <span class="integration-line l4"></span>
+          <span class="integration-node i1">CRM</span>
+          <span class="integration-node i2">ERP</span>
+          <span class="integration-node i3">COMMERCE</span>
+          <span class="integration-node i4">DATA</span>
+          <span class="integration-core">API<br />LAYER</span>
+        </div>
+      </article>
+
+      <article class="solution-band reverse">
+        <div class="solution-copy">
+          <span class="solution-num">04 / 04</span>
+          <h3>Cloud & Technology Consulting</h3>
+          <p>
+            We help determine what the technology should look like before anyone starts buying,
+            migrating, or building — then help put the right architecture and infrastructure
+            in place.
+          </p>
+          <div class="solution-points">
+            <span>Cloud architecture</span>
+            <span>Migration strategy</span>
+            <span>Hybrid environments</span>
+            <span>Infrastructure planning</span>
+            <span>Technical guidance</span>
+          </div>
+        </div>
+        <div class="solution-visual" aria-hidden="true">
+          <div class="cloud-stack">
+            <span class="cloud-layer"></span>
+            <span class="cloud-layer"></span>
+            <span class="cloud-layer"></span>
+          </div>
+          <span class="cloud-badge">RIGHT<br />FIT</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="solutions-combine">
+      <div class="solutions-combine-inner">
+        <div class="solutions-combine-copy">
+          <p class="solutions-section-label">How we think</p>
+          <h2>The solution does not have to fit neatly into a box.</h2>
+          <p>
+            A mobile application may need a custom back end, payment processing, CRM integration,
+            device support, and cloud infrastructure. We look at the whole system instead of
+            forcing the engagement into a single service category.
+          </p>
+        </div>
+
+        <div class="combine-map" aria-label="Multiple Lotus capabilities working together in one engagement">
+          <span class="combine-orbit o1"><strong>Custom Software</strong><span>Product & workflow</span></span>
+          <span class="combine-orbit o2"><strong>Integration</strong><span>Systems & data</span></span>
+          <span class="combine-orbit o3"><strong>Mobile</strong><span>People & devices</span></span>
+          <span class="combine-orbit o4"><strong>Cloud</strong><span>Architecture & scale</span></span>
+          <span class="combine-center">ONE<br />SOLUTION</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="solutions-proof">
+      <p class="solutions-section-label">Technology without the tunnel vision</p>
+      <h2>Use the tools that fit the outcome.</h2>
+      <p>
+        We work across software, cloud, commerce, CRM, data, and device ecosystems. The goal is
+        not to sell a particular platform. It is to choose and connect the technology that makes
+        sense for the work.
+      </p>
+      <div class="proof-chips" aria-label="Examples of technologies and platforms">
+        <span>JavaScript</span><span>Python</span><span>Java</span><span>Swift</span>
+        <span>AWS</span><span>Azure</span><span>Google Cloud</span>
+        <span>Salesforce</span><span>Dynamics</span><span>NetSuite</span><span>HubSpot</span>
+        <span>Stripe</span><span>Authorize.Net</span><span>Android</span><span>iOS</span>
+      </div>
+    </section>
+
+    <section class="solutions-cta-wrap">
+      <div class="solutions-cta">
+        <p class="solutions-section-label">Start with the idea</p>
+        <h2>Not sure what the solution is yet? That is okay.</h2>
+        <p>
+          You do not need a complete technical plan before talking to us. Tell us what you want
+          to accomplish, what is getting in the way, or what you wish existed. We will help
+          determine the right path forward.
+        </p>
+        <div class="solutions-hero-actions">
+          <a class="solutions-btn primary" href="/contact">Discuss Your Challenge</a>
+          <a class="solutions-btn secondary" href="/our-process">See How We Work</a>
+        </div>
+      </div>
+    </section>
+  </div>
 </BaseLayout>
