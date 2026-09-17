@@ -1,0 +1,47 @@
+/* Premium cinematic artwork for Solutions capabilities 1–3. */
+
+.custom-software-visual,
+.mobile-connected-visual,
+.systems-integration-visual {
+  min-height: 420px;
+  background-color: #071936;
+  background-repeat: no-repeat;
+  background-size: cover;
+  isolation: isolate;
+}
+
+.custom-software-visual {
+  background-image: url('/custom-software-applications.png');
+  background-position: center 52%;
+}
+
+.mobile-connected-visual {
+  background-image: url('/mobile-connected-solutions.png');
+  background-position: center 50%;
+}
+
+.systems-integration-visual {
+  background-image: url('/systems-data-integration.png');
+  background-position: center 50%;
+}
+
+.custom-software-visual::before,
+.mobile-connected-visual::before,
+.systems-integration-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, transparent 48%, rgba(7,25,54,.10) 68%, rgba(7,25,54,.38) 100%);
+}
+
+@media (max-width: 760px) {
+  .custom-software-visual,
+  .mobile-connected-visual,
+  .systems-integration-visual {
+    min-height: 250px;
+    background-size: cover;
+    background-position: center center;
+  }
+}
