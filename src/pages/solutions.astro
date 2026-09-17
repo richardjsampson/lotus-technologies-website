@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/solutions-page.css';
+import '../styles/solutions-cloud-consulting.css';
 ---
 
 <BaseLayout
@@ -160,10 +161,12 @@ import '../styles/solutions-page.css';
         </div>
       </article>
 
-      <article class="solution-band reverse">
+      <article class="solution-band reverse cloud-consulting-band">
         <div class="solution-copy">
-          <span class="solution-num">04 / 04</span>
-          <h3>Cloud & Technology Consulting</h3>
+          <div class="cloud-consulting-heading">
+            <span class="solution-num">04 / 04</span>
+            <h3>Cloud & Technology Consulting</h3>
+          </div>
           <p>
             We help determine what the technology should look like before anyone starts buying,
             migrating, or building — then help put the right architecture and infrastructure
@@ -177,14 +180,7 @@ import '../styles/solutions-page.css';
             <span>Technical guidance</span>
           </div>
         </div>
-        <div class="solution-visual" aria-hidden="true">
-          <div class="cloud-stack">
-            <span class="cloud-layer"></span>
-            <span class="cloud-layer"></span>
-            <span class="cloud-layer"></span>
-          </div>
-          <span class="cloud-badge">RIGHT<br />FIT</span>
-        </div>
+        <div class="solution-visual cloud-consulting-visual" aria-hidden="true"></div>
       </article>
     </section>
 
