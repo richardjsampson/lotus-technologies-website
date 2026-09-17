@@ -1,7 +1,12 @@
 ---
+import { readFileSync } from 'node:fs';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/solutions-page.css';
 import '../styles/solutions-cloud-consulting.css';
+
+const customSoftwareArtwork = `data:image/webp;base64,${readFileSync('public/custom-software-applications.b64', 'utf8').trim()}`;
+const mobileConnectedArtwork = `data:image/webp;base64,${readFileSync('public/mobile-connected-solutions.b64', 'utf8').trim()}`;
+const systemsIntegrationArtwork = `data:image/jpeg;base64,${readFileSync('public/systems-data-integration.b64', 'utf8').trim()}`;
 ---
 
 <BaseLayout
@@ -94,7 +99,7 @@ import '../styles/solutions-cloud-consulting.css';
             <span>Front-end & back-end</span>
           </div>
         </div>
-        <div class="solution-visual custom-software-visual" aria-hidden="true"></div>
+        <div class="solution-visual custom-software-visual" aria-hidden="true" style={`background-image: url("${customSoftwareArtwork}")`}></div>
       </article>
 
       <article class="solution-band reverse mobile-connected-band">
@@ -115,7 +120,7 @@ import '../styles/solutions-cloud-consulting.css';
             <span>Payments & commerce</span>
           </div>
         </div>
-        <div class="solution-visual mobile-connected-visual" aria-hidden="true"></div>
+        <div class="solution-visual mobile-connected-visual" aria-hidden="true" style={`background-image: url("${mobileConnectedArtwork}")`}></div>
       </article>
 
       <article class="solution-band systems-integration-band">
@@ -136,7 +141,7 @@ import '../styles/solutions-cloud-consulting.css';
             <span>Data interoperability</span>
           </div>
         </div>
-        <div class="solution-visual systems-integration-visual" aria-hidden="true"></div>
+        <div class="solution-visual systems-integration-visual" aria-hidden="true" style={`background-image: url("${systemsIntegrationArtwork}")`}></div>
       </article>
 
       <article class="solution-band reverse cloud-consulting-band">
