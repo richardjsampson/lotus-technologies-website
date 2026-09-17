@@ -28,6 +28,9 @@
 .solutions-capabilities .solution-visual {
   background-color: #071936;
   isolation: isolate;
+  min-height: 420px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .solutions-capabilities .solution-visual::after {
@@ -43,43 +46,45 @@
 
 /* Custom Software & Applications */
 .custom-software-visual {
-  min-height: 420px;
   background-image: url('/custom-software-applications.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
   background-position: center 54%;
 }
 
-.custom-software-visual::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background: radial-gradient(circle at 54% 48%, transparent 48%, rgba(7,25,54,.10) 67%, rgba(7,25,54,.34) 100%);
+/* Mobile & Connected Solutions */
+.mobile-connected-visual {
+  background-image: url('/mobile-connected-solutions.webp');
+  background-position: center 52%;
+}
+
+/* Systems & Data Integration */
+.systems-integration-visual {
+  background-image: url('/systems-data-integration.webp');
+  background-position: center 52%;
 }
 
 /* Cloud & Technology Consulting */
 .cloud-consulting-visual {
-  min-height: 420px;
-  background-color: #071936;
   background-image: url('/cloud-technology-consulting.png');
-  background-repeat: no-repeat;
-  background-size: cover;
   background-position: center 52%;
-  isolation: isolate;
 }
 
+.custom-software-visual::before,
+.mobile-connected-visual::before,
+.systems-integration-visual::before,
 .cloud-consulting-visual::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(circle at 52% 48%, transparent 48%, rgba(7,25,54,.10) 67%, rgba(7,25,54,.34) 100%);
+}
+
+.cloud-consulting-visual::before {
   background:
     linear-gradient(90deg, #071936 0%, rgba(7,25,54,.72) 8%, rgba(7,25,54,.12) 21%, transparent 38%),
     linear-gradient(270deg, #071936 0%, rgba(7,25,54,.62) 7%, rgba(7,25,54,.10) 20%, transparent 37%),
     linear-gradient(180deg, #071936 0%, rgba(7,25,54,.46) 7%, transparent 21%, transparent 78%, rgba(7,25,54,.62) 93%, #071936 100%);
-  pointer-events: none;
 }
 
 @media (max-width: 760px) {
@@ -137,10 +142,9 @@
     padding: 1.2rem 1.35rem 0;
   }
 
-  .custom-software-visual {
-    background-position: center 52%;
-  }
-
+  .custom-software-visual,
+  .mobile-connected-visual,
+  .systems-integration-visual,
   .cloud-consulting-visual {
     background-position: center 50%;
   }
