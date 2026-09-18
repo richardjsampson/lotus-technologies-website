@@ -1,12 +1,7 @@
 ---
-import { readFileSync } from 'node:fs';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/solutions-page.css';
 import '../styles/solutions-cloud-consulting.css';
-
-const customSoftwareArtwork = `data:image/webp;base64,${readFileSync('public/custom-software-applications.b64', 'utf8').trim()}`;
-const mobileConnectedArtwork = `data:image/webp;base64,${readFileSync('public/mobile-connected-solutions.b64', 'utf8').trim()}`;
-const systemsIntegrationArtwork = `data:image/jpeg;base64,${readFileSync('public/systems-data-integration.b64', 'utf8').trim()}`;
 ---
 
 <BaseLayout
@@ -100,7 +95,7 @@ const systemsIntegrationArtwork = `data:image/jpeg;base64,${readFileSync('public
           </div>
         </div>
         <div class="solution-visual custom-software-visual" aria-hidden="true">
-          <img src={customSoftwareArtwork} alt="" loading="lazy" decoding="async" />
+          <img src="/Custom%20Software%20%26%20Applications.jpg" alt="" loading="lazy" decoding="async" />
         </div>
       </article>
 
@@ -123,7 +118,7 @@ const systemsIntegrationArtwork = `data:image/jpeg;base64,${readFileSync('public
           </div>
         </div>
         <div class="solution-visual mobile-connected-visual" aria-hidden="true">
-          <img src={mobileConnectedArtwork} alt="" loading="lazy" decoding="async" />
+          <img src="/Mobile%20Development.png" alt="" loading="lazy" decoding="async" />
         </div>
       </article>
 
@@ -146,7 +141,7 @@ const systemsIntegrationArtwork = `data:image/jpeg;base64,${readFileSync('public
           </div>
         </div>
         <div class="solution-visual systems-integration-visual" aria-hidden="true">
-          <img src={systemsIntegrationArtwork} alt="" loading="lazy" decoding="async" />
+          <img src="/Systems%20%26%20Data%20Integration.jpg" alt="" loading="lazy" decoding="async" />
         </div>
       </article>
 
