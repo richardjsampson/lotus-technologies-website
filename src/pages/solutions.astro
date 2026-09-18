@@ -13,7 +13,7 @@ import '../styles/solutions-cloud-consulting.css';
       <div class="solutions-hero-inner">
         <div class="solutions-hero-heading">
           <p class="solutions-eyebrow">Solutions</p>
-          <h1>Your Dream. <span>Our Team.</span></h1>
+          <h1><span class="solutions-tagline-primary">Your Dream.</span> <span class="solutions-tagline-accent">Our Team.</span></h1>
         </div>
 
         <div class="solutions-hero-art" aria-hidden="true"></div>
@@ -149,3 +149,21 @@ import '../styles/solutions-cloud-consulting.css';
     </section>
   </div>
 </BaseLayout>
+
+<style is:global>
+  .solutions-hero h1 .solutions-tagline-primary {
+    color: #fff;
+  }
+
+  .solutions-hero h1 .solutions-tagline-accent {
+    color: #F2B84B;
+  }
+
+  @media (max-width: 760px) {
+    .solutions-hero h1 .solutions-tagline-primary,
+    .solutions-hero h1 .solutions-tagline-accent {
+      display: block;
+      white-space: nowrap;
+    }
+  }
+</style>
