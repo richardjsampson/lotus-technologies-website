@@ -90,8 +90,7 @@
     grid-template-areas:
       "heading"
       "visual"
-      "description"
-      "points";
+      "description";
     gap: 0;
     margin-bottom: 3.75rem;
   }
@@ -131,10 +130,9 @@
     line-height: 1.7;
   }
 
+  /* Mobile-only cleanup: remove service capability pills to reduce scrolling. */
   .solutions-capabilities .solution-band .solution-points {
-    grid-area: points;
-    margin: 0;
-    padding: 1.2rem 1.35rem 0;
+    display: none;
   }
 
   .solutions-capabilities .solution-visual > img {
