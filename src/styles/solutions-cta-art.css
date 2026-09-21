@@ -1,35 +1,53 @@
 /* Desktop-only cinematic artwork for the Solutions CTA. */
 
+.solutions-cta-art {
+  display: none;
+}
+
 @media (min-width: 761px) {
   .solutions-cta {
     position: relative;
     isolation: isolate;
     min-height: 390px;
-    padding-right: 48%;
   }
 
-  .solutions-cta > * {
+  .solutions-cta-copy {
     position: relative;
     z-index: 2;
+    width: min(58%, 650px);
   }
 
-  .solutions-cta::after {
-    content: "";
+  .solutions-cta-copy h2 {
+    white-space: nowrap;
+  }
+
+  .solutions-cta-copy .solutions-hero-actions {
+    flex-wrap: nowrap;
+  }
+
+  .solutions-cta-copy .solutions-btn {
+    width: auto;
+    flex: 0 0 auto;
+  }
+
+  .solutions-cta-art {
+    display: block;
     position: absolute;
     z-index: 1;
     top: 50%;
-    right: 1.5%;
-    width: 47%;
-    height: 112%;
+    right: 2.5%;
+    width: min(46%, 560px);
+    height: auto;
+    max-height: 118%;
     transform: translateY(-50%);
-    background: url('/cta-lotus-cutout.webp') center right / contain no-repeat;
+    object-fit: contain;
     pointer-events: none;
-    opacity: .96;
+    user-select: none;
   }
 }
 
 @media (max-width: 760px) {
-  .solutions-cta::after {
-    content: none;
+  .solutions-cta-art {
+    display: none;
   }
 }
