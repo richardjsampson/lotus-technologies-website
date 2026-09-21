@@ -1,0 +1,35 @@
+/* Desktop-only cinematic artwork for the Solutions CTA. */
+
+@media (min-width: 761px) {
+  .solutions-cta {
+    position: relative;
+    isolation: isolate;
+    min-height: 390px;
+    padding-right: 48%;
+  }
+
+  .solutions-cta > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .solutions-cta::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: 1.5%;
+    width: 47%;
+    height: 112%;
+    transform: translateY(-50%);
+    background: url('/cta-lotus-cutout.webp') center right / contain no-repeat;
+    pointer-events: none;
+    opacity: .96;
+  }
+}
+
+@media (max-width: 760px) {
+  .solutions-cta::after {
+    content: none;
+  }
+}
