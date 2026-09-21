@@ -1,0 +1,61 @@
+/* Dedicated Case Studies hero artwork. */
+.case-studies-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.case-studies-hero .case-studies-shell {
+  position: relative;
+  z-index: 2;
+}
+
+.case-studies-hero::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: -2%;
+  width: min(58vw, 860px);
+  aspect-ratio: 1.333 / 1;
+  transform: translateY(-50%);
+  background: url('/case-studies-hero.webp') center / contain no-repeat;
+  pointer-events: none;
+}
+
+.case-studies-hero h1,
+.case-studies-intro,
+.case-studies-eyebrow {
+  position: relative;
+  z-index: 2;
+}
+
+.case-studies-hero h1 {
+  max-width: 610px;
+}
+
+.case-studies-intro {
+  max-width: 560px;
+}
+
+@media (max-width: 900px) {
+  .case-studies-hero {
+    padding-bottom: 2.5rem;
+  }
+
+  .case-studies-hero::after {
+    position: relative;
+    display: block;
+    top: auto;
+    right: auto;
+    width: min(100%, 760px);
+    margin: 2rem auto 0;
+    transform: none;
+    aspect-ratio: 1.333 / 1;
+  }
+
+  .case-studies-hero h1,
+  .case-studies-intro {
+    max-width: 760px;
+  }
+}
