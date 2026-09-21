@@ -1,24 +1,176 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/case-studies-page.css';
+
+const studies = [
+  {
+    id: 'scripps-health',
+    client: 'Scripps Health',
+    industry: 'Healthcare',
+    service: 'Data & Business Intelligence',
+    image: '/custom-software-applications-premium.png',
+    challenge: 'Turn fragmented, unstructured operational data into information teams could actually use.',
+    solution: 'Designed a practical reporting and analytics workflow that gave stakeholders a clearer view of the business.',
+    impact: 'Created a dependable foundation for decision-making and drove strong adoption across the organization.',
+  },
+  {
+    id: 'servicenow',
+    client: 'ServiceNow',
+    industry: 'Enterprise Software',
+    service: 'Collaboration & Workflow',
+    image: '/Systems%20%26%20Data%20Integration.jpg',
+    challenge: 'Give engineering stakeholders a more effective way to collaborate around complex work.',
+    solution: 'Implemented and supported a SaaS-based collaboration environment, including onboarding, training, and ongoing adoption.',
+    impact: 'Established a durable workflow that became part of the team\'s day-to-day operating model.',
+  },
+  {
+    id: 'mtn-products',
+    client: 'MTN Products',
+    industry: 'Field Operations',
+    service: 'Mobile & Connected Solutions',
+    image: '/Mobile%20Development.png',
+    challenge: 'Reduce operational errors across a device-driven field workflow involving scanning, service, and payments.',
+    solution: 'Designed a mobile scanner solution that connected frontline activity with the systems behind it.',
+    impact: 'Simplified field operations, reduced avoidable errors, and improved control over the transaction process.',
+  },
+];
 ---
 
 <BaseLayout
-	title="Case Studies | Lotus Technologies"
-	description="Explore technology solutions Lotus Technologies has designed and implemented for clients."
+  title="Case Studies | Lotus Technologies"
+  description="Selected Lotus Technologies work across software, integrations, mobile solutions, data, and business systems."
 >
-	<section class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-		<div class="max-w-3xl">
-			<p class="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-lotus-sky">
-				Case Studies
-			</p>
+  <section class="case-studies-hero">
+    <div class="case-studies-shell">
+      <p class="case-studies-eyebrow">CASE STUDIES</p>
+      <h1>Work that moved the business forward.</h1>
+      <p class="case-studies-intro">A look at the challenges we were asked to solve — and what changed after we did.</p>
+    </div>
+  </section>
 
-			<h1 class="text-5xl font-semibold tracking-tight text-white sm:text-6xl">
-				Problems solved. Results delivered.
-			</h1>
+  <section class="case-studies-gallery" aria-labelledby="case-studies-heading">
+    <div class="case-studies-shell">
+      <div class="case-studies-toolbar">
+        <h2 id="case-studies-heading">Selected work.</h2>
+        <div class="case-study-filters" aria-label="Filter case studies">
+          <button class="case-study-filter is-active" type="button" data-filter="all">All</button>
+          <button class="case-study-filter" type="button" data-filter="software">Software</button>
+          <button class="case-study-filter" type="button" data-filter="mobile">Mobile</button>
+          <button class="case-study-filter" type="button" data-filter="integration">Integration</button>
+          <button class="case-study-filter" type="button" data-filter="data">Data</button>
+        </div>
+      </div>
 
-			<p class="mt-6 text-lg leading-8 text-white/70">
-				Our Case Studies page is coming soon.
-			</p>
-		</div>
-	</section>
+      <div class="case-study-grid">
+        {studies.map((study, index) => (
+          <button
+            class={`case-study-card case-study-card-${index + 1}`}
+            type="button"
+            data-case-study={study.id}
+            data-category={index === 0 ? 'data' : index === 1 ? 'integration software' : 'mobile integration'}
+            aria-haspopup="dialog"
+          >
+            <img src={study.image} alt="" loading="lazy" decoding="async" />
+            <span class="case-study-card-shade"></span>
+            <span class="case-study-card-content">
+              <span class="case-study-service">{study.service}</span>
+              <strong>{study.client}</strong>
+              <span class="case-study-open">View case study <span aria-hidden="true">↗</span></span>
+            </span>
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="case-study-modal" aria-hidden="true">
+    <button class="case-study-backdrop" type="button" aria-label="Close case study"></button>
+    <section class="case-study-dialog" role="dialog" aria-modal="true" aria-labelledby="case-study-modal-title">
+      <button class="case-study-close" type="button" aria-label="Close case study">×</button>
+      <div class="case-study-dialog-media">
+        <img class="case-study-modal-image" src="" alt="" />
+      </div>
+      <div class="case-study-dialog-copy">
+        <div class="case-study-modal-meta">
+          <span class="case-study-modal-industry"></span>
+          <span class="case-study-modal-service"></span>
+        </div>
+        <h2 id="case-study-modal-title"></h2>
+        <div class="case-study-story">
+          <article>
+            <span>01</span>
+            <h3>The Challenge</h3>
+            <p class="case-study-modal-challenge"></p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>The Solution</h3>
+            <p class="case-study-modal-solution"></p>
+          </article>
+          <article class="impact">
+            <span>03</span>
+            <h3>Impact</h3>
+            <p class="case-study-modal-impact"></p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script define:vars={{ studies }}>
+    const cards = document.querySelectorAll('[data-case-study]');
+    const modal = document.querySelector('.case-study-modal');
+    const closeButton = document.querySelector('.case-study-close');
+    const backdrop = document.querySelector('.case-study-backdrop');
+    const filters = document.querySelectorAll('.case-study-filter');
+    let lastTrigger = null;
+
+    const studyMap = new Map(studies.map((study) => [study.id, study]));
+
+    const closeModal = () => {
+      if (!modal) return;
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('case-study-modal-open');
+      if (lastTrigger) lastTrigger.focus();
+    };
+
+    cards.forEach((card) => {
+      card.addEventListener('click', () => {
+        const study = studyMap.get(card.dataset.caseStudy);
+        if (!study || !modal) return;
+        lastTrigger = card;
+        modal.querySelector('.case-study-modal-image').src = study.image;
+        modal.querySelector('.case-study-modal-industry').textContent = study.industry;
+        modal.querySelector('.case-study-modal-service').textContent = study.service;
+        modal.querySelector('#case-study-modal-title').textContent = study.client;
+        modal.querySelector('.case-study-modal-challenge').textContent = study.challenge;
+        modal.querySelector('.case-study-modal-solution').textContent = study.solution;
+        modal.querySelector('.case-study-modal-impact').textContent = study.impact;
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('case-study-modal-open');
+        closeButton?.focus();
+      });
+    });
+
+    closeButton?.addEventListener('click', closeModal);
+    backdrop?.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && modal?.classList.contains('is-open')) closeModal();
+    });
+
+    filters.forEach((filter) => {
+      filter.addEventListener('click', () => {
+        filters.forEach((item) => item.classList.remove('is-active'));
+        filter.classList.add('is-active');
+        const value = filter.dataset.filter;
+        cards.forEach((card) => {
+          const matches = value === 'all' || card.dataset.category?.split(' ').includes(value);
+          card.toggleAttribute('hidden', !matches);
+        });
+      });
+    });
+  </script>
 </BaseLayout>
