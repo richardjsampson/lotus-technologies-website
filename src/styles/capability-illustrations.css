@@ -12,15 +12,16 @@
 
   main > section:nth-child(4) > div > div:first-child > div:first-child {
     width: 100% !important;
-    max-width: 410px !important;
-    padding-top: .2rem;
+    max-width: 400px !important;
+    padding-top: 0 !important;
+    transform: translateY(-.35rem);
   }
 
   main > section:nth-child(4) > div > div:first-child > div:first-child h2 {
     width: 100% !important;
-    max-width: 11.5ch !important;
-    font-size: clamp(2.85rem, 3.35vw, 3.7rem) !important;
-    line-height: 1.04 !important;
+    max-width: 11ch !important;
+    font-size: clamp(2.55rem, 3vw, 3.25rem) !important;
+    line-height: 1.045 !important;
     letter-spacing: -.04em !important;
     text-wrap: balance;
   }
@@ -34,7 +35,7 @@
   main > section:nth-child(4) > div > div:first-child > div:first-child > p:nth-of-type(2) {
     display: block !important;
     max-width: 38ch !important;
-    margin-top: 1.35rem !important;
+    margin-top: 1.3rem !important;
     font-size: 1rem !important;
     line-height: 1.7 !important;
     color: rgba(255,255,255,.58) !important;
@@ -117,7 +118,7 @@
     position: relative !important;
     z-index: 2;
     max-width: 32ch !important;
-    margin-top: .7rem !important;
+    margin-top: .88rem !important;
     display: -webkit-box !important;
     overflow: hidden !important;
     -webkit-box-orient: vertical;
@@ -143,8 +144,8 @@
     top: .95rem !important;
     left: auto !important;
     bottom: auto !important;
-    width: 118px !important;
-    height: 92px !important;
+    width: 108px !important;
+    height: 84px !important;
     border: 0 !important;
     border-radius: 0 !important;
     background-position: center !important;
@@ -152,7 +153,7 @@
     background-repeat: no-repeat !important;
     box-shadow: none !important;
     transform: none !important;
-    opacity: .82 !important;
+    opacity: .84 !important;
     pointer-events: none !important;
   }
 
@@ -170,10 +171,14 @@
   }
 
   main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(3)::before {
+    width: 116px !important;
+    height: 90px !important;
     background-image: url("/illustrations/mobile-connected.svg") !important;
   }
 
   main > section:nth-child(4) > div > div:first-child > div:nth-child(2) > a:nth-child(4)::before {
+    width: 120px !important;
+    height: 92px !important;
     background-image: url("/illustrations/cloud-consulting.svg") !important;
   }
 }
