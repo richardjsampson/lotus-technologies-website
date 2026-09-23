@@ -54,5 +54,11 @@ const bodyClass = `min-h-screen bg-gradient-to-br from-lotus-navy via-lotus-navy
 		<script is:inline src="/process-section.js"></script>
 		<script is:inline src="/process-approval-diagram.js"></script>
 		<script is:inline src="/process-mobile-diagram.js"></script>
+		<script is:inline>
+			if (window.location.pathname === '/about' || window.location.pathname === '/about/') {
+				const aboutCta = document.querySelector('.about-close a[href="/contact"]');
+				if (aboutCta) aboutCta.textContent = 'Get in Touch';
+			}
+		</script>
 	</body>
 </html>
