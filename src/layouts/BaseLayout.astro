@@ -15,6 +15,7 @@ import '../styles/about-silhouette-fixes.css';
 import '../styles/about-cinematic-hero.css';
 import '../styles/about-hero-background.css';
 import '../styles/case-studies-hero-art.css';
+import '../styles/trusted-by.css';
 import Header from '../components/header.astro';
 import Footer from '../components/footer.astro';
 
@@ -55,6 +56,55 @@ const bodyClass = `min-h-screen bg-gradient-to-br from-lotus-navy via-lotus-navy
 		<script is:inline src="/process-approval-diagram.js"></script>
 		<script is:inline src="/process-mobile-diagram.js"></script>
 		<script is:inline>
+			if (window.location.pathname === '/' || window.location.pathname === '') {
+				const trustedSection = document.querySelector('main > section:nth-child(2)');
+				if (trustedSection) {
+					const heading = trustedSection.querySelector('.text-center > p');
+					if (heading) heading.textContent = 'Trusted By';
+
+					const logoGrid = trustedSection.querySelector('.text-center + div');
+					if (logoGrid && !logoGrid.classList.contains('trusted-logo-viewport')) {
+						const makeLogo = (src, alt, extraClass) => {
+							const item = document.createElement('div');
+							item.className = `trusted-logo-item ${extraClass || ''}`.trim();
+							const img = document.createElement('img');
+							img.src = src;
+							img.alt = alt;
+							img.loading = 'lazy';
+							item.appendChild(img);
+							return item;
+						};
+
+						const originalItems = Array.from(logoGrid.children);
+						for (const item of originalItems) {
+							item.className = 'trusted-logo-item';
+							const img = item.querySelector('img');
+							if (img) img.className = '';
+						}
+
+						const berkshire = makeLogo('/clients/berkshire-hathaway.png', 'Berkshire Hathaway HomeServices', 'trusted-logo-item--berkshire');
+						const sanDiego = makeLogo('/clients/city-of-san-diego.png', 'The City of San Diego', 'trusted-logo-item--sandiego');
+						const orderedItems = [berkshire, sanDiego, ...originalItems];
+
+						const track = document.createElement('div');
+						track.className = 'trusted-logo-track';
+						for (const item of orderedItems) track.appendChild(item);
+
+						for (const item of orderedItems) {
+							const clone = item.cloneNode(true);
+							clone.classList.add('trusted-logo-clone');
+							clone.setAttribute('aria-hidden', 'true');
+							const img = clone.querySelector('img');
+							if (img) img.alt = '';
+							track.appendChild(clone);
+						}
+
+						logoGrid.className = 'trusted-logo-viewport';
+						logoGrid.replaceChildren(track);
+					}
+				}
+			}
+
 			if (window.location.pathname === '/about' || window.location.pathname === '/about/') {
 				document.querySelector('.about-values-wrap')?.remove();
 				const aboutTeamIntro = document.querySelector('.about-team-intro');
