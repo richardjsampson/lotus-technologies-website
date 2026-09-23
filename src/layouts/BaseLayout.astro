@@ -57,6 +57,9 @@ const bodyClass = `min-h-screen bg-gradient-to-br from-lotus-navy via-lotus-navy
 		<script is:inline src="/process-mobile-diagram.js"></script>
 		<script is:inline>
 			if (window.location.pathname === '/' || window.location.pathname === '') {
+				const heroHeading = document.querySelector('main > section:first-child h1');
+				if (heroHeading) heroHeading.textContent = 'Solving business problems with technical solutions.';
+
 				const trustedSection = document.querySelector('main > section:nth-child(2)');
 				if (trustedSection) {
 					const heading = trustedSection.querySelector('.text-center > p');
