@@ -103,7 +103,7 @@ body.home-page main > section:first-child a{
 
 @media (max-width:700px){
   body.home-page main > section:first-child{
-    min-height:820px;
+    min-height:760px;
     padding:0 1rem;
     align-items:flex-end;
     background:#071a38;
@@ -129,7 +129,7 @@ body.home-page main > section:first-child a{
   }
 
   body.home-page main > section:first-child > div:first-child{
-    padding:23rem 0 4.75rem;
+    padding:18.75rem 0 4.25rem;
   }
 
   body.home-page main > section:first-child > div:first-child > p:first-child{
