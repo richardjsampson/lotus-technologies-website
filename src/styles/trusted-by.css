@@ -1,0 +1,122 @@
+@keyframes lotus-trusted-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 2.25rem)); }
+}
+
+body.home-page .trusted-logo-viewport {
+  margin-top: 2.5rem;
+}
+
+body.home-page .trusted-logo-track {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.35rem 1.5rem;
+  align-items: center;
+}
+
+body.home-page .trusted-logo-item {
+  display: flex;
+  min-width: 0;
+  height: 4.25rem;
+  align-items: center;
+  justify-content: center;
+}
+
+body.home-page .trusted-logo-item img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 9.4rem;
+  max-height: 3.25rem;
+  object-fit: contain;
+}
+
+body.home-page .trusted-logo-item--berkshire img {
+  max-width: 9.7rem;
+  max-height: 3.6rem;
+}
+
+body.home-page .trusted-logo-item--sandiego img {
+  max-width: 10rem;
+  max-height: 3.35rem;
+}
+
+body.home-page .trusted-logo-clone {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  body.home-page .trusted-logo-viewport {
+    position: relative;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1120px;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 5%, #000 95%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, #000 5%, #000 95%, transparent 100%);
+  }
+
+  body.home-page .trusted-logo-track {
+    display: flex;
+    width: max-content;
+    grid-template-columns: none;
+    gap: 4.5rem;
+    align-items: center;
+    animation: lotus-trusted-scroll 32s linear infinite;
+    will-change: transform;
+  }
+
+  body.home-page .trusted-logo-viewport:hover .trusted-logo-track,
+  body.home-page .trusted-logo-viewport:focus-within .trusted-logo-track {
+    animation-play-state: paused;
+  }
+
+  body.home-page .trusted-logo-item {
+    flex: 0 0 180px;
+    height: 4.75rem;
+  }
+
+  body.home-page .trusted-logo-item img {
+    max-width: 10rem;
+    max-height: 3.45rem;
+  }
+
+  body.home-page .trusted-logo-item--berkshire img {
+    max-width: 10.5rem;
+    max-height: 3.85rem;
+  }
+
+  body.home-page .trusted-logo-item--sandiego img {
+    max-width: 10.8rem;
+    max-height: 3.5rem;
+  }
+
+  body.home-page .trusted-logo-clone {
+    display: flex;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) and (min-width: 1024px) {
+  body.home-page .trusted-logo-viewport {
+    overflow: visible;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  body.home-page .trusted-logo-track {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
+    animation: none;
+  }
+
+  body.home-page .trusted-logo-item {
+    width: auto;
+  }
+
+  body.home-page .trusted-logo-clone {
+    display: none;
+  }
+}
