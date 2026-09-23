@@ -56,6 +56,7 @@ const bodyClass = `min-h-screen bg-gradient-to-br from-lotus-navy via-lotus-navy
 		<script is:inline src="/process-mobile-diagram.js"></script>
 		<script is:inline>
 			if (window.location.pathname === '/about' || window.location.pathname === '/about/') {
+				document.querySelector('.about-values-wrap')?.remove();
 				const aboutTeamIntro = document.querySelector('.about-team-intro');
 				if (aboutTeamIntro) aboutTeamIntro.textContent = 'The Lotus team is comprised of experts specializing in end-to-end Software Development, Security, AI, Infrastructure, Design, Telecommunications, Business Intelligence, Data Architecture, ERP/CRM/SaaS, Hardware, and many other disciplines. We are platform and vendor agnostic, and will work together with you to find the right solution to achieve your goals. Our leadership team includes:';
 				const aboutCta = document.querySelector('.about-close a[href="/contact"]');
