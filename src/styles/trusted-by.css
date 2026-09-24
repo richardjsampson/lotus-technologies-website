@@ -3,6 +3,10 @@
   to { transform: translateX(calc(-50% - 2.25rem)); }
 }
 
+body.home-page main > section:nth-child(2) .text-center > p {
+  color: #16345f;
+}
+
 body.home-page .trusted-logo-viewport {
   margin-top: 2.5rem;
 }
