@@ -45,6 +45,16 @@ body.home-page .trusted-logo-clone {
   display: none;
 }
 
+@media (max-width: 700px) {
+  body.home-page main > section:nth-child(2) > div.relative {
+    padding-top: 2.75rem;
+  }
+
+  body.home-page .trusted-logo-viewport {
+    margin-top: 2rem;
+  }
+}
+
 @media (min-width: 1024px) {
   body.home-page .trusted-logo-viewport {
     position: relative;
