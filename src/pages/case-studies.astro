@@ -8,6 +8,7 @@ const studies = [
     client: 'Scripps Health',
     industry: 'Healthcare',
     service: 'Data & Business Intelligence',
+    category: 'data',
     image: '/scripps-case-study.png',
     challenge: 'Decades of legacy databases left patient information siloed, unreliable, and often inaccessible across departments.',
     solution: 'Built a centralized data warehouse and implemented Power BI for consistent, actionable reporting, eliminating thousands of hours of manual work.',
@@ -18,6 +19,7 @@ const studies = [
     client: 'ServiceNow',
     industry: 'SaaS',
     service: 'Customer Support Infrastructure',
+    category: 'integration software',
     image: '/servicenow-case-study.png',
     challenge: 'ServiceNow’s premium concierge engineering support team needed a multi-channel communication infrastructure for engineers serving its largest customers. The legacy system was no longer adequate.',
     solution: 'Implemented Cisco Finesse, Cisco’s next-generation agent and supervisor desktop, trained internal engineers, and launched the new environment on time and under budget.',
@@ -28,6 +30,7 @@ const studies = [
     client: 'MTN Products',
     industry: 'Fresh Water Distribution',
     service: 'Mobile & Connected Solutions',
+    category: 'mobile integration',
     image: '/mtn-products-case-study.png',
     challenge: 'Field technicians servicing thousands of devices recorded work through email, spreadsheets, and other ad hoc methods, with no consistent process or centralized record.',
     solution: 'Developed iOS and Android applications with barcode scanning and standardized required fields, connected to a centralized management dashboard.',
@@ -38,10 +41,22 @@ const studies = [
     client: 'Berkshire Hathaway',
     industry: 'Real Estate',
     service: 'Mobile & Connected Solutions',
+    category: 'mobile integration',
     image: '/berkshire-hathaway-case-study.png',
     challenge: 'Berkshire Hathaway HomeServices identified one of the most time-consuming parts of a real estate agent’s job: placing and removing Open House signs. The company envisioned a mobile solution that could take the task off the agent’s plate entirely.',
     solution: 'Developed SignWebb, a mobile app that lets agents select an Open House property, choose the quantity and placement locations of signs, and automate their placement and takedown with verification of each activity.',
     impact: 'Turned a days-long operational process into a task that takes minutes for agents, while creating a novel, monetizable product for the company.',
+  },
+  {
+    id: 'kaiser-permanente',
+    client: 'Kaiser Permanente',
+    industry: 'Healthcare',
+    service: 'Customer Support Infrastructure',
+    category: 'integration software',
+    image: '/kaiser-permanente-case-study.jpg',
+    challenge: 'Kaiser Permanente’s West Coast nursing call center was operating on the legacy Infor Epiphany platform, resulting in dropped calls, poor patient care, and gaps in HIPAA compliance. The vendor’s proposed upgrade was costly and would not address the underlying problems.',
+    solution: 'Worked with Kaiser’s in-house infrastructure and development teams to audit the existing configuration, identify multiple root causes, and perform a cost-benefit analysis across alternative solutions.',
+    impact: 'Restructured the contact center configuration to prepare for a successful migration to a Salesforce-based system, saving Kaiser money and helping re-establish excellent telehealth standards.',
   },
 ];
 ---
@@ -77,7 +92,7 @@ const studies = [
             class={`case-study-card case-study-card-${index + 1}`}
             type="button"
             data-case-study={study.id}
-            data-category={index === 0 ? 'data' : index === 1 ? 'integration software' : 'mobile integration'}
+            data-category={study.category}
             aria-haspopup="dialog"
           >
             <img src={study.image} alt="" loading="lazy" decoding="async" />
