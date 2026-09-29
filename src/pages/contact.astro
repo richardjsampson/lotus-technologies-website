@@ -39,27 +39,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 					<h2>What are you trying to accomplish?</h2>
 				</div>
 
-				<form class="contact-form" aria-label="Contact Lotus Technologies">
+				<form class="contact-form" aria-label="Contact Lotus Technologies" novalidate>
 					<div class="contact-field-row">
 						<label>
 							<span>Name</span>
-							<input type="text" name="name" autocomplete="name" required />
+							<input type="text" name="name" autocomplete="name" maxlength="120" required />
 						</label>
 						<label>
 							<span>Company <em>optional</em></span>
-							<input type="text" name="company" autocomplete="organization" />
+							<input type="text" name="company" autocomplete="organization" maxlength="160" />
 						</label>
 					</div>
 
 					<label>
 						<span>Email</span>
-						<input type="email" name="email" autocomplete="email" required />
+						<input type="email" name="email" autocomplete="email" maxlength="254" required />
 					</label>
 
 					<label>
 						<span>What are you trying to solve?</span>
-						<textarea name="challenge" rows="5" required placeholder="A goal, a problem, an existing system that isn’t working the way you need — start wherever makes sense."></textarea>
+						<textarea name="challenge" rows="5" maxlength="5000" required placeholder="A goal, a problem, an existing system that isn’t working the way you need — start wherever makes sense."></textarea>
 					</label>
+
+					<div class="contact-turnstile">
+						<div class="cf-turnstile" data-sitekey="0x4AAAAAAFJf05M13DLJJtK0" data-theme="dark"></div>
+					</div>
 
 					<div class="contact-submit-row">
 						<button type="submit">Send inquiry <span aria-hidden="true">→</span></button>
@@ -71,20 +75,71 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		</div>
 	</section>
 
+	<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 	<script is:inline>
 		const contactForm = document.querySelector('.contact-form');
 		const contactStatus = document.querySelector('.contact-form-status');
-		contactForm?.addEventListener('submit', (event) => {
+		const submitButton = contactForm?.querySelector('button[type="submit"]');
+
+		contactForm?.addEventListener('submit', async (event) => {
 			event.preventDefault();
+			if (!contactForm.reportValidity()) return;
+
 			const data = new FormData(contactForm);
-			const name = String(data.get('name') || '').trim();
-			const company = String(data.get('company') || '').trim();
-			const email = String(data.get('email') || '').trim();
-			const challenge = String(data.get('challenge') || '').trim();
-			const subject = `Lotus Technologies inquiry${company ? ` — ${company}` : ''}`;
-			const body = `Name: ${name}\nEmail: ${email}${company ? `\nCompany: ${company}` : ''}\n\nWhat I'm trying to solve:\n${challenge}`;
-			if (contactStatus) contactStatus.textContent = 'Opening your email app with this message ready to send…';
-			window.location.href = `mailto:info@lotustechnologies.dev?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+			const turnstileToken = String(data.get('cf-turnstile-response') || '').trim();
+			if (!turnstileToken) {
+				if (contactStatus) {
+					contactStatus.textContent = 'Please complete the security check before sending your message.';
+					contactStatus.dataset.state = 'error';
+				}
+				return;
+			}
+
+			const payload = {
+				name: String(data.get('name') || '').trim(),
+				company: String(data.get('company') || '').trim(),
+				email: String(data.get('email') || '').trim(),
+				challenge: String(data.get('challenge') || '').trim(),
+				turnstileToken,
+			};
+
+			if (submitButton) {
+				submitButton.disabled = true;
+				submitButton.dataset.originalText = submitButton.innerHTML;
+				submitButton.textContent = 'Sending…';
+			}
+			if (contactStatus) {
+				contactStatus.textContent = 'Sending your inquiry…';
+				contactStatus.dataset.state = 'pending';
+			}
+
+			try {
+				const response = await fetch('/api/contact', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify(payload),
+				});
+				const result = await response.json().catch(() => ({}));
+				if (!response.ok) throw new Error(result.error || 'Unable to send your inquiry.');
+
+				contactForm.reset();
+				window.turnstile?.reset();
+				if (contactStatus) {
+					contactStatus.textContent = 'Thanks — your message has been sent. We’ll be in touch soon.';
+					contactStatus.dataset.state = 'success';
+				}
+			} catch (error) {
+				window.turnstile?.reset();
+				if (contactStatus) {
+					contactStatus.textContent = error instanceof Error ? error.message : 'Unable to send your inquiry. Please try again.';
+					contactStatus.dataset.state = 'error';
+				}
+			} finally {
+				if (submitButton) {
+					submitButton.disabled = false;
+					submitButton.innerHTML = submitButton.dataset.originalText || 'Send inquiry <span aria-hidden="true">→</span>';
+				}
+			}
 		});
 	</script>
 </BaseLayout>
@@ -225,6 +280,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	.contact-form input:focus,
 	.contact-form textarea:focus { border-color: rgba(99,190,255,.7); background: rgba(5,24,53,.75); box-shadow: 0 0 0 3px rgba(99,190,255,.08); }
 	.contact-form textarea::placeholder { color: rgba(255,255,255,.28); }
+	.contact-turnstile { min-height: 65px; display: flex; align-items: center; }
 	.contact-submit-row { display: flex; align-items: center; gap: 1rem; margin-top: .15rem; }
 	.contact-form button {
 		flex: 0 0 auto;
@@ -238,13 +294,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		padding: .85rem 1.15rem;
 		font-weight: 800;
 		cursor: pointer;
-		transition: transform .18s ease, background .18s ease;
+		transition: transform .18s ease, background .18s ease, opacity .18s ease;
 	}
-	.contact-form button:hover { transform: translateY(-2px); background: #2873f0; }
+	.contact-form button:hover:not(:disabled) { transform: translateY(-2px); background: #2873f0; }
+	.contact-form button:disabled { cursor: wait; opacity: .65; }
 	.contact-form button span { font-size: 1.15rem; }
 	.contact-form-note,
 	.contact-form-status { margin: 0; color: rgba(255,255,255,.38); font-size: .74rem; line-height: 1.45; }
 	.contact-form-status { color: #8FD4FF; min-height: 1.1em; }
+	.contact-form-status[data-state="success"] { color: #8FE4B8; }
+	.contact-form-status[data-state="error"] { color: #FFAAA0; }
 
 	@media (max-width: 1249px) {
 		.contact-shell {
